@@ -133,6 +133,11 @@ tr:hover td{background:rgba(0,170,255,.03)}
 /* ── PICK CARD ── */
 .pick-card{background:var(--bg3);border-left:3px solid var(--a);border-radius:10px;
   padding:16px;margin-bottom:10px}
+.pick-card-active{border:1.5px solid rgba(0,232,122,.35);border-left:4px solid var(--a);
+  background:rgba(0,232,122,.04);transition:box-shadow .2s}
+.pick-card-active:hover{box-shadow:0 0 14px rgba(0,232,122,.2)}
+.picks-grid-hoy{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.picks-grid-hoy .pick-card{margin-bottom:0}
 .pick-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px}
 .pick-liga{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--a);letter-spacing:2px}
 .pick-partido{font-weight:700;font-size:16px;margin-bottom:6px}
@@ -174,7 +179,7 @@ tr:hover td{background:rgba(0,170,255,.03)}
     <a class="nav-link active" href="#picks">⚽ Picks</a>
     <a class="nav-link" href="#virtual">🔬 Análisis Virtual</a>
   </div>
-  <div class="nav-right">Actualizado: 08/05/2026 22:49</div>
+  <div class="nav-right">Actualizado: 08/05/2026 23:46</div>
 </nav>
 
 <div class="main">
@@ -218,26 +223,31 @@ tr:hover td{background:rgba(0,170,255,.03)}
 
   <div class="kpi-grid" id="kpi-grid"></div>
 
+
+  <div class="card picks-hoy-section" style="margin-bottom:20px;border:1.5px solid var(--a);box-shadow:0 0 18px rgba(0,232,122,.18)">
+    <div class="card-title" style="font-size:17px;color:var(--a)">
+      🎯 Picks en Juego Hoy
+      <span style="display:inline-flex;align-items:center;justify-content:center;background:var(--a);color:#060810;border-radius:50%;width:26px;height:26px;font-size:13px;font-weight:900;margin-left:8px">7</span>
+    </div>
+    <div class="picks-grid-hoy"><div class="pick-card pick-card-active"><div class="pick-top"><span class="pick-liga">Serie A</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">Torino <span class="vs">vs</span> Sassuolo</div><div class="pick-merc">Under 2.5 <span class="pick-odd">@ 1.96</span></div></div><div class="pick-card pick-card-active"><div class="pick-top"><span class="pick-liga">La Liga</span><span class="nivel-badge nb-alta">⭐⭐ ALTA</span></div><div class="pick-partido">Atlético Madrid <span class="vs">vs</span> Celta Vigo</div><div class="pick-merc">Hánd. V +1.0 <span class="pick-odd">@ 1.42</span></div></div><div class="pick-card pick-card-active"><div class="pick-top"><span class="pick-liga">Serie A</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">Lecce <span class="vs">vs</span> Juventus</div><div class="pick-merc">Hánd. L +1.5 <span class="pick-odd">@ 1.78</span></div></div><div class="pick-card pick-card-active"><div class="pick-top"><span class="pick-liga">CH1</span><span class="nivel-badge nb-elite">🔥 ELITE</span></div><div class="pick-partido">FC Winterthur <span class="vs">vs</span> FC Lausanne-Sport</div><div class="pick-merc">Hánd. L +1.5 <span class="pick-odd">@ 1.39</span></div></div><div class="pick-card pick-card-active"><div class="pick-top"><span class="pick-liga">Allsvenskan</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">IFK Goteborg <span class="vs">vs</span> Hammarby IF</div><div class="pick-merc">Hánd. L +1.0 <span class="pick-odd">@ 1.69</span></div></div><div class="pick-card pick-card-active"><div class="pick-top"><span class="pick-liga">K League 1</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">Sangju Sangmu FC <span class="vs">vs</span> Incheon United</div><div class="pick-merc">Hánd. V +0.25 <span class="pick-odd">@ 1.88</span></div></div><div class="pick-card pick-card-active"><div class="pick-top"><span class="pick-liga">K League 1</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">Daejeon Citizen <span class="vs">vs</span> Pohang Steelers</div><div class="pick-merc">Hánd. L -0.25 <span class="pick-odd">@ 1.83</span></div></div></div>
+  </div>
+
   <div class="grid-2">
     <div class="card">
       <div class="card-title">📈 Evolución Banca &amp; ROI Acumulado</div>
       <canvas id="bancaChart" style="max-height:240px"></canvas>
     </div>
     <div>
-      <div class="card" style="margin-bottom:16px">
+      <div class="card">
         <div class="card-title">💰 Banca Actual</div>
         <div class="banca-num">89.98€</div>
         <div class="banca-sub">Inicial 100€ &nbsp;·&nbsp; Diferencia -10.02€ &nbsp;·&nbsp;
           <span style="color:#ff4444;font-weight:700">ROI real -10.0%</span>
         </div>
-        <div class="card-title" style="margin-top:4px">🔑 Créditos API</div>
+        <div class="card-title" style="margin-top:16px">🔑 Créditos API</div>
         <div style="font-size:28px;font-weight:700;color:var(--a2);font-family:'JetBrains Mono',monospace">17,962</div>
         <div class="cred-bar"><div class="cred-fill" style="width:90%"></div></div>
         <div class="cred-row"><span>Restantes / 20.000</span><span>90%</span></div>
-      </div>
-      <div class="card">
-        <div class="card-title">🎯 Picks en Juego Hoy</div>
-        <div class="pick-card"><div class="pick-top"><span class="pick-liga">Serie A</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">Torino <span class="vs">vs</span> Sassuolo</div><div class="pick-merc">Under 2.5 <span class="pick-odd">@ 1.96</span></div></div><div class="pick-card"><div class="pick-top"><span class="pick-liga">La Liga</span><span class="nivel-badge nb-alta">⭐⭐ ALTA</span></div><div class="pick-partido">Atlético Madrid <span class="vs">vs</span> Celta Vigo</div><div class="pick-merc">Hánd. V +1.0 <span class="pick-odd">@ 1.42</span></div></div><div class="pick-card"><div class="pick-top"><span class="pick-liga">Serie A</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">Lecce <span class="vs">vs</span> Juventus</div><div class="pick-merc">Hánd. L +1.5 <span class="pick-odd">@ 1.78</span></div></div><div class="pick-card"><div class="pick-top"><span class="pick-liga">CH1</span><span class="nivel-badge nb-elite">🔥 ELITE</span></div><div class="pick-partido">FC Winterthur <span class="vs">vs</span> FC Lausanne-Sport</div><div class="pick-merc">Hánd. L +1.5 <span class="pick-odd">@ 1.39</span></div></div><div class="pick-card"><div class="pick-top"><span class="pick-liga">Allsvenskan</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">IFK Goteborg <span class="vs">vs</span> Hammarby IF</div><div class="pick-merc">Hánd. L +1.0 <span class="pick-odd">@ 1.69</span></div></div><div class="pick-card"><div class="pick-top"><span class="pick-liga">K League 1</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">Sangju Sangmu FC <span class="vs">vs</span> Incheon United</div><div class="pick-merc">Hánd. V +0.25 <span class="pick-odd">@ 1.88</span></div></div><div class="pick-card"><div class="pick-top"><span class="pick-liga">K League 1</span><span class="nivel-badge nb-media">⭐ MEDIA</span></div><div class="pick-partido">Daejeon Citizen <span class="vs">vs</span> Pohang Steelers</div><div class="pick-merc">Hánd. L -0.25 <span class="pick-odd">@ 1.83</span></div></div>
       </div>
     </div>
   </div>
@@ -441,6 +451,11 @@ function initChart() {
           type:'line', label:'Banca (€)', data:banca, order:1,
           borderColor:'#00e87a', backgroundColor:gradB, borderWidth:2.5,
           pointRadius:2, fill:true, tension:.4, yAxisID:'yBanca', spanGaps:true,
+        },
+        {
+          type:'line', label:'Inicial (100€)', data:labels.map(()=>100), order:0,
+          borderColor:'rgba(255,184,0,0.5)', borderWidth:1.5, borderDash:[6,4],
+          pointRadius:0, fill:false, yAxisID:'yBanca', spanGaps:true,
         },
         {
           type:'bar', label:'ROI diario (%)', data:roi, order:2,
