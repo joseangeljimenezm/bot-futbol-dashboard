@@ -2,8 +2,6 @@
 
 const { useState: useStateV, useMemo: useMemoV } = React;
 
-const D = window.DASH;
-
 /* ============== VALIDACIÓN DE DATOS ============== */
 function safeNum(v, def = 0) {
   const n = parseFloat(v);
@@ -19,8 +17,8 @@ function safeObj(obj, def = {}) {
 }
 
 function ensureKPI(period) {
-  if (!D || !D.kpis) return { roi: 0, profit: 0, picks: 0, wins: 0, edge: 0, yld: 0, win: 0 };
-  return D.kpis[period] || D.kpis.since || { roi: 0, profit: 0, picks: 0, wins: 0, edge: 0, yld: 0, win: 0 };
+  if (!window.DASH || !window.DASH.kpis) return { roi: 0, profit: 0, picks: 0, wins: 0, edge: 0, yld: 0, win: 0 };
+  return window.DASH.kpis[period] || window.DASH.kpis.since || { roi: 0, profit: 0, picks: 0, wins: 0, edge: 0, yld: 0, win: 0 };
 }
 
 /* ============== KPI HERO (compact, configurable) ============== */
@@ -75,7 +73,7 @@ function ConfidenceBadge({ pickCount = 67 }) {
 
 function KPIHero({ period }) {
   const k = ensureKPI(period);
-  const equityVals = safeArray(D?.equity, []).map(e => safeNum(e?.v, 0));
+  const equityVals = safeArray(window.DASH?.equity, []).map(e => safeNum(e?.v, 0));
   let slice = equityVals;
   if (period === "today") slice = equityVals.slice(-2);
   else if (period === "yest") slice = equityVals.slice(-3, -1);
@@ -83,20 +81,20 @@ function KPIHero({ period }) {
   else if (period === "7d") slice = equityVals.slice(-7);
   else if (period === "month") slice = equityVals.slice(-10);
 
-  const bankCurrent = safeNum(D?.bank?.current, 100);
-  const bankDiff = safeNum(D?.bank?.diff, 0);
-  const bankRoi = safeNum(D?.bank?.roi, 0);
+  const bankCurrent = safeNum(window.DASH?.bank?.current, 100);
+  const bankDiff = safeNum(window.DASH?.bank?.diff, 0);
+  const bankRoi = safeNum(window.DASH?.bank?.roi, 0);
   const kRoi = safeNum(k.roi, 0);
   const kProfit = safeNum(k.profit, 0);
   const kYld = safeNum(k.yld, 0);
   const kEdge = safeNum(k.edge, 0);
   const kWin = safeNum(k.win, 0);
   const kPicks = Math.max(0, Math.round(k.picks || 0));
-  const liveCt = safeArray(D?.livePicks, []).length;
+  const liveCt = safeArray(window.DASH?.livePicks, []).length;
 
   return (
     <>
-      <ConfidenceBadge pickCount={safeNum(D?.meta?.totalPicks, 67)} />
+      <ConfidenceBadge pickCount={safeNum(window.DASH?.meta?.totalPicks, 67)} />
       <div className="kpi-grid">
         <KPICard
           label="Banca actual" featured
@@ -274,8 +272,9 @@ function HeatmapPanel({ title, sub, rows, cols, matrix, selected, setSelected, d
 /* ============== TABLES ============== */
 function maxOf(arr, key) { return Math.max(...arr.map(r => r[key])); }
 
-function LeagueTable({ disabled, onToggle, rows = D.byLeague }) {
-  const max = maxOf(rows, "total");
+function LeagueTable({ disabled, onToggle, rows }) {
+  const actualRows = rows || window.DASH?.byLeague || [];
+  const max = maxOf(actualRows, "total");
   const cols = [
     { key: "name", label: "Liga", render: r => (
         <div style={{display:"flex", alignItems:"center", gap:9}}>
@@ -293,15 +292,16 @@ function LeagueTable({ disabled, onToggle, rows = D.byLeague }) {
     { key: "status", label: "", align: "center", width: 110, sortable: false, render: r => <StatusChip status={r.status}/> },
   ];
   return (
-    <DataTable rows={rows} cols={cols} defaultSort={{key:"roi", dir:"desc"}}
+    <DataTable rows={actualRows} cols={cols} defaultSort={{key:"roi", dir:"desc"}}
                onToggle={onToggle} isOn={r => !disabled.has(r.name)}
                rowKey={r => r.name}
                disabledRow={r => disabled.has(r.name)}/>
   );
 }
 
-function MarketTable({ disabled, onToggle, rows = D.byMarket }) {
-  const max = maxOf(rows, "total");
+function MarketTable({ disabled, onToggle, rows }) {
+  const actualRows = rows || window.DASH?.byMarket || [];
+  const max = maxOf(actualRows, "total");
   const cols = [
     { key: "name", label: "Mercado", render: r => (
         <div style={{display:"flex", alignItems:"center", gap:9}}>
@@ -315,15 +315,16 @@ function MarketTable({ disabled, onToggle, rows = D.byMarket }) {
     { key: "status", label: "", align: "center", width: 110, sortable: false, render: r => <StatusChip status={r.status}/> },
   ];
   return (
-    <DataTable rows={rows} cols={cols} defaultSort={{key:"roi", dir:"desc"}}
+    <DataTable rows={actualRows} cols={cols} defaultSort={{key:"roi", dir:"desc"}}
                onToggle={onToggle} isOn={r => !disabled.has(r.name)}
                rowKey={r => r.name}
                disabledRow={r => disabled.has(r.name)}/>
   );
 }
 
-function OddsTable({ disabled, onToggle, rows = D.byOdds }) {
-  const max = maxOf(rows, "total");
+function OddsTable({ disabled, onToggle, rows }) {
+  const actualRows = rows || window.DASH?.byOdds || [];
+  const max = maxOf(actualRows, "total");
   const cols = [
     { key: "name", label: "Rango de Cuota", render: r => (
         <div style={{display:"flex", alignItems:"center", gap:9}}>
@@ -337,15 +338,16 @@ function OddsTable({ disabled, onToggle, rows = D.byOdds }) {
     { key: "status", label: "", align: "center", width: 110, sortable: false, render: r => <StatusChip status={r.status}/> },
   ];
   return (
-    <DataTable rows={rows} cols={cols} defaultSort={{key:"roi", dir:"desc"}}
+    <DataTable rows={actualRows} cols={cols} defaultSort={{key:"roi", dir:"desc"}}
                onToggle={onToggle} isOn={r => !disabled.has(r.name)}
                rowKey={r => r.name}
                disabledRow={r => disabled.has(r.name)}/>
   );
 }
 
-function CornersTable({ disabled, onToggle, rows = D.byCorners || [] }) {
-  if (!rows || rows.length === 0) {
+function CornersTable({ disabled, onToggle, rows }) {
+  const actualRows = rows || window.DASH?.byCorners || [];
+  if (!actualRows || actualRows.length === 0) {
     return (
       <div className="panel">
         <div className="panel-h"><h3>🔄 Análisis de Corners</h3></div>
@@ -353,7 +355,7 @@ function CornersTable({ disabled, onToggle, rows = D.byCorners || [] }) {
       </div>
     );
   }
-  const max = maxOf(rows, "total");
+  const max = maxOf(actualRows, "total");
   const cols = [
     { key: "name", label: "Línea", render: r => (
         <div style={{display:"flex", alignItems:"center", gap:9}}>
@@ -367,7 +369,7 @@ function CornersTable({ disabled, onToggle, rows = D.byCorners || [] }) {
     { key: "status", label: "", align: "center", width: 110, sortable: false, render: r => <StatusChip status={r.status}/> },
   ];
   return (
-    <DataTable rows={rows} cols={cols} defaultSort={{key:"roi", dir:"desc"}}
+    <DataTable rows={actualRows} cols={cols} defaultSort={{key:"roi", dir:"desc"}}
                onToggle={onToggle} isOn={r => !disabled.has(r.name)}
                rowKey={r => r.name}
                disabledRow={r => disabled.has(r.name)}/>
@@ -375,7 +377,8 @@ function CornersTable({ disabled, onToggle, rows = D.byCorners || [] }) {
 }
 
 function ReasonTable() {
-  const max = maxOf(D.byReason, "total");
+  const reasonRows = window.DASH?.byReason || [];
+  const max = maxOf(reasonRows, "total");
   const cols = [
     { key: "name", label: "Motivo", render: r => (
         <div style={{display:"flex", alignItems:"center", gap:9}}>
@@ -387,7 +390,7 @@ function ReasonTable() {
     { key: "roi", label: "ROI", align: "right", width: 170, render: r => <ROICell value={r.roi}/> },
     { key: "eur", label: "PnL", align: "right", width: 80, render: r => fmtEur(r.eur) },
   ];
-  return <DataTable rows={D.byReason} cols={cols} defaultSort={{key:"total", dir:"desc"}}/>;
+  return <DataTable rows={reasonRows} cols={cols} defaultSort={{key:"total", dir:"desc"}}/>;
 }
 
 /* ============== MODEL HEALTH PANEL (TIER 3) ============== */
