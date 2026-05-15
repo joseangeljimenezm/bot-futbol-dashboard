@@ -120,38 +120,36 @@
   }
 
   // ============== BOOT ==============
-  // Sync XHR so window.DASH is ready before the JSX scripts load.
-  // (Deprecated but reliable for a single static asset under the same origin.)
+  // Async fetch to load data.json (non-blocking, modern approach)
   function boot() {
-    try {
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", "data.json?ts=" + Date.now(), false);
-      xhr.send();
-      if (xhr.status !== 0 && (xhr.status < 200 || xhr.status >= 300)) {
-        throw new Error("HTTP " + xhr.status);
-      }
-      const raw = JSON.parse(xhr.responseText);
-      window.DASH = buildDash(raw);
-      window.dispatchEvent(new Event("dash:ready"));
-    } catch (e) {
-      console.error("[data.js] No se pudo cargar data.json:", e);
-      window.addEventListener("DOMContentLoaded", () => {
-        const root = document.getElementById("root");
-        if (root) {
-          root.innerHTML =
-            `<div style="padding:40px;font-family:sans-serif;color:#ff5c7a;background:#07090f;min-height:100vh">
-               <h2>Error cargando data.json</h2>
-               <pre style="color:#a8b0c4;white-space:pre-wrap">${e.message}</pre>
-               <p style="color:#a8b0c4">
-                 Genera el fichero con <code>python generar_dashboard.py</code> y sirve la página
-                 vía HTTP (no la abras con <code>file://</code>).<br>
-                 Para servir local: <code>python -m http.server 8000</code> y abre
-                 <code>http://localhost:8000/Dashboard.html</code>.
-               </p>
-             </div>`;
-        }
+    fetch("data.json?ts=" + Date.now())
+      .then(res => {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(raw => {
+        window.DASH = buildDash(raw);
+        window.dispatchEvent(new Event("dash:ready"));
+      })
+      .catch(e => {
+        console.error("[data.js] No se pudo cargar data.json:", e);
+        window.addEventListener("DOMContentLoaded", () => {
+          const root = document.getElementById("root");
+          if (root) {
+            root.innerHTML =
+              `<div style="padding:40px;font-family:sans-serif;color:#ff5c7a;background:#07090f;min-height:100vh">
+                 <h2>Error cargando data.json</h2>
+                 <pre style="color:#a8b0c4;white-space:pre-wrap">${e.message}</pre>
+                 <p style="color:#a8b0c4">
+                   Genera el fichero con <code>python generar_dashboard.py</code> y sirve la página
+                   vía HTTP (no la abras con <code>file://</code>).<br>
+                   Para servir local: <code>python -m http.server 8000</code> y abre
+                   <code>http://localhost:8000/Dashboard.html</code>.
+                 </p>
+               </div>`;
+          }
+        });
       });
-    }
   }
   boot();
 })();
