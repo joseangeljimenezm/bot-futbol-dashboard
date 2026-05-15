@@ -2,13 +2,12 @@
 // Nuevas vistas de análisis para Dashboard v2
 
 const { useState: useStateCA, useMemo: useMemoCA } = React;
-const D3 = window.DASH;
 
 /* ============== LIGA × MERCADO PIVOT TABLE ============== */
 function LigaByMercadoView({ period }) {
   const data = useMemoCA(() => {
     // Construir matriz: liga × mercado con ROI
-    const picks = D3.periods[period]?.picks || [];
+    const picks = window.DASH?.periods[period]?.picks || [];
     if (!picks.length) return { matrix: [], ligas: [], mercados: [] };
 
     const byLM = {};
