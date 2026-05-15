@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-15T19:02:12",
+    "generated_at": "2026-05-15T19:46:32",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -8,6 +8,8 @@
   "bank": {
     "current": 107.42,
     "initial": 100.0,
+    "bank_inicial": 100.0,
+    "bank_final": 107.42,
     "diff": 7.42,
     "roi": 7.4,
     "since": "2026-04-23"
@@ -72,64 +74,139 @@
     {
       "d": "11/05",
       "v": 100.39
+    },
+    {
+      "d": "15/05",
+      "v": 100.39,
+      "pending": true
     }
   ],
   "kpis": {
     "today": {
       "roi": 0.0,
+      "roi_percent": 0.0,
       "profit": 0,
       "picks": 0,
+      "wins": 0,
+      "losses": 0,
       "win": 0,
+      "winPct": 0,
       "edge": 0,
-      "yld": 0.0
+      "yld": 0.0,
+      "yield": 0.0,
+      "staked": 0,
+      "bank_inicial": 107.42,
+      "bank_final": 107.42,
+      "bank_current": 107.42,
+      "ganancia_neto": 0.0
     },
     "yest": {
       "roi": 0.0,
+      "roi_percent": 0.0,
       "profit": 0,
       "picks": 0,
+      "wins": 0,
+      "losses": 0,
       "win": 0,
+      "winPct": 0,
       "edge": 0,
-      "yld": 0.0
+      "yld": 0.0,
+      "yield": 0.0,
+      "staked": 0,
+      "bank_inicial": 107.42,
+      "bank_final": 107.42,
+      "bank_current": 107.42,
+      "ganancia_neto": 0.0
     },
     "weekend": {
       "roi": 36.7,
+      "roi_percent": 36.7,
       "profit": 0.27,
       "picks": 5,
+      "wins": 4,
+      "losses": 1,
       "win": 80,
+      "winPct": 80,
       "edge": 7.3,
-      "yld": 36.7
+      "yld": 36.7,
+      "yield": 36.7,
+      "staked": 0.75,
+      "bank_inicial": 107.08,
+      "bank_final": 107.35,
+      "bank_current": 107.35,
+      "ganancia_neto": 0.27
     },
     "7d": {
       "roi": 42.1,
+      "roi_percent": 42.1,
       "profit": 0.34,
       "picks": 6,
+      "wins": 5,
+      "losses": 1,
       "win": 83,
+      "winPct": 83,
       "edge": 7.7,
-      "yld": 42.1
+      "yld": 42.1,
+      "yield": 42.1,
+      "staked": 0.82,
+      "bank_inicial": 107.08,
+      "bank_final": 107.42,
+      "bank_current": 107.42,
+      "ganancia_neto": 0.34
     },
     "month": {
       "roi": 9.2,
+      "roi_percent": 9.2,
       "profit": 1.76,
       "picks": 97,
+      "wins": 63,
+      "losses": 34,
       "win": 65,
+      "winPct": 65,
       "edge": 13.7,
-      "yld": 9.2
+      "yld": 9.2,
+      "yield": 9.2,
+      "staked": 19.18,
+      "bank_inicial": 105.66,
+      "bank_final": 107.42,
+      "bank_current": 107.42,
+      "ganancia_neto": 1.76
     },
     "since": {
       "roi": 3.7,
+      "roi_percent": 3.7,
       "profit": 0.39,
       "picks": 67,
+      "wins": 42,
+      "losses": 25,
       "win": 63,
+      "winPct": 63,
       "edge": 10.9,
-      "yld": 3.7
+      "yld": 3.7,
+      "yield": 3.7,
+      "staked": 10.63,
+      "bank_inicial": 107.03,
+      "bank_final": 107.42,
+      "bank_current": 107.42,
+      "ganancia_neto": 0.39
     },
     "hist": {
       "roi": 19.2,
+      "roi_percent": 19.2,
       "profit": 7.42,
       "picks": 126,
+      "wins": 84,
+      "losses": 42,
       "win": 67,
+      "winPct": 67,
       "edge": 15.1,
-      "yld": 19.2
+      "yld": 19.2,
+      "yield": 19.2,
+      "staked": 38.58,
+      "bank_inicial": 100.0,
+      "bank_final": 107.42,
+      "bank_current": 107.42,
+      "ganancia_neto": 7.42
     }
   },
   "livePicks": [],
@@ -139,9 +216,14 @@
       "total": 10,
       "w": 7,
       "l": 3,
+      "losses": 3,
       "winPct": 70,
+      "win_pct": 70,
       "roi": 16.0,
+      "yield": 16.0,
       "eur": 0.25,
+      "pnl": 0.25,
+      "staked": 1.56,
       "status": "green"
     },
     {
@@ -149,9 +231,14 @@
       "total": 9,
       "w": 4,
       "l": 5,
+      "losses": 5,
       "winPct": 44,
+      "win_pct": 44,
       "roi": -28.3,
+      "yield": -28.3,
       "eur": -0.41,
+      "pnl": -0.41,
+      "staked": 1.45,
       "status": "red"
     },
     {
@@ -159,9 +246,14 @@
       "total": 8,
       "w": 6,
       "l": 2,
+      "losses": 2,
       "winPct": 75,
+      "win_pct": 75,
       "roi": 42.9,
+      "yield": 42.9,
       "eur": 0.52,
+      "pnl": 0.52,
+      "staked": 1.2,
       "status": "green"
     },
     {
@@ -169,9 +261,14 @@
       "total": 5,
       "w": 2,
       "l": 3,
+      "losses": 3,
       "winPct": 40,
+      "win_pct": 40,
       "roi": -37.0,
+      "yield": -37.0,
       "eur": -0.3,
+      "pnl": -0.3,
+      "staked": 0.81,
       "status": "red"
     },
     {
@@ -179,9 +276,14 @@
       "total": 5,
       "w": 3,
       "l": 2,
+      "losses": 2,
       "winPct": 60,
+      "win_pct": 60,
       "roi": -20.7,
+      "yield": -20.7,
       "eur": -0.18,
+      "pnl": -0.18,
+      "staked": 0.87,
       "status": "red"
     },
     {
@@ -189,9 +291,14 @@
       "total": 4,
       "w": 1,
       "l": 3,
+      "losses": 3,
       "winPct": 25,
+      "win_pct": 25,
       "roi": -63.6,
+      "yield": -63.6,
       "eur": -0.42,
+      "pnl": -0.42,
+      "staked": 0.66,
       "status": "insuf"
     },
     {
@@ -199,9 +306,14 @@
       "total": 4,
       "w": 3,
       "l": 1,
+      "losses": 1,
       "winPct": 75,
+      "win_pct": 75,
       "roi": 24.3,
+      "yield": 24.3,
       "eur": 0.17,
+      "pnl": 0.17,
+      "staked": 0.72,
       "status": "insuf"
     },
     {
@@ -209,9 +321,14 @@
       "total": 4,
       "w": 2,
       "l": 2,
+      "losses": 2,
       "winPct": 50,
+      "win_pct": 50,
       "roi": -13.3,
+      "yield": -13.3,
       "eur": -0.08,
+      "pnl": -0.08,
+      "staked": 0.6,
       "status": "insuf"
     },
     {
@@ -219,9 +336,14 @@
       "total": 3,
       "w": 3,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 75.6,
+      "yield": 75.6,
       "eur": 0.34,
+      "pnl": 0.34,
+      "staked": 0.45,
       "status": "insuf"
     },
     {
@@ -229,9 +351,14 @@
       "total": 3,
       "w": 1,
       "l": 2,
+      "losses": 2,
       "winPct": 33,
+      "win_pct": 33,
       "roi": -40.0,
+      "yield": -40.0,
       "eur": -0.18,
+      "pnl": -0.18,
+      "staked": 0.45,
       "status": "insuf"
     },
     {
@@ -239,9 +366,14 @@
       "total": 3,
       "w": 3,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 48.9,
+      "yield": 48.9,
       "eur": 0.22,
+      "pnl": 0.22,
+      "staked": 0.45,
       "status": "insuf"
     },
     {
@@ -249,9 +381,14 @@
       "total": 2,
       "w": 1,
       "l": 1,
+      "losses": 1,
       "winPct": 50,
+      "win_pct": 50,
       "roi": -26.7,
+      "yield": -26.7,
       "eur": -0.08,
+      "pnl": -0.08,
+      "staked": 0.3,
       "status": "insuf"
     },
     {
@@ -259,9 +396,14 @@
       "total": 2,
       "w": 2,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 75.0,
+      "yield": 75.0,
       "eur": 0.27,
+      "pnl": 0.27,
+      "staked": 0.36,
       "status": "insuf"
     },
     {
@@ -269,9 +411,14 @@
       "total": 2,
       "w": 2,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 53.3,
+      "yield": 53.3,
       "eur": 0.16,
+      "pnl": 0.16,
+      "staked": 0.3,
       "status": "insuf"
     },
     {
@@ -279,9 +426,14 @@
       "total": 1,
       "w": 0,
       "l": 1,
+      "losses": 1,
       "winPct": 0,
+      "win_pct": 0,
       "roi": -100.0,
+      "yield": -100.0,
       "eur": -0.15,
+      "pnl": -0.15,
+      "staked": 0.15,
       "status": "insuf"
     },
     {
@@ -289,9 +441,14 @@
       "total": 1,
       "w": 1,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 93.3,
+      "yield": 93.3,
       "eur": 0.14,
+      "pnl": 0.14,
+      "staked": 0.15,
       "status": "insuf"
     },
     {
@@ -299,9 +456,14 @@
       "total": 1,
       "w": 1,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 80.0,
+      "yield": 80.0,
       "eur": 0.12,
+      "pnl": 0.12,
+      "staked": 0.15,
       "status": "insuf"
     }
   ],
@@ -311,9 +473,14 @@
       "total": 18,
       "w": 12,
       "l": 6,
+      "losses": 6,
       "winPct": 67,
+      "win_pct": 67,
       "roi": 15.8,
+      "yield": 15.8,
       "eur": 0.44,
+      "pnl": 0.44,
+      "staked": 2.76,
       "status": "green"
     },
     {
@@ -321,9 +488,14 @@
       "total": 13,
       "w": 7,
       "l": 6,
+      "losses": 6,
       "winPct": 54,
+      "win_pct": 54,
       "roi": -6.8,
+      "yield": -6.8,
       "eur": -0.13,
+      "pnl": -0.13,
+      "staked": 1.99,
       "status": "red"
     },
     {
@@ -331,9 +503,14 @@
       "total": 12,
       "w": 9,
       "l": 3,
+      "losses": 3,
       "winPct": 75,
+      "win_pct": 75,
       "roi": 18.7,
+      "yield": 18.7,
       "eur": 0.37,
+      "pnl": 0.37,
+      "staked": 1.98,
       "status": "green"
     },
     {
@@ -341,9 +518,14 @@
       "total": 6,
       "w": 2,
       "l": 4,
+      "losses": 4,
       "winPct": 33,
+      "win_pct": 33,
       "roi": -44.1,
+      "yield": -44.1,
       "eur": -0.45,
+      "pnl": -0.45,
+      "staked": 1.02,
       "status": "red"
     },
     {
@@ -351,9 +533,14 @@
       "total": 5,
       "w": 5,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 60.0,
+      "yield": 60.0,
       "eur": 0.45,
+      "pnl": 0.45,
+      "staked": 0.75,
       "status": "green"
     },
     {
@@ -361,9 +548,14 @@
       "total": 2,
       "w": 1,
       "l": 1,
+      "losses": 1,
       "winPct": 50,
+      "win_pct": 50,
       "roi": 0.0,
+      "yield": 0.0,
       "eur": 0.0,
+      "pnl": 0.0,
+      "staked": 0.3,
       "status": "insuf"
     },
     {
@@ -371,9 +563,14 @@
       "total": 2,
       "w": 0,
       "l": 2,
+      "losses": 2,
       "winPct": 0,
+      "win_pct": 0,
       "roi": -100.0,
+      "yield": -100.0,
       "eur": -0.36,
+      "pnl": -0.36,
+      "staked": 0.36,
       "status": "insuf"
     },
     {
@@ -381,9 +578,14 @@
       "total": 2,
       "w": 1,
       "l": 1,
+      "losses": 1,
       "winPct": 50,
+      "win_pct": 50,
       "roi": -14.0,
+      "yield": -14.0,
       "eur": -0.04,
+      "pnl": -0.04,
+      "staked": 0.3,
       "status": "insuf"
     },
     {
@@ -391,9 +593,14 @@
       "total": 1,
       "w": 1,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 66.7,
+      "yield": 66.7,
       "eur": 0.1,
+      "pnl": 0.1,
+      "staked": 0.15,
       "status": "insuf"
     },
     {
@@ -401,9 +608,14 @@
       "total": 1,
       "w": 1,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 46.7,
+      "yield": 46.7,
       "eur": 0.07,
+      "pnl": 0.07,
+      "staked": 0.15,
       "status": "insuf"
     },
     {
@@ -411,9 +623,14 @@
       "total": 1,
       "w": 0,
       "l": 1,
+      "losses": 1,
       "winPct": 0,
+      "win_pct": 0,
       "roi": -100.0,
+      "yield": -100.0,
       "eur": -0.15,
+      "pnl": -0.15,
+      "staked": 0.15,
       "status": "insuf"
     },
     {
@@ -421,9 +638,14 @@
       "total": 1,
       "w": 1,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 40.0,
+      "yield": 40.0,
       "eur": 0.06,
+      "pnl": 0.06,
+      "staked": 0.15,
       "status": "insuf"
     },
     {
@@ -431,9 +653,14 @@
       "total": 1,
       "w": 0,
       "l": 1,
+      "losses": 1,
       "winPct": 0,
+      "win_pct": 0,
       "roi": -100.0,
+      "yield": -100.0,
       "eur": -0.21,
+      "pnl": -0.21,
+      "staked": 0.21,
       "status": "insuf"
     },
     {
@@ -441,9 +668,14 @@
       "total": 1,
       "w": 1,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 40.0,
+      "yield": 40.0,
       "eur": 0.06,
+      "pnl": 0.06,
+      "staked": 0.15,
       "status": "insuf"
     },
     {
@@ -451,9 +683,14 @@
       "total": 1,
       "w": 1,
       "l": 0,
+      "losses": 0,
       "winPct": 100,
+      "win_pct": 100,
       "roi": 90.5,
+      "yield": 90.5,
       "eur": 0.19,
+      "pnl": 0.19,
+      "staked": 0.21,
       "status": "insuf"
     }
   ],
@@ -463,9 +700,14 @@
       "total": 49,
       "w": 27,
       "l": 22,
+      "losses": 22,
       "winPct": 55,
+      "win_pct": 55,
       "roi": -4.8,
+      "yield": -4.8,
       "eur": -0.37,
+      "pnl": -0.37,
+      "staked": 7.69,
       "status": "red"
     },
     {
@@ -473,9 +715,14 @@
       "total": 18,
       "w": 15,
       "l": 3,
+      "losses": 3,
       "winPct": 83,
+      "win_pct": 83,
       "roi": 25.9,
+      "yield": 25.9,
       "eur": 0.76,
+      "pnl": 0.76,
+      "staked": 2.94,
       "status": "green"
     }
   ],
@@ -506,18 +753,17 @@
       [
         {
           "roi": 33,
-          "n": 5
+          "n": 5,
+          "status": "green"
         },
         null,
         {
           "roi": -9,
-          "n": 4
+          "n": 4,
+          "status": "red"
         },
         null,
-        {
-          "roi": 40,
-          "n": 1
-        },
+        null,
         null,
         null,
         null
@@ -526,31 +772,28 @@
         null,
         {
           "roi": -78,
-          "n": 4
-        },
-        null,
-        {
-          "roi": 87,
-          "n": 1
+          "n": 4,
+          "status": "red"
         },
         null,
         null,
-        {
-          "roi": -100,
-          "n": 1
-        },
+        null,
+        null,
+        null,
         null
       ],
       [
         null,
         {
           "roi": 58,
-          "n": 6
+          "n": 6,
+          "status": "green"
         },
         null,
         {
           "roi": -3,
-          "n": 2
+          "n": 2,
+          "status": "red"
         },
         null,
         null,
@@ -559,109 +802,64 @@
       ],
       [
         null,
-        {
-          "roi": -100,
-          "n": 1
-        },
+        null,
         {
           "roi": -33,
-          "n": 2
-        },
-        {
-          "roi": -100,
-          "n": 1
-        },
-        {
-          "roi": 80,
-          "n": 1
+          "n": 2,
+          "status": "red"
         },
         null,
         null,
-        null
-      ],
-      [
-        {
-          "roi": 67,
-          "n": 1
-        },
-        null,
-        null,
-        {
-          "roi": -100,
-          "n": 1
-        },
-        {
-          "roi": 53,
-          "n": 1
-        },
         null,
         null,
         null
       ],
       [
         null,
-        {
-          "roi": -100,
-          "n": 1
-        },
-        {
-          "roi": 60,
-          "n": 1
-        },
         null,
         null,
-        {
-          "roi": -100,
-          "n": 1
-        },
-        {
-          "roi": -100,
-          "n": 1
-        },
+        null,
+        null,
+        null,
+        null,
         null
       ],
       [
-        {
-          "roi": 105,
-          "n": 1
-        },
-        null,
-        {
-          "roi": 57,
-          "n": 1
-        },
-        {
-          "roi": -100,
-          "n": 1
-        },
         null,
         null,
         null,
-        {
-          "roi": 72,
-          "n": 1
-        }
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ],
       [
         {
           "roi": -20,
-          "n": 2
+          "n": 2,
+          "status": "red"
         },
         null,
         null,
         null,
-        {
-          "roi": 87,
-          "n": 1
-        },
         null,
         null,
-        {
-          "roi": -100,
-          "n": 1
-        }
+        null,
+        null
       ]
-    ]
+    ],
+    "min_picks": 2
   },
   "periods": {
     "today": {
@@ -673,7 +871,8 @@
       "heatmap": {
         "leagues": [],
         "markets": [],
-        "cells": []
+        "cells": [],
+        "min_picks": 2
       }
     },
     "yest": {
@@ -685,7 +884,8 @@
       "heatmap": {
         "leagues": [],
         "markets": [],
-        "cells": []
+        "cells": [],
+        "min_picks": 2
       }
     },
     "weekend": {
@@ -695,9 +895,14 @@
           "total": 2,
           "w": 2,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 76.7,
+          "yield": 76.7,
           "eur": 0.23,
+          "pnl": 0.23,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -705,9 +910,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.15,
+          "pnl": -0.15,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -715,9 +925,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 90.0,
+          "yield": 90.0,
           "eur": 0.13,
+          "pnl": 0.13,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -725,9 +940,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         }
       ],
@@ -737,9 +957,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 53.3,
+          "yield": 53.3,
           "eur": 0.08,
+          "pnl": 0.08,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -747,9 +972,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 90.0,
+          "yield": 90.0,
           "eur": 0.13,
+          "pnl": 0.13,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -757,9 +987,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.15,
+          "pnl": -0.15,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -767,9 +1002,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -777,9 +1017,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 100.0,
+          "yield": 100.0,
           "eur": 0.15,
+          "pnl": 0.15,
+          "staked": 0.15,
           "status": "insuf"
         }
       ],
@@ -789,9 +1034,14 @@
           "total": 3,
           "w": 3,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 64.4,
+          "yield": 64.4,
           "eur": 0.29,
+          "pnl": 0.29,
+          "staked": 0.45,
           "status": "insuf"
         },
         {
@@ -799,9 +1049,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -5.0,
+          "yield": -5.0,
           "eur": -0.02,
+          "pnl": -0.02,
+          "staked": 0.3,
           "status": "insuf"
         }
       ],
@@ -823,34 +1078,8 @@
         ],
         "cells": [
           [
-            {
-              "roi": 53,
-              "n": 1
-            },
             null,
             null,
-            null,
-            {
-              "roi": 100,
-              "n": 1
-            }
-          ],
-          [
-            null,
-            null,
-            {
-              "roi": -100,
-              "n": 1
-            },
-            null,
-            null
-          ],
-          [
-            null,
-            {
-              "roi": 90,
-              "n": 1
-            },
             null,
             null,
             null
@@ -859,13 +1088,25 @@
             null,
             null,
             null,
-            {
-              "roi": 40,
-              "n": 1
-            },
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
             null
           ]
-        ]
+        ],
+        "min_picks": 2
       }
     },
     "7d": {
@@ -875,9 +1116,14 @@
           "total": 2,
           "w": 2,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 76.7,
+          "yield": 76.7,
           "eur": 0.23,
+          "pnl": 0.23,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -885,9 +1131,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.15,
+          "pnl": -0.15,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -895,9 +1146,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 100.0,
+          "yield": 100.0,
           "eur": 0.07,
+          "pnl": 0.07,
+          "staked": 0.07,
           "status": "insuf"
         },
         {
@@ -905,9 +1161,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 90.0,
+          "yield": 90.0,
           "eur": 0.13,
+          "pnl": 0.13,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -915,9 +1176,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         }
       ],
@@ -927,9 +1193,14 @@
           "total": 2,
           "w": 2,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 93.2,
+          "yield": 93.2,
           "eur": 0.2,
+          "pnl": 0.2,
+          "staked": 0.22,
           "status": "insuf"
         },
         {
@@ -937,9 +1208,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 53.3,
+          "yield": 53.3,
           "eur": 0.08,
+          "pnl": 0.08,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -947,9 +1223,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.15,
+          "pnl": -0.15,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -957,9 +1238,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -967,9 +1253,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 100.0,
+          "yield": 100.0,
           "eur": 0.15,
+          "pnl": 0.15,
+          "staked": 0.15,
           "status": "insuf"
         }
       ],
@@ -979,9 +1270,14 @@
           "total": 3,
           "w": 2,
           "l": 1,
+          "losses": 1,
           "winPct": 67,
+          "win_pct": 67,
           "roi": 14.9,
+          "yield": 14.9,
           "eur": 0.05,
+          "pnl": 0.05,
+          "staked": 0.37,
           "status": "insuf"
         },
         {
@@ -989,9 +1285,14 @@
           "total": 3,
           "w": 3,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 64.4,
+          "yield": 64.4,
           "eur": 0.29,
+          "pnl": 0.29,
+          "staked": 0.45,
           "status": "insuf"
         }
       ],
@@ -1015,42 +1316,6 @@
         "cells": [
           [
             null,
-            {
-              "roi": 53,
-              "n": 1
-            },
-            null,
-            null,
-            {
-              "roi": 100,
-              "n": 1
-            }
-          ],
-          [
-            null,
-            null,
-            {
-              "roi": -100,
-              "n": 1
-            },
-            null,
-            null
-          ],
-          [
-            {
-              "roi": 100,
-              "n": 1
-            },
-            null,
-            null,
-            null,
-            null
-          ],
-          [
-            {
-              "roi": 90,
-              "n": 1
-            },
             null,
             null,
             null,
@@ -1060,13 +1325,32 @@
             null,
             null,
             null,
-            {
-              "roi": 40,
-              "n": 1
-            },
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
             null
           ]
-        ]
+        ],
+        "min_picks": 2
       }
     },
     "month": {
@@ -1076,9 +1360,14 @@
           "total": 12,
           "w": 8,
           "l": 4,
+          "losses": 4,
           "winPct": 67,
+          "win_pct": 67,
           "roi": 6.0,
+          "yield": 6.0,
           "eur": 0.13,
+          "pnl": 0.13,
+          "staked": 2.16,
           "status": "amber"
         },
         {
@@ -1086,9 +1375,14 @@
           "total": 9,
           "w": 4,
           "l": 5,
+          "losses": 5,
           "winPct": 44,
+          "win_pct": 44,
           "roi": -28.3,
+          "yield": -28.3,
           "eur": -0.41,
+          "pnl": -0.41,
+          "staked": 1.45,
           "status": "red"
         },
         {
@@ -1096,9 +1390,14 @@
           "total": 8,
           "w": 4,
           "l": 4,
+          "losses": 4,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -15.2,
+          "yield": -15.2,
           "eur": -0.26,
+          "pnl": -0.26,
+          "staked": 1.71,
           "status": "red"
         },
         {
@@ -1106,9 +1405,14 @@
           "total": 8,
           "w": 6,
           "l": 2,
+          "losses": 2,
           "winPct": 75,
+          "win_pct": 75,
           "roi": 42.9,
+          "yield": 42.9,
           "eur": 0.52,
+          "pnl": 0.52,
+          "staked": 1.2,
           "status": "green"
         },
         {
@@ -1116,9 +1420,14 @@
           "total": 7,
           "w": 3,
           "l": 4,
+          "losses": 4,
           "winPct": 43,
+          "win_pct": 43,
           "roi": -22.4,
+          "yield": -22.4,
           "eur": -0.35,
+          "pnl": -0.35,
+          "staked": 1.56,
           "status": "red"
         },
         {
@@ -1126,9 +1435,14 @@
           "total": 6,
           "w": 4,
           "l": 2,
+          "losses": 2,
           "winPct": 67,
+          "win_pct": 67,
           "roi": 4.3,
+          "yield": 4.3,
           "eur": 0.05,
+          "pnl": 0.05,
+          "staked": 1.17,
           "status": "amber"
         },
         {
@@ -1136,9 +1450,14 @@
           "total": 6,
           "w": 3,
           "l": 3,
+          "losses": 3,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -8.9,
+          "yield": -8.9,
           "eur": -0.12,
+          "pnl": -0.12,
+          "staked": 1.35,
           "status": "red"
         },
         {
@@ -1146,9 +1465,14 @@
           "total": 5,
           "w": 4,
           "l": 1,
+          "losses": 1,
           "winPct": 80,
+          "win_pct": 80,
           "roi": 36.2,
+          "yield": 36.2,
           "eur": 0.32,
+          "pnl": 0.32,
+          "staked": 0.87,
           "status": "green"
         },
         {
@@ -1156,9 +1480,14 @@
           "total": 5,
           "w": 3,
           "l": 2,
+          "losses": 2,
           "winPct": 60,
+          "win_pct": 60,
           "roi": 0.0,
+          "yield": 0.0,
           "eur": 0.0,
+          "pnl": 0.0,
+          "staked": 1.2,
           "status": "amber"
         },
         {
@@ -1166,9 +1495,14 @@
           "total": 4,
           "w": 2,
           "l": 2,
+          "losses": 2,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -13.3,
+          "yield": -13.3,
           "eur": -0.08,
+          "pnl": -0.08,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -1176,9 +1510,14 @@
           "total": 4,
           "w": 3,
           "l": 1,
+          "losses": 1,
           "winPct": 75,
+          "win_pct": 75,
           "roi": 30.0,
+          "yield": 30.0,
           "eur": 0.36,
+          "pnl": 0.36,
+          "staked": 1.2,
           "status": "insuf"
         },
         {
@@ -1186,9 +1525,14 @@
           "total": 4,
           "w": 3,
           "l": 1,
+          "losses": 1,
           "winPct": 75,
+          "win_pct": 75,
           "roi": -10.7,
+          "yield": -10.7,
           "eur": -0.08,
+          "pnl": -0.08,
+          "staked": 0.75,
           "status": "insuf"
         },
         {
@@ -1196,9 +1540,14 @@
           "total": 4,
           "w": 3,
           "l": 1,
+          "losses": 1,
           "winPct": 75,
+          "win_pct": 75,
           "roi": 2.2,
+          "yield": 2.2,
           "eur": 0.02,
+          "pnl": 0.02,
+          "staked": 0.9,
           "status": "insuf"
         },
         {
@@ -1206,9 +1555,14 @@
           "total": 3,
           "w": 3,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 75.8,
+          "yield": 75.8,
           "eur": 0.5,
+          "pnl": 0.5,
+          "staked": 0.66,
           "status": "insuf"
         },
         {
@@ -1216,9 +1570,14 @@
           "total": 3,
           "w": 3,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 75.6,
+          "yield": 75.6,
           "eur": 0.34,
+          "pnl": 0.34,
+          "staked": 0.45,
           "status": "insuf"
         },
         {
@@ -1226,9 +1585,14 @@
           "total": 3,
           "w": 2,
           "l": 1,
+          "losses": 1,
           "winPct": 67,
+          "win_pct": 67,
           "roi": 25.3,
+          "yield": 25.3,
           "eur": 0.19,
+          "pnl": 0.19,
+          "staked": 0.75,
           "status": "insuf"
         },
         {
@@ -1236,9 +1600,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -26.7,
+          "yield": -26.7,
           "eur": -0.08,
+          "pnl": -0.08,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1246,9 +1615,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 96.7,
+          "yield": 96.7,
           "eur": 0.29,
+          "pnl": 0.29,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1256,9 +1630,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 56.7,
+          "yield": 56.7,
           "eur": 0.17,
+          "pnl": 0.17,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1266,9 +1645,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 93.3,
+          "yield": 93.3,
           "eur": 0.14,
+          "pnl": 0.14,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1276,9 +1660,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 80.0,
+          "yield": 80.0,
           "eur": 0.12,
+          "pnl": 0.12,
+          "staked": 0.15,
           "status": "insuf"
         }
       ],
@@ -1288,9 +1677,14 @@
           "total": 37,
           "w": 25,
           "l": 12,
+          "losses": 12,
           "winPct": 68,
+          "win_pct": 68,
           "roi": 16.3,
+          "yield": 16.3,
           "eur": 1.36,
+          "pnl": 1.36,
+          "staked": 8.31,
           "status": "green"
         },
         {
@@ -1298,9 +1692,14 @@
           "total": 15,
           "w": 8,
           "l": 7,
+          "losses": 7,
           "winPct": 53,
+          "win_pct": 53,
           "roi": -12.1,
+          "yield": -12.1,
           "eur": -0.29,
+          "pnl": -0.29,
+          "staked": 2.44,
           "status": "red"
         },
         {
@@ -1308,9 +1707,14 @@
           "total": 15,
           "w": 10,
           "l": 5,
+          "losses": 5,
           "winPct": 67,
+          "win_pct": 67,
           "roi": -2.1,
+          "yield": -2.1,
           "eur": -0.06,
+          "pnl": -0.06,
+          "staked": 2.88,
           "status": "amber"
         },
         {
@@ -1318,9 +1722,14 @@
           "total": 7,
           "w": 7,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 60.8,
+          "yield": 60.8,
           "eur": 0.73,
+          "pnl": 0.73,
+          "staked": 1.2,
           "status": "green"
         },
         {
@@ -1328,9 +1737,14 @@
           "total": 6,
           "w": 2,
           "l": 4,
+          "losses": 4,
           "winPct": 33,
+          "win_pct": 33,
           "roi": -44.1,
+          "yield": -44.1,
           "eur": -0.45,
+          "pnl": -0.45,
+          "staked": 1.02,
           "status": "red"
         },
         {
@@ -1338,9 +1752,14 @@
           "total": 3,
           "w": 2,
           "l": 1,
+          "losses": 1,
           "winPct": 67,
+          "win_pct": 67,
           "roi": 21.3,
+          "yield": 21.3,
           "eur": 0.13,
+          "pnl": 0.13,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -1348,9 +1767,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": 0.0,
+          "yield": 0.0,
           "eur": 0.0,
+          "pnl": 0.0,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1358,9 +1782,14 @@
           "total": 2,
           "w": 0,
           "l": 2,
+          "losses": 2,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.36,
+          "pnl": -0.36,
+          "staked": 0.36,
           "status": "insuf"
         },
         {
@@ -1368,9 +1797,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 60.0,
+          "yield": 60.0,
           "eur": 0.18,
+          "pnl": 0.18,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1378,9 +1812,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 66.7,
+          "yield": 66.7,
           "eur": 0.1,
+          "pnl": 0.1,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1388,9 +1827,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 46.7,
+          "yield": 46.7,
           "eur": 0.07,
+          "pnl": 0.07,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1398,9 +1842,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.15,
+          "pnl": -0.15,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1408,9 +1857,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 83.3,
+          "yield": 83.3,
           "eur": 0.25,
+          "pnl": 0.25,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1418,9 +1872,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1428,9 +1887,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.21,
+          "pnl": -0.21,
+          "staked": 0.21,
           "status": "insuf"
         },
         {
@@ -1438,9 +1902,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1448,9 +1917,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 90.5,
+          "yield": 90.5,
           "eur": 0.19,
+          "pnl": 0.19,
+          "staked": 0.21,
           "status": "insuf"
         },
         {
@@ -1458,9 +1932,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 53.3,
+          "yield": 53.3,
           "eur": 0.16,
+          "pnl": 0.16,
+          "staked": 0.3,
           "status": "insuf"
         }
       ],
@@ -1470,9 +1949,14 @@
           "total": 70,
           "w": 39,
           "l": 31,
+          "losses": 31,
           "winPct": 56,
+          "win_pct": 56,
           "roi": -3.6,
+          "yield": -3.6,
           "eur": -0.49,
+          "pnl": -0.49,
+          "staked": 13.54,
           "status": "red"
         },
         {
@@ -1480,9 +1964,14 @@
           "total": 27,
           "w": 24,
           "l": 3,
+          "losses": 3,
           "winPct": 89,
+          "win_pct": 89,
           "roi": 39.9,
+          "yield": 39.9,
           "eur": 2.25,
+          "pnl": 2.25,
+          "staked": 5.64,
           "status": "green"
         }
       ],
@@ -1513,17 +2002,16 @@
           [
             {
               "roi": -5,
-              "n": 6
+              "n": 6,
+              "status": "red"
             },
             null,
             {
               "roi": -9,
-              "n": 4
+              "n": 4,
+              "status": "red"
             },
-            {
-              "roi": 40,
-              "n": 1
-            },
+            null,
             null,
             null,
             null,
@@ -1533,42 +2021,30 @@
             null,
             {
               "roi": -78,
-              "n": 4
+              "n": 4,
+              "status": "red"
             },
             null,
             null,
-            {
-              "roi": 87,
-              "n": 1
-            },
             null,
             null,
-            {
-              "roi": -100,
-              "n": 1
-            }
+            null,
+            null
           ],
           [
-            {
-              "roi": 60,
-              "n": 1
-            },
-            {
-              "roi": -100,
-              "n": 1
-            },
+            null,
+            null,
             {
               "roi": -64,
-              "n": 3
+              "n": 3,
+              "status": "red"
             },
             {
               "roi": 62,
-              "n": 2
+              "n": 2,
+              "status": "green"
             },
-            {
-              "roi": -100,
-              "n": 1
-            },
+            null,
             null,
             null,
             null
@@ -1577,13 +2053,15 @@
             null,
             {
               "roi": 58,
-              "n": 6
+              "n": 6,
+              "status": "green"
             },
             null,
             null,
             {
               "roi": -3,
-              "n": 2
+              "n": 2,
+              "status": "red"
             },
             null,
             null,
@@ -1592,46 +2070,27 @@
           [
             {
               "roi": -17,
-              "n": 2
-            },
-            {
-              "roi": -100,
-              "n": 1
-            },
-            {
-              "roi": 60,
-              "n": 1
+              "n": 2,
+              "status": "red"
             },
             null,
             null,
-            {
-              "roi": 57,
-              "n": 1
-            },
-            {
-              "roi": -100,
-              "n": 1
-            },
-            {
-              "roi": -100,
-              "n": 1
-            }
+            null,
+            null,
+            null,
+            null,
+            null
           ],
           [
             {
               "roi": 73,
-              "n": 2
+              "n": 2,
+              "status": "green"
             },
             null,
             null,
-            {
-              "roi": 53,
-              "n": 1
-            },
-            {
-              "roi": -100,
-              "n": 1
-            },
+            null,
+            null,
             null,
             null,
             null
@@ -1639,7 +2098,8 @@
           [
             {
               "roi": -9,
-              "n": 6
+              "n": 6,
+              "status": "red"
             },
             null,
             null,
@@ -1650,31 +2110,17 @@
             null
           ],
           [
-            {
-              "roi": 105,
-              "n": 1
-            },
-            {
-              "roi": 93,
-              "n": 1
-            },
-            {
-              "roi": 57,
-              "n": 1
-            },
             null,
-            {
-              "roi": -100,
-              "n": 1
-            },
-            {
-              "roi": 72,
-              "n": 1
-            },
+            null,
+            null,
+            null,
+            null,
+            null,
             null,
             null
           ]
-        ]
+        ],
+        "min_picks": 2
       }
     },
     "since": {
@@ -1684,9 +2130,14 @@
           "total": 10,
           "w": 7,
           "l": 3,
+          "losses": 3,
           "winPct": 70,
+          "win_pct": 70,
           "roi": 16.0,
+          "yield": 16.0,
           "eur": 0.25,
+          "pnl": 0.25,
+          "staked": 1.56,
           "status": "green"
         },
         {
@@ -1694,9 +2145,14 @@
           "total": 9,
           "w": 4,
           "l": 5,
+          "losses": 5,
           "winPct": 44,
+          "win_pct": 44,
           "roi": -28.3,
+          "yield": -28.3,
           "eur": -0.41,
+          "pnl": -0.41,
+          "staked": 1.45,
           "status": "red"
         },
         {
@@ -1704,9 +2160,14 @@
           "total": 8,
           "w": 6,
           "l": 2,
+          "losses": 2,
           "winPct": 75,
+          "win_pct": 75,
           "roi": 42.9,
+          "yield": 42.9,
           "eur": 0.52,
+          "pnl": 0.52,
+          "staked": 1.2,
           "status": "green"
         },
         {
@@ -1714,9 +2175,14 @@
           "total": 5,
           "w": 2,
           "l": 3,
+          "losses": 3,
           "winPct": 40,
+          "win_pct": 40,
           "roi": -37.0,
+          "yield": -37.0,
           "eur": -0.3,
+          "pnl": -0.3,
+          "staked": 0.81,
           "status": "red"
         },
         {
@@ -1724,9 +2190,14 @@
           "total": 5,
           "w": 3,
           "l": 2,
+          "losses": 2,
           "winPct": 60,
+          "win_pct": 60,
           "roi": -20.7,
+          "yield": -20.7,
           "eur": -0.18,
+          "pnl": -0.18,
+          "staked": 0.87,
           "status": "red"
         },
         {
@@ -1734,9 +2205,14 @@
           "total": 4,
           "w": 1,
           "l": 3,
+          "losses": 3,
           "winPct": 25,
+          "win_pct": 25,
           "roi": -63.6,
+          "yield": -63.6,
           "eur": -0.42,
+          "pnl": -0.42,
+          "staked": 0.66,
           "status": "insuf"
         },
         {
@@ -1744,9 +2220,14 @@
           "total": 4,
           "w": 3,
           "l": 1,
+          "losses": 1,
           "winPct": 75,
+          "win_pct": 75,
           "roi": 24.3,
+          "yield": 24.3,
           "eur": 0.17,
+          "pnl": 0.17,
+          "staked": 0.72,
           "status": "insuf"
         },
         {
@@ -1754,9 +2235,14 @@
           "total": 4,
           "w": 2,
           "l": 2,
+          "losses": 2,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -13.3,
+          "yield": -13.3,
           "eur": -0.08,
+          "pnl": -0.08,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -1764,9 +2250,14 @@
           "total": 3,
           "w": 3,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 75.6,
+          "yield": 75.6,
           "eur": 0.34,
+          "pnl": 0.34,
+          "staked": 0.45,
           "status": "insuf"
         },
         {
@@ -1774,9 +2265,14 @@
           "total": 3,
           "w": 1,
           "l": 2,
+          "losses": 2,
           "winPct": 33,
+          "win_pct": 33,
           "roi": -40.0,
+          "yield": -40.0,
           "eur": -0.18,
+          "pnl": -0.18,
+          "staked": 0.45,
           "status": "insuf"
         },
         {
@@ -1784,9 +2280,14 @@
           "total": 3,
           "w": 3,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 48.9,
+          "yield": 48.9,
           "eur": 0.22,
+          "pnl": 0.22,
+          "staked": 0.45,
           "status": "insuf"
         },
         {
@@ -1794,9 +2295,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -26.7,
+          "yield": -26.7,
           "eur": -0.08,
+          "pnl": -0.08,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1804,9 +2310,14 @@
           "total": 2,
           "w": 2,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 75.0,
+          "yield": 75.0,
           "eur": 0.27,
+          "pnl": 0.27,
+          "staked": 0.36,
           "status": "insuf"
         },
         {
@@ -1814,9 +2325,14 @@
           "total": 2,
           "w": 2,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 53.3,
+          "yield": 53.3,
           "eur": 0.16,
+          "pnl": 0.16,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1824,9 +2340,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.15,
+          "pnl": -0.15,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1834,9 +2355,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 93.3,
+          "yield": 93.3,
           "eur": 0.14,
+          "pnl": 0.14,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1844,9 +2370,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 80.0,
+          "yield": 80.0,
           "eur": 0.12,
+          "pnl": 0.12,
+          "staked": 0.15,
           "status": "insuf"
         }
       ],
@@ -1856,9 +2387,14 @@
           "total": 18,
           "w": 12,
           "l": 6,
+          "losses": 6,
           "winPct": 67,
+          "win_pct": 67,
           "roi": 15.8,
+          "yield": 15.8,
           "eur": 0.44,
+          "pnl": 0.44,
+          "staked": 2.76,
           "status": "green"
         },
         {
@@ -1866,9 +2402,14 @@
           "total": 13,
           "w": 7,
           "l": 6,
+          "losses": 6,
           "winPct": 54,
+          "win_pct": 54,
           "roi": -6.8,
+          "yield": -6.8,
           "eur": -0.13,
+          "pnl": -0.13,
+          "staked": 1.99,
           "status": "red"
         },
         {
@@ -1876,9 +2417,14 @@
           "total": 12,
           "w": 9,
           "l": 3,
+          "losses": 3,
           "winPct": 75,
+          "win_pct": 75,
           "roi": 18.7,
+          "yield": 18.7,
           "eur": 0.37,
+          "pnl": 0.37,
+          "staked": 1.98,
           "status": "green"
         },
         {
@@ -1886,9 +2432,14 @@
           "total": 6,
           "w": 2,
           "l": 4,
+          "losses": 4,
           "winPct": 33,
+          "win_pct": 33,
           "roi": -44.1,
+          "yield": -44.1,
           "eur": -0.45,
+          "pnl": -0.45,
+          "staked": 1.02,
           "status": "red"
         },
         {
@@ -1896,9 +2447,14 @@
           "total": 5,
           "w": 5,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 60.0,
+          "yield": 60.0,
           "eur": 0.45,
+          "pnl": 0.45,
+          "staked": 0.75,
           "status": "green"
         },
         {
@@ -1906,9 +2462,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": 0.0,
+          "yield": 0.0,
           "eur": 0.0,
+          "pnl": 0.0,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1916,9 +2477,14 @@
           "total": 2,
           "w": 0,
           "l": 2,
+          "losses": 2,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.36,
+          "pnl": -0.36,
+          "staked": 0.36,
           "status": "insuf"
         },
         {
@@ -1926,9 +2492,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -14.0,
+          "yield": -14.0,
           "eur": -0.04,
+          "pnl": -0.04,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -1936,9 +2507,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 66.7,
+          "yield": 66.7,
           "eur": 0.1,
+          "pnl": 0.1,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1946,9 +2522,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 46.7,
+          "yield": 46.7,
           "eur": 0.07,
+          "pnl": 0.07,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1956,9 +2537,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.15,
+          "pnl": -0.15,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1966,9 +2552,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1976,9 +2567,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.21,
+          "pnl": -0.21,
+          "staked": 0.21,
           "status": "insuf"
         },
         {
@@ -1986,9 +2582,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -1996,9 +2597,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 90.5,
+          "yield": 90.5,
           "eur": 0.19,
+          "pnl": 0.19,
+          "staked": 0.21,
           "status": "insuf"
         }
       ],
@@ -2008,9 +2614,14 @@
           "total": 49,
           "w": 27,
           "l": 22,
+          "losses": 22,
           "winPct": 55,
+          "win_pct": 55,
           "roi": -4.8,
+          "yield": -4.8,
           "eur": -0.37,
+          "pnl": -0.37,
+          "staked": 7.69,
           "status": "red"
         },
         {
@@ -2018,9 +2629,14 @@
           "total": 18,
           "w": 15,
           "l": 3,
+          "losses": 3,
           "winPct": 83,
+          "win_pct": 83,
           "roi": 25.9,
+          "yield": 25.9,
           "eur": 0.76,
+          "pnl": 0.76,
+          "staked": 2.94,
           "status": "green"
         }
       ],
@@ -2051,18 +2667,17 @@
           [
             {
               "roi": 33,
-              "n": 5
+              "n": 5,
+              "status": "green"
             },
             null,
             {
               "roi": -9,
-              "n": 4
+              "n": 4,
+              "status": "red"
             },
             null,
-            {
-              "roi": 40,
-              "n": 1
-            },
+            null,
             null,
             null,
             null
@@ -2071,31 +2686,28 @@
             null,
             {
               "roi": -78,
-              "n": 4
-            },
-            null,
-            {
-              "roi": 87,
-              "n": 1
+              "n": 4,
+              "status": "red"
             },
             null,
             null,
-            {
-              "roi": -100,
-              "n": 1
-            },
+            null,
+            null,
+            null,
             null
           ],
           [
             null,
             {
               "roi": 58,
-              "n": 6
+              "n": 6,
+              "status": "green"
             },
             null,
             {
               "roi": -3,
-              "n": 2
+              "n": 2,
+              "status": "red"
             },
             null,
             null,
@@ -2104,109 +2716,64 @@
           ],
           [
             null,
-            {
-              "roi": -100,
-              "n": 1
-            },
+            null,
             {
               "roi": -33,
-              "n": 2
-            },
-            {
-              "roi": -100,
-              "n": 1
-            },
-            {
-              "roi": 80,
-              "n": 1
+              "n": 2,
+              "status": "red"
             },
             null,
             null,
-            null
-          ],
-          [
-            {
-              "roi": 67,
-              "n": 1
-            },
-            null,
-            null,
-            {
-              "roi": -100,
-              "n": 1
-            },
-            {
-              "roi": 53,
-              "n": 1
-            },
             null,
             null,
             null
           ],
           [
             null,
-            {
-              "roi": -100,
-              "n": 1
-            },
-            {
-              "roi": 60,
-              "n": 1
-            },
             null,
             null,
-            {
-              "roi": -100,
-              "n": 1
-            },
-            {
-              "roi": -100,
-              "n": 1
-            },
+            null,
+            null,
+            null,
+            null,
             null
           ],
           [
-            {
-              "roi": 105,
-              "n": 1
-            },
-            null,
-            {
-              "roi": 57,
-              "n": 1
-            },
-            {
-              "roi": -100,
-              "n": 1
-            },
             null,
             null,
             null,
-            {
-              "roi": 72,
-              "n": 1
-            }
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
           ],
           [
             {
               "roi": -20,
-              "n": 2
+              "n": 2,
+              "status": "red"
             },
             null,
             null,
             null,
-            {
-              "roi": 87,
-              "n": 1
-            },
             null,
             null,
-            {
-              "roi": -100,
-              "n": 1
-            }
+            null,
+            null
           ]
-        ]
+        ],
+        "min_picks": 2
       }
     },
     "hist": {
@@ -2216,9 +2783,14 @@
           "total": 13,
           "w": 9,
           "l": 4,
+          "losses": 4,
           "winPct": 69,
+          "win_pct": 69,
           "roi": 12.2,
+          "yield": 12.2,
           "eur": 0.3,
+          "pnl": 0.3,
+          "staked": 2.46,
           "status": "green"
         },
         {
@@ -2226,9 +2798,14 @@
           "total": 10,
           "w": 5,
           "l": 5,
+          "losses": 5,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -16.2,
+          "yield": -16.2,
           "eur": -0.37,
+          "pnl": -0.37,
+          "staked": 2.31,
           "status": "red"
         },
         {
@@ -2236,9 +2813,14 @@
           "total": 9,
           "w": 4,
           "l": 5,
+          "losses": 5,
           "winPct": 44,
+          "win_pct": 44,
           "roi": -28.3,
+          "yield": -28.3,
           "eur": -0.41,
+          "pnl": -0.41,
+          "staked": 1.45,
           "status": "red"
         },
         {
@@ -2246,9 +2828,14 @@
           "total": 8,
           "w": 6,
           "l": 2,
+          "losses": 2,
           "winPct": 75,
+          "win_pct": 75,
           "roi": 42.9,
+          "yield": 42.9,
           "eur": 0.52,
+          "pnl": 0.52,
+          "staked": 1.2,
           "status": "green"
         },
         {
@@ -2256,9 +2843,14 @@
           "total": 7,
           "w": 3,
           "l": 4,
+          "losses": 4,
           "winPct": 43,
+          "win_pct": 43,
           "roi": -22.4,
+          "yield": -22.4,
           "eur": -0.35,
+          "pnl": -0.35,
+          "staked": 1.56,
           "status": "red"
         },
         {
@@ -2266,9 +2858,14 @@
           "total": 7,
           "w": 5,
           "l": 2,
+          "losses": 2,
           "winPct": 71,
+          "win_pct": 71,
           "roi": 15.1,
+          "yield": 15.1,
           "eur": 0.22,
+          "pnl": 0.22,
+          "staked": 1.47,
           "status": "green"
         },
         {
@@ -2276,9 +2873,14 @@
           "total": 7,
           "w": 5,
           "l": 2,
+          "losses": 2,
           "winPct": 71,
+          "win_pct": 71,
           "roi": 21.1,
+          "yield": 21.1,
           "eur": 0.31,
+          "pnl": 0.31,
+          "staked": 1.47,
           "status": "green"
         },
         {
@@ -2286,9 +2888,14 @@
           "total": 6,
           "w": 3,
           "l": 3,
+          "losses": 3,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -20.0,
+          "yield": -20.0,
           "eur": -0.3,
+          "pnl": -0.3,
+          "staked": 1.5,
           "status": "red"
         },
         {
@@ -2296,9 +2903,14 @@
           "total": 6,
           "w": 3,
           "l": 3,
+          "losses": 3,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -8.9,
+          "yield": -8.9,
           "eur": -0.12,
+          "pnl": -0.12,
+          "staked": 1.35,
           "status": "red"
         },
         {
@@ -2306,9 +2918,14 @@
           "total": 5,
           "w": 3,
           "l": 2,
+          "losses": 2,
           "winPct": 60,
+          "win_pct": 60,
           "roi": 23.3,
+          "yield": 23.3,
           "eur": 0.21,
+          "pnl": 0.21,
+          "staked": 0.9,
           "status": "green"
         },
         {
@@ -2316,9 +2933,14 @@
           "total": 5,
           "w": 4,
           "l": 1,
+          "losses": 1,
           "winPct": 80,
+          "win_pct": 80,
           "roi": 38.0,
+          "yield": 38.0,
           "eur": 0.57,
+          "pnl": 0.57,
+          "staked": 1.5,
           "status": "green"
         },
         {
@@ -2326,9 +2948,14 @@
           "total": 5,
           "w": 5,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 79.0,
+          "yield": 79.0,
           "eur": 0.83,
+          "pnl": 0.83,
+          "staked": 1.05,
           "status": "green"
         },
         {
@@ -2336,9 +2963,14 @@
           "total": 4,
           "w": 2,
           "l": 2,
+          "losses": 2,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -0.5,
+          "yield": -0.5,
           "eur": -0.04,
+          "pnl": -0.04,
+          "staked": 8.0,
           "status": "insuf"
         },
         {
@@ -2346,9 +2978,14 @@
           "total": 4,
           "w": 3,
           "l": 1,
+          "losses": 1,
           "winPct": 75,
+          "win_pct": 75,
           "roi": -10.7,
+          "yield": -10.7,
           "eur": -0.08,
+          "pnl": -0.08,
+          "staked": 0.75,
           "status": "insuf"
         },
         {
@@ -2356,9 +2993,14 @@
           "total": 4,
           "w": 3,
           "l": 1,
+          "losses": 1,
           "winPct": 75,
+          "win_pct": 75,
           "roi": 2.2,
+          "yield": 2.2,
           "eur": 0.02,
+          "pnl": 0.02,
+          "staked": 0.9,
           "status": "insuf"
         },
         {
@@ -2366,9 +3008,14 @@
           "total": 3,
           "w": 2,
           "l": 1,
+          "losses": 1,
           "winPct": 67,
+          "win_pct": 67,
           "roi": 13.3,
+          "yield": 13.3,
           "eur": 0.08,
+          "pnl": 0.08,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -2376,9 +3023,14 @@
           "total": 3,
           "w": 3,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 75.8,
+          "yield": 75.8,
           "eur": 0.5,
+          "pnl": 0.5,
+          "staked": 0.66,
           "status": "insuf"
         },
         {
@@ -2386,9 +3038,14 @@
           "total": 3,
           "w": 3,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 86.0,
+          "yield": 86.0,
           "eur": 4.13,
+          "pnl": 4.13,
+          "staked": 4.8,
           "status": "insuf"
         },
         {
@@ -2396,9 +3053,14 @@
           "total": 3,
           "w": 2,
           "l": 1,
+          "losses": 1,
           "winPct": 67,
+          "win_pct": 67,
           "roi": 25.3,
+          "yield": 25.3,
           "eur": 0.19,
+          "pnl": 0.19,
+          "staked": 0.75,
           "status": "insuf"
         },
         {
@@ -2406,9 +3068,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -20.0,
+          "yield": -20.0,
           "eur": -0.12,
+          "pnl": -0.12,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -2416,9 +3083,14 @@
           "total": 2,
           "w": 2,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 60.0,
+          "yield": 60.0,
           "eur": 0.36,
+          "pnl": 0.36,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -2426,9 +3098,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -18.3,
+          "yield": -18.3,
           "eur": -0.11,
+          "pnl": -0.11,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -2436,9 +3113,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.3,
+          "pnl": -0.3,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -2446,9 +3128,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 86.7,
+          "yield": 86.7,
           "eur": 0.26,
+          "pnl": 0.26,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -2456,9 +3143,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 80.0,
+          "yield": 80.0,
           "eur": 0.24,
+          "pnl": 0.24,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -2466,9 +3158,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 96.7,
+          "yield": 96.7,
           "eur": 0.29,
+          "pnl": 0.29,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -2476,9 +3173,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 56.7,
+          "yield": 56.7,
           "eur": 0.17,
+          "pnl": 0.17,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -2486,9 +3188,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 56.7,
+          "yield": 56.7,
           "eur": 0.17,
+          "pnl": 0.17,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -2496,9 +3203,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 93.3,
+          "yield": 93.3,
           "eur": 0.14,
+          "pnl": 0.14,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -2506,9 +3218,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 80.0,
+          "yield": 80.0,
           "eur": 0.12,
+          "pnl": 0.12,
+          "staked": 0.15,
           "status": "insuf"
         }
       ],
@@ -2518,9 +3235,14 @@
           "total": 59,
           "w": 42,
           "l": 17,
+          "losses": 17,
           "winPct": 71,
+          "win_pct": 71,
           "roi": 37.0,
+          "yield": 37.0,
           "eur": 6.97,
+          "pnl": 6.97,
+          "staked": 18.81,
           "status": "green"
         },
         {
@@ -2528,9 +3250,14 @@
           "total": 16,
           "w": 9,
           "l": 7,
+          "losses": 7,
           "winPct": 56,
+          "win_pct": 56,
           "roi": -4.0,
+          "yield": -4.0,
           "eur": -0.11,
+          "pnl": -0.11,
+          "staked": 2.74,
           "status": "red"
         },
         {
@@ -2538,9 +3265,14 @@
           "total": 15,
           "w": 10,
           "l": 5,
+          "losses": 5,
           "winPct": 67,
+          "win_pct": 67,
           "roi": -2.1,
+          "yield": -2.1,
           "eur": -0.06,
+          "pnl": -0.06,
+          "staked": 2.88,
           "status": "amber"
         },
         {
@@ -2548,9 +3280,14 @@
           "total": 7,
           "w": 7,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 60.8,
+          "yield": 60.8,
           "eur": 0.73,
+          "pnl": 0.73,
+          "staked": 1.2,
           "status": "green"
         },
         {
@@ -2558,9 +3295,14 @@
           "total": 6,
           "w": 2,
           "l": 4,
+          "losses": 4,
           "winPct": 33,
+          "win_pct": 33,
           "roi": -44.1,
+          "yield": -44.1,
           "eur": -0.45,
+          "pnl": -0.45,
+          "staked": 1.02,
           "status": "red"
         },
         {
@@ -2568,9 +3310,14 @@
           "total": 3,
           "w": 2,
           "l": 1,
+          "losses": 1,
           "winPct": 67,
+          "win_pct": 67,
           "roi": 21.3,
+          "yield": 21.3,
           "eur": 0.13,
+          "pnl": 0.13,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -2578,9 +3325,14 @@
           "total": 2,
           "w": 2,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 64.5,
+          "yield": 64.5,
           "eur": 0.39,
+          "pnl": 0.39,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -2588,9 +3340,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": 0.0,
+          "yield": 0.0,
           "eur": 0.0,
+          "pnl": 0.0,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -2598,9 +3355,14 @@
           "total": 2,
           "w": 0,
           "l": 2,
+          "losses": 2,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.36,
+          "pnl": -0.36,
+          "staked": 0.36,
           "status": "insuf"
         },
         {
@@ -2608,9 +3370,14 @@
           "total": 2,
           "w": 1,
           "l": 1,
+          "losses": 1,
           "winPct": 50,
+          "win_pct": 50,
           "roi": -23.3,
+          "yield": -23.3,
           "eur": -0.14,
+          "pnl": -0.14,
+          "staked": 0.6,
           "status": "insuf"
         },
         {
@@ -2618,9 +3385,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 66.7,
+          "yield": 66.7,
           "eur": 0.1,
+          "pnl": 0.1,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -2628,9 +3400,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 46.7,
+          "yield": 46.7,
           "eur": 0.07,
+          "pnl": 0.07,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -2638,9 +3415,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.15,
+          "pnl": -0.15,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -2648,9 +3430,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 83.3,
+          "yield": 83.3,
           "eur": 0.25,
+          "pnl": 0.25,
+          "staked": 0.3,
           "status": "insuf"
         },
         {
@@ -2658,9 +3445,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -2668,9 +3460,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -0.21,
+          "pnl": -0.21,
+          "staked": 0.21,
           "status": "insuf"
         },
         {
@@ -2678,9 +3475,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 40.0,
+          "yield": 40.0,
           "eur": 0.06,
+          "pnl": 0.06,
+          "staked": 0.15,
           "status": "insuf"
         },
         {
@@ -2688,9 +3490,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 90.5,
+          "yield": 90.5,
           "eur": 0.19,
+          "pnl": 0.19,
+          "staked": 0.21,
           "status": "insuf"
         },
         {
@@ -2698,9 +3505,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -2.0,
+          "pnl": -2.0,
+          "staked": 2.0,
           "status": "insuf"
         },
         {
@@ -2708,9 +3520,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 102.0,
+          "yield": 102.0,
           "eur": 2.04,
+          "pnl": 2.04,
+          "staked": 2.0,
           "status": "insuf"
         },
         {
@@ -2718,9 +3535,14 @@
           "total": 1,
           "w": 0,
           "l": 1,
+          "losses": 1,
           "winPct": 0,
+          "win_pct": 0,
           "roi": -100.0,
+          "yield": -100.0,
           "eur": -2.0,
+          "pnl": -2.0,
+          "staked": 2.0,
           "status": "insuf"
         },
         {
@@ -2728,9 +3550,14 @@
           "total": 1,
           "w": 1,
           "l": 0,
+          "losses": 0,
           "winPct": 100,
+          "win_pct": 100,
           "roi": 96.0,
+          "yield": 96.0,
           "eur": 1.92,
+          "pnl": 1.92,
+          "staked": 2.0,
           "status": "insuf"
         }
       ],
@@ -2740,9 +3567,14 @@
           "total": 95,
           "w": 56,
           "l": 39,
+          "losses": 39,
           "winPct": 59,
+          "win_pct": 59,
           "roi": 14.2,
+          "yield": 14.2,
           "eur": 4.5,
+          "pnl": 4.5,
+          "staked": 31.74,
           "status": "green"
         },
         {
@@ -2750,9 +3582,14 @@
           "total": 31,
           "w": 28,
           "l": 3,
+          "losses": 3,
           "winPct": 90,
+          "win_pct": 90,
           "roi": 42.7,
+          "yield": 42.7,
           "eur": 2.92,
+          "pnl": 2.92,
+          "staked": 6.84,
           "status": "green"
         }
       ],
@@ -2783,46 +3620,39 @@
           [
             {
               "roi": 9,
-              "n": 7
+              "n": 7,
+              "status": "green"
             },
             null,
             {
               "roi": -9,
-              "n": 4
-            },
-            {
-              "roi": 40,
-              "n": 1
+              "n": 4,
+              "status": "red"
             },
             null,
             null,
-            {
-              "roi": 60,
-              "n": 1
-            },
+            null,
+            null,
             null
           ],
           [
-            {
-              "roi": 60,
-              "n": 1
-            },
+            null,
             {
               "roi": 8,
-              "n": 2
+              "n": 2,
+              "status": "green"
             },
             {
               "roi": -64,
-              "n": 3
+              "n": 3,
+              "status": "red"
             },
             {
               "roi": 62,
-              "n": 2
+              "n": 2,
+              "status": "green"
             },
-            {
-              "roi": -100,
-              "n": 1
-            },
+            null,
             null,
             null,
             null
@@ -2831,14 +3661,12 @@
             null,
             {
               "roi": -78,
-              "n": 4
+              "n": 4,
+              "status": "red"
             },
             null,
             null,
-            {
-              "roi": 87,
-              "n": 1
-            },
+            null,
             null,
             null,
             null
@@ -2847,13 +3675,15 @@
             null,
             {
               "roi": 58,
-              "n": 6
+              "n": 6,
+              "status": "green"
             },
             null,
             null,
             {
               "roi": -3,
-              "n": 2
+              "n": 2,
+              "status": "red"
             },
             null,
             null,
@@ -2862,71 +3692,41 @@
           [
             {
               "roi": -17,
-              "n": 2
-            },
-            {
-              "roi": -100,
-              "n": 1
-            },
-            {
-              "roi": 60,
-              "n": 1
+              "n": 2,
+              "status": "red"
             },
             null,
             null,
-            {
-              "roi": 57,
-              "n": 1
-            },
             null,
-            {
-              "roi": -100,
-              "n": 1
-            }
+            null,
+            null,
+            null,
+            null
           ],
           [
             {
               "roi": -32,
-              "n": 2
-            },
-            {
-              "roi": 93,
-              "n": 1
-            },
-            {
-              "roi": 57,
-              "n": 1
+              "n": 2,
+              "status": "red"
             },
             null,
-            {
-              "roi": -100,
-              "n": 1
-            },
-            {
-              "roi": 72,
-              "n": 1
-            },
-            {
-              "roi": 69,
-              "n": 1
-            },
+            null,
+            null,
+            null,
+            null,
+            null,
             null
           ],
           [
             {
               "roi": 79,
-              "n": 3
+              "n": 3,
+              "status": "green"
             },
             null,
             null,
-            {
-              "roi": 53,
-              "n": 1
-            },
-            {
-              "roi": -100,
-              "n": 1
-            },
+            null,
+            null,
             null,
             null,
             null
@@ -2934,20 +3734,19 @@
           [
             {
               "roi": -55,
-              "n": 4
+              "n": 4,
+              "status": "red"
             },
             null,
             null,
-            {
-              "roi": 80,
-              "n": 1
-            },
+            null,
             null,
             null,
             null,
             null
           ]
-        ]
+        ],
+        "min_picks": 2
       }
     }
   },
@@ -2983,14 +3782,16 @@
     1,
     1
   ],
-  "drawdown": -1.0,
+  "drawdown": -4.0,
   "currentStreak": {
     "type": "W",
-    "n": 4
+    "n": 4,
+    "status": "+4"
   },
   "bestStreak": {
     "type": "W",
-    "n": 9
+    "n": 9,
+    "status": "+9"
   },
   "shadowBasket": {
     "total": 0,
