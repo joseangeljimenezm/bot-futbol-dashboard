@@ -1,7 +1,22 @@
 // Main app shell
 
 const { useState: useStateA, useEffect: useEffectA, useMemo: useMemoA } = React;
-const D2 = window.DASH;
+
+// Hook que accede a window.DASH de forma segura
+function useD2() {
+  const [d2, setD2] = useStateA(window.DASH || null);
+  useEffectA(() => {
+    if (!window.DASH) {
+      const handler = () => setD2(window.DASH);
+      window.addEventListener("dash:ready", handler);
+      return () => window.removeEventListener("dash:ready", handler);
+    }
+  }, []);
+  return d2;
+}
+
+// D2 variable global para acceso directo fuera de componentes React
+let D2 = window.DASH;
 
 function ErrorBoundary({ children }) {
   const [hasError, setHasError] = useStateA(false);
@@ -468,6 +483,12 @@ function ShadowTab({ period, pd }) {
 
 /* ============== APP ============== */
 function App() {
+  // Esperar a que window.DASH esté disponible
+  if (!window.DASH) {
+    return <div style={{padding:"40px", textAlign:"center", color:"#a8b0c4"}}>Cargando datos...</div>;
+  }
+  if (!D2) D2 = window.DASH;
+
   const [tab, setTab] = useStateA("picks");
   const [period, setPeriod] = useStateA("since");
   const [disabled, setDisabled] = useStateA({
