@@ -68,7 +68,7 @@ function TopBar({ period, setPeriod, tab }) {
   const tabName = ({picks:"Picks Reales", virtual:"Análisis Virtual", shadow:"Modo Sombra"})[tab];
   let updatedTime = "—";
   try {
-    const dt = new Date(D2.meta.generated_at);
+    const dt = new Date(window.DASH.meta.generated_at);
     const d = dt.getDate().toString().padStart(2,"0");
     const m = (dt.getMonth()+1).toString().padStart(2,"0");
     const y = dt.getFullYear();
@@ -138,11 +138,11 @@ function Nav({ tab, setTab }) {
       <div style={{marginTop:"auto", padding:"14px 10px 4px", borderTop:"1px solid var(--border)", marginLeft:-12, marginRight:-12, paddingLeft:22, paddingRight:22}}>
         <div className="text-3" style={{fontSize:10.5, textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6, fontWeight:600}}>Créditos API</div>
         <div className="row" style={{justifyContent:"space-between"}}>
-          <span className="mono" style={{fontSize:14, fontWeight:600}}>{D2.api.used.toLocaleString("es")}</span>
-          <span className="text-3 mono" style={{fontSize:11.5}}>/ {D2.api.total.toLocaleString("es")}</span>
+          <span className="mono" style={{fontSize:14, fontWeight:600}}>{window.DASH.api.used.toLocaleString("es")}</span>
+          <span className="text-3 mono" style={{fontSize:11.5}}>/ {window.DASH.api.total.toLocaleString("es")}</span>
         </div>
         <div style={{height:3, background:"rgba(255,255,255,0.06)", borderRadius:2, marginTop:6, overflow:"hidden"}}>
-          <div style={{width: `${(D2.api.used/D2.api.total)*100}%`, height:"100%", background:"var(--green)"}}></div>
+          <div style={{width: `${(window.DASH.api.used/window.DASH.api.total)*100}%`, height:"100%", background:"var(--green)"}}></div>
         </div>
       </div>
     </nav>
@@ -172,7 +172,7 @@ function ImpactBanner({ impact, onApply, onDiscard }) {
         <div>
           <div className="imp-label">ROI</div>
           <div className="imp-val">
-            <span className="text-3">{D2.bank.roi.toFixed(1)}%</span>
+            <span className="text-3">{window.DASH.bank.roi.toFixed(1)}%</span>
             <span className="text-3" style={{margin:"0 6px", fontSize:14}}>→</span>
             <span className={better ? "green" : "red"}>
               {impact.newROI > 0 ? "+" : ""}{impact.newROI.toFixed(1)}%
@@ -251,16 +251,16 @@ function PicksTab({ period, pd, disabled, onToggleLeague, onToggleMarket, onTogg
         <div className="panel">
           <div className="panel-h">
             <h3>📈 Evolución de banca</h3>
-            <span className="sub">{D2.bank.diff > 0 ? "+" : ""}{D2.bank.diff.toFixed(2)}€ · ROI {D2.bank.roi.toFixed(1)}%</span>
+            <span className="sub">{window.DASH.bank.diff > 0 ? "+" : ""}{window.DASH.bank.diff.toFixed(2)}€ · ROI {window.DASH.bank.roi.toFixed(1)}%</span>
           </div>
           <div className="panel-body">
-            <EquityCurve data={D2.equity} initial={D2.bank.initial} height={260}/>
+            <EquityCurve data={window.DASH.equity} initial={window.DASH.bank.initial} height={260}/>
           </div>
         </div>
         <div className="panel">
           <div className="panel-h">
             <h3>🎯 En juego hoy</h3>
-            <span className="sub">{D2.livePicks.length} picks</span>
+            <span className="sub">{window.DASH.livePicks.length} picks</span>
           </div>
           <div className="panel-body" style={{padding: 12}}>
             <LivePicks/>
@@ -272,7 +272,7 @@ function PicksTab({ period, pd, disabled, onToggleLeague, onToggleMarket, onTogg
         <HeatmapPanel
           title="Heatmap Liga × Mercado"
           sub="ROI % y volumen por celda · click para detalle"
-          rows={D2.hmLeagues} cols={D2.hmMarkets} matrix={pd.heatmap}
+          rows={window.DASH.hmLeagues} cols={window.DASH.hmMarkets} matrix={pd.heatmap}
           selected={hmSel} setSelected={setHmSel}
           disabled={new Set([...disabled.leagues])}
         />
@@ -286,19 +286,19 @@ function PicksTab({ period, pd, disabled, onToggleLeague, onToggleMarket, onTogg
             <span className="sub">verde = día ganador</span>
           </div>
           <div className="panel-body" style={{display:"flex", flexDirection:"column", gap:18}}>
-            <DailyStrip days={D2.dailyResults}/>
+            <DailyStrip days={window.DASH.dailyResults}/>
             <div style={{display:"flex", gap:24, paddingTop:14, borderTop:"1px solid var(--border)"}}>
               <div>
                 <div className="text-3" style={{fontSize:10.5, textTransform:"uppercase", letterSpacing:"0.06em", fontWeight:600}}>Drawdown</div>
-                <div className={`mono ${D2.drawdown < -5 ? "red" : "amber"}`} style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>{D2.drawdown}%</div>
+                <div className={`mono ${window.DASH.drawdown < -5 ? "red" : "amber"}`} style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>{window.DASH.drawdown}%</div>
               </div>
               <div>
                 <div className="text-3" style={{fontSize:10.5, textTransform:"uppercase", letterSpacing:"0.06em", fontWeight:600}}>Racha actual</div>
-                <div className={`mono ${D2.currentStreak.type === "W" ? "green" : "red"}`} style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>{D2.currentStreak.status}</div>
+                <div className={`mono ${window.DASH.currentStreak.type === "W" ? "green" : "red"}`} style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>{window.DASH.currentStreak.status}</div>
               </div>
               <div>
                 <div className="text-3" style={{fontSize:10.5, textTransform:"uppercase", letterSpacing:"0.06em", fontWeight:600}}>Mejor racha</div>
-                <div className={`mono ${D2.bestStreak.type === "W" ? "green" : "red"}`} style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>{D2.bestStreak.status}</div>
+                <div className={`mono ${window.DASH.bestStreak.type === "W" ? "green" : "red"}`} style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>{window.DASH.bestStreak.status}</div>
               </div>
             </div>
           </div>
@@ -361,7 +361,7 @@ function VirtualTab({ period, pd, disabled, onToggleLeague, onToggleMarket, onTo
         <HeatmapPanel
           title="Heatmap Liga × Mercado · rechazados"
           sub="dónde estaríamos ganando si activáramos"
-          rows={D2.hmLeagues} cols={D2.hmMarkets} matrix={pd.heatmap}
+          rows={window.DASH.hmLeagues} cols={window.DASH.hmMarkets} matrix={pd.heatmap}
           selected={hmSel} setSelected={setHmSel}/>
       </div>
 
@@ -430,7 +430,7 @@ function ShadowTab({ period, pd }) {
         <HeatmapPanel
           title="Heatmap sombra · Liga × Mercado"
           sub="picks no-jugados · sólo análisis"
-          rows={D2.hmLeaguesShadow} cols={D2.hmMarketsShadow} matrix={pd.heatmapShadow}
+          rows={window.DASH.hmLeaguesShadow} cols={window.DASH.hmMarketsShadow} matrix={pd.heatmapShadow}
           selected={hmSel} setSelected={setHmSel}/>
       </div>
 
@@ -483,21 +483,36 @@ function ShadowTab({ period, pd }) {
 
 /* ============== APP ============== */
 function App() {
-  // Esperar a que window.DASH esté disponible
-  if (!window.DASH) {
-    return <div style={{padding:"40px", textAlign:"center", color:"#a8b0c4"}}>Cargando datos...</div>;
-  }
-  if (!D2) D2 = window.DASH;
-
   const [tab, setTab] = useStateA("picks");
   const [period, setPeriod] = useStateA("since");
   const [disabled, setDisabled] = useStateA({
     leagues: new Set(), markets: new Set(), odds: new Set(), corners: new Set(),
   });
+
+  // Actualizar D2 cuando window.DASH esté listo
+  useEffectA(() => {
+    if (window.DASH && !D2) {
+      window.D2 = window.DASH;
+      D2 = window.DASH;
+    }
+    if (!window.DASH) {
+      window.addEventListener("dash:ready", () => {
+        D2 = window.DASH;
+      });
+    }
+  }, []);
+
+  // No renderizar si window.DASH no existe
+  if (!window.DASH) {
+    return <div style={{padding:"40px", textAlign:"center", color:"#a8b0c4"}}>Cargando datos...</div>;
+  }
   const [impact, setImpact] = useStateA(null);
 
   // SCALED data for current period — flows into every panel
-  const pd = useMemoA(() => D2.getPeriod(period), [period]);
+  const pd = useMemoA(() => {
+    if (!D2 || !window.DASH) return {};
+    return window.DASH.getPeriod(period);
+  }, [period]);
 
   function toggleIn(group) {
     return (key) => {
@@ -533,7 +548,7 @@ function App() {
     const lgRoi = sumPicks ? kept.reduce((s, r) => s + r.roi * r.total, 0) / sumPicks : 0;
     const newROI = (lgRoi + mktRoi + oddsRoi + cornersRoi) / 4;
     const newPnL = (newROI / 100) * sumPicks * 0.21;
-    setImpact({ newROI, newPnL, picks: sumPicks, deltaROI: newROI - D2.bank.roi });
+    setImpact({ newROI, newPnL, picks: sumPicks, deltaROI: newROI - window.DASH.bank.roi });
   }, [disabled, pd]);
 
   function applyImpact() { setImpact(null); }
