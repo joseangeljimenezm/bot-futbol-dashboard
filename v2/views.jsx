@@ -135,7 +135,7 @@ function labelFor(p) {
 
 /* ============== LIVE PICKS ============== */
 function LivePicks() {
-  const picks = safeArray(D?.livePicks, []);
+  const picks = safeArray(window.DASH?.livePicks, []);
   if (picks.length === 0) {
     return (
       <div style={{ padding: "20px", textAlign: "center", color: "var(--text-3)" }}>
