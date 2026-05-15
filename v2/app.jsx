@@ -3,6 +3,30 @@
 const { useState: useStateA, useEffect: useEffectA, useMemo: useMemoA } = React;
 const D2 = window.DASH;
 
+function ErrorBoundary({ children }) {
+  const [hasError, setHasError] = useStateA(false);
+
+  useEffectA(() => {
+    const handleError = () => setHasError(true);
+    window.addEventListener("error", handleError);
+    window.addEventListener("unhandledrejection", handleError);
+    return () => {
+      window.removeEventListener("error", handleError);
+      window.removeEventListener("unhandledrejection", handleError);
+    };
+  }, []);
+
+  if (hasError) {
+    return (
+      <div style={{padding:"40px", textAlign:"center", color:"#ff5c7a", fontFamily:"sans-serif"}}>
+        <h2>Error en la aplicación</h2>
+        <p>Recarga la página o contacta al soporte</p>
+      </div>
+    );
+  }
+  return children;
+}
+
 function Logo() {
   return (
     <div className="logo-area">
@@ -517,4 +541,4 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+ReactDOM.createRoot(document.getElementById("root")).render(<ErrorBoundary><App/></ErrorBoundary>);
