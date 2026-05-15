@@ -473,12 +473,6 @@ function App() {
   const [disabled, setDisabled] = useStateA({
     leagues: new Set(), markets: new Set(), odds: new Set(), corners: new Set(),
   });
-
-
-  // No renderizar si window.DASH no existe
-  if (!window.DASH) {
-    return <div style={{padding:"40px", textAlign:"center", color:"#a8b0c4"}}>Cargando datos...</div>;
-  }
   const [impact, setImpact] = useStateA(null);
 
   // SCALED data for current period — flows into every panel
@@ -486,6 +480,11 @@ function App() {
     if (!window.DASH || !window.DASH.getPeriod) return {};
     return window.DASH.getPeriod(period);
   }, [period]);
+
+  // No renderizar si window.DASH no existe
+  if (!window.DASH) {
+    return <div style={{padding:"40px", textAlign:"center", color:"#a8b0c4"}}>Cargando datos...</div>;
+  }
 
   function toggleIn(group) {
     return (key) => {
