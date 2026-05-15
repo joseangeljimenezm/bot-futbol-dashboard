@@ -218,10 +218,14 @@ function HeatmapPanel({ title, sub, rows, cols, matrix, selected, setSelected, d
         </div>
       </div>
       <div className="panel-body" style={{paddingBottom: 12}}>
-        <Heatmap rows={safeRows} cols={safeCols} matrix={safeMatrix}
-                 selected={selected} onSelect={setSelected}
-                 disabled={disabled}/>
-        {selected && (
+        {safeMatrix.length === 0 || !safeMatrix.some(row => Array.isArray(row)) ? (
+          <p className="text-3" style={{padding: "20px", textAlign: "center", opacity: 0.6}}>Sin datos para este período</p>
+        ) : (
+          <>
+            <Heatmap rows={safeRows} cols={safeCols} matrix={safeMatrix}
+                     selected={selected} onSelect={setSelected}
+                     disabled={disabled}/>
+            {selected && (
           <div style={{
             marginTop: 14,
             padding: "12px 14px",
@@ -260,10 +264,12 @@ function HeatmapPanel({ title, sub, rows, cols, matrix, selected, setSelected, d
           borderTop: "1px solid var(--border)",
           display: "flex", gap: 24, fontSize: 12, color: "var(--text-3)"
         }}>
-          <div><span className="text-3">Total muestra:</span> <span className="mono" style={{color:"var(--text)", fontWeight:600}}>{totalN} picks</span></div>
-          <div><span className="text-3">ROI ponderado:</span> <span className={"mono " + (wAvg>=0?"green":"red")} style={{fontWeight:600}}>{wAvg>0?"+":""}{wAvg.toFixed(1)}%</span></div>
-          <div><span className="text-3">Celdas verdes:</span> <span className="mono green" style={{fontWeight:600}}>{posCells}</span> <span className="text-3">·</span> <span className="text-3">rojas:</span> <span className="mono red" style={{fontWeight:600}}>{negCells}</span></div>
-        </div>
+            <div><span className="text-3">Total muestra:</span> <span className="mono" style={{color:"var(--text)", fontWeight:600}}>{totalN} picks</span></div>
+            <div><span className="text-3">ROI ponderado:</span> <span className={"mono " + (wAvg>=0?"green":"red")} style={{fontWeight:600}}>{wAvg>0?"+":""}{wAvg.toFixed(1)}%</span></div>
+            <div><span className="text-3">Celdas verdes:</span> <span className="mono green" style={{fontWeight:600}}>{posCells}</span> <span className="text-3">·</span> <span className="text-3">rojas:</span> <span className="mono red" style={{fontWeight:600}}>{negCells}</span></div>
+          </div>
+          </>
+        )}
       </div>
     </div>
   );
