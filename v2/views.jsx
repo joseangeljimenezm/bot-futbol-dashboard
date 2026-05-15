@@ -4,6 +4,25 @@ const { useState: useStateV, useMemo: useMemoV } = React;
 
 const D = window.DASH;
 
+/* ============== VALIDACIÓN DE DATOS ============== */
+function safeNum(v, def = 0) {
+  const n = parseFloat(v);
+  return isNaN(n) || !isFinite(n) ? def : n;
+}
+
+function safeArray(arr, def = []) {
+  return Array.isArray(arr) ? arr : def;
+}
+
+function safeObj(obj, def = {}) {
+  return obj && typeof obj === "object" ? obj : def;
+}
+
+function ensureKPI(period) {
+  if (!D || !D.kpis) return { roi: 0, profit: 0, picks: 0, wins: 0, edge: 0, yld: 0, win: 0 };
+  return D.kpis[period] || D.kpis.since || { roi: 0, profit: 0, picks: 0, wins: 0, edge: 0, yld: 0, win: 0 };
+}
+
 /* ============== KPI HERO (compact, configurable) ============== */
 function KPICard({ label, value, unit, sub, delta, spark, sparkColor, featured, danger }) {
   return (
@@ -30,8 +49,8 @@ function KPICard({ label, value, unit, sub, delta, spark, sparkColor, featured, 
 }
 
 function KPIHero({ period }) {
-  const k = D.kpis[period] || D.kpis.since;
-  const equityVals = D.equity.map(e => e.v);
+  const k = ensureKPI(period);
+  const equityVals = safeArray(D?.equity, []).map(e => safeNum(e?.v, 0));
   let slice = equityVals;
   if (period === "today") slice = equityVals.slice(-2);
   else if (period === "yest") slice = equityVals.slice(-3, -1);
@@ -39,35 +58,46 @@ function KPIHero({ period }) {
   else if (period === "7d") slice = equityVals.slice(-7);
   else if (period === "month") slice = equityVals.slice(-10);
 
+  const bankCurrent = safeNum(D?.bank?.current, 100);
+  const bankDiff = safeNum(D?.bank?.diff, 0);
+  const bankRoi = safeNum(D?.bank?.roi, 0);
+  const kRoi = safeNum(k.roi, 0);
+  const kProfit = safeNum(k.profit, 0);
+  const kYld = safeNum(k.yld, 0);
+  const kEdge = safeNum(k.edge, 0);
+  const kWin = safeNum(k.win, 0);
+  const kPicks = Math.max(0, Math.round(k.picks || 0));
+  const liveCt = safeArray(D?.livePicks, []).length;
+
   return (
     <div className="kpi-grid">
       <KPICard
         label="Banca actual" featured
-        value={D.bank.current.toFixed(2)} unit="€"
-        delta={{ v: D.bank.diff, pct: D.bank.roi }}
-        sub={`Inicial 100€ · ${D.bank.diff > 0 ? "+" : ""}${D.bank.diff.toFixed(2)}€`}
+        value={bankCurrent.toFixed(2)} unit="€"
+        delta={{ v: bankDiff, pct: bankRoi }}
+        sub={`Inicial 100€ · ${bankDiff > 0 ? "+" : ""}${bankDiff.toFixed(2)}€`}
         spark={equityVals} sparkColor="#ff5c7a"
       />
       <KPICard
         label={`ROI ${labelFor(period)}`}
-        value={`${k.roi > 0 ? "+" : ""}${k.roi.toFixed(1)}`} unit="%"
-        sub={`${k.profit > 0 ? "+" : ""}${k.profit.toFixed(2)}€ · ${k.picks} picks`}
-        spark={slice} sparkColor={k.roi >= 0 ? "var(--green)" : "var(--red)"}
-        danger={k.roi < 0}
+        value={`${kRoi > 0 ? "+" : ""}${kRoi.toFixed(1)}`} unit="%"
+        sub={`${kProfit > 0 ? "+" : ""}${kProfit.toFixed(2)}€ · ${kPicks} picks`}
+        spark={slice} sparkColor={kRoi >= 0 ? "var(--green)" : "var(--red)"}
+        danger={kRoi < 0}
       />
       <KPICard
         label="Yield / Edge medio"
-        value={`${k.yld > 0 ? "+" : ""}${k.yld.toFixed(1)}`} unit="%"
-        sub={<span>edge medio <b className="mono" style={{color:"var(--text-2)"}}>{k.edge.toFixed(1)}pp</b></span>}
+        value={`${kYld > 0 ? "+" : ""}${kYld.toFixed(1)}`} unit="%"
+        sub={<span>edge medio <b className="mono" style={{color:"var(--text-2)"}}>{kEdge.toFixed(1)}pp</b></span>}
       />
       <KPICard
         label="% Acierto"
-        value={k.win} unit="%"
-        sub={<span><WLStrip w={Math.round(k.picks * k.win/100)} l={k.picks - Math.round(k.picks*k.win/100)} max={14}/></span>}
+        value={kWin} unit="%"
+        sub={<span><WLStrip w={Math.round(kPicks * kWin / 100)} l={Math.max(0, kPicks - Math.round(kPicks * kWin / 100))} max={14}/></span>}
       />
       <KPICard
         label="Picks en juego hoy"
-        value={D.livePicks.length} unit=""
+        value={liveCt} unit=""
         sub={<span className="green" style={{fontWeight:600}}>EN VIVO · próx 13:00</span>}
       />
     </div>
@@ -79,38 +109,68 @@ function labelFor(p) {
 
 /* ============== LIVE PICKS ============== */
 function LivePicks() {
+  const picks = safeArray(D?.livePicks, []);
+  if (picks.length === 0) {
+    return (
+      <div style={{ padding: "20px", textAlign: "center", color: "var(--text-3)" }}>
+        <div style={{ fontSize: 13 }}>Sin picks en vivo para hoy</div>
+      </div>
+    );
+  }
   return (
     <div className="picks-grid">
-      {D.livePicks.map((p, i) => (
-        <div className="pick" key={i}>
-          <div className="pick-time">⏱ {p.time}</div>
-          <div className="pick-top">
-            <span className="pick-league">{p.league}</span>
-            <span className="pick-conf">
-              <span className="stars">{"★".repeat(p.conf+1)}</span>
-              {p.conf >= 1 ? "ALTA" : "MEDIA"}
-            </span>
+      {picks.map((p, i) => {
+        const conf = Math.max(0, Math.min(3, Math.round(p?.conf || 1)));
+        const odds = safeNum(p?.odds, 1.0);
+        return (
+          <div className="pick" key={i}>
+            <div className="pick-time">⏱ {p?.time || "—"}</div>
+            <div className="pick-top">
+              <span className="pick-league">{p?.league || "?"}</span>
+              <span className="pick-conf">
+                <span className="stars">{"★".repeat(conf + 1)}</span>
+                {conf >= 1 ? "ALTA" : "MEDIA"}
+              </span>
+            </div>
+            <div className="pick-match">
+              {p?.home || "?"} <span className="text-3">vs</span> {p?.away || "?"}
+            </div>
+            <div className="pick-bet">
+              <span className="pick-market">{p?.market || "?"}</span>
+              <span className="pick-odds">@ {odds.toFixed(2)}</span>
+            </div>
           </div>
-          <div className="pick-match">
-            {p.home} <span className="text-3">vs</span> {p.away}
-          </div>
-          <div className="pick-bet">
-            <span className="pick-market">{p.market}</span>
-            <span className="pick-odds">@ {p.odds.toFixed(2)}</span>
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
 
 /* ============== HEATMAP PANEL (reusable) ============== */
 function HeatmapPanel({ title, sub, rows, cols, matrix, selected, setSelected, disabled }) {
+  // Validar datos
+  const safeRows = safeArray(rows, []);
+  const safeCols = safeArray(cols, []);
+  const safeMatrix = safeArray(matrix, []);
+
   // Compute summary
   let totalN = 0, totalROI = 0, posCells = 0, negCells = 0;
-  matrix.forEach(row => row.forEach(c => {
-    if (c) { totalN += c.n; totalROI += c.roi * c.n; if (c.roi > 0) posCells++; else if (c.roi < 0) negCells++; }
-  }));
+  if (safeMatrix.length > 0) {
+    safeMatrix.forEach(row => {
+      if (Array.isArray(row)) {
+        row.forEach(c => {
+          if (c && typeof c === "object") {
+            const n = safeNum(c.n, 0);
+            const roi = safeNum(c.roi, 0);
+            totalN += n;
+            totalROI += roi * n;
+            if (roi > 0) posCells++;
+            else if (roi < 0) negCells++;
+          }
+        });
+      }
+    });
+  }
   const wAvg = totalN ? totalROI / totalN : 0;
 
   return (
@@ -132,7 +192,7 @@ function HeatmapPanel({ title, sub, rows, cols, matrix, selected, setSelected, d
         </div>
       </div>
       <div className="panel-body" style={{paddingBottom: 12}}>
-        <Heatmap rows={rows} cols={cols} matrix={matrix}
+        <Heatmap rows={safeRows} cols={safeCols} matrix={safeMatrix}
                  selected={selected} onSelect={setSelected}
                  disabled={disabled}/>
         {selected && (
