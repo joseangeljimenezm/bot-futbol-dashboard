@@ -77,6 +77,25 @@
     const hmShadow = raw.heatmapShadow?.cells ? raw.heatmapShadow : { leagues: raw.hmLeaguesShadow || [], markets: raw.hmMarketsShadow || [], cells: raw.heatmapShadow || [] };
     const hmProd = raw.heatmapProd?.cells ? raw.heatmapProd : { leagues: raw.hmLeaguesProd || [], markets: raw.hmMarketsProd || [], cells: raw.heatmapProd || [] };
 
+    function expandHeatmap(ppHm, refHm) {
+      // If ppHm is just cells array, use as-is. If it has structure with leagues/markets, expand to ref size.
+      if (!ppHm) return refHm.cells;
+      if (Array.isArray(ppHm)) return ppHm; // Already expanded
+      // ppHm is {leagues, markets, cells} — need to expand to ref size
+      const result = Array(refHm.leagues.length).fill(null).map(() => Array(refHm.markets.length).fill(null));
+      const ppLgMap = {}; ppHm.leagues?.forEach((lg, i) => { ppLgMap[lg] = i; });
+      const ppMktMap = {}; ppHm.markets?.forEach((mkt, i) => { ppMktMap[mkt] = i; });
+      refHm.leagues.forEach((lg, ri) => {
+        refHm.markets.forEach((mkt, ci) => {
+          const ppi = ppLgMap[lg];
+          const pci = ppMktMap[mkt];
+          if (ppi != null && pci != null && ppHm.cells && ppHm.cells[ppi]) {
+            result[ri][ci] = ppHm.cells[ppi][ci];
+          }
+        });
+      });
+      return result;
+    }
     function getPeriod(p) {
       // Best: Python pre-computed this period
       if (raw.periods && raw.periods[p]) {
@@ -87,9 +106,9 @@
           byOdds:   pp.byOdds   || raw.byOdds,
           byCorners: pp.byCorners || raw.byCorners,
           byReason: pp.byReason || raw.byReason,
-          heatmap:       (pp.heatmap?.cells       ? pp.heatmap.cells       : pp.heatmap)       || hm.cells,
-          heatmapProd:   (pp.heatmapProd?.cells   ? pp.heatmapProd.cells   : pp.heatmapProd)   || hmProd.cells,
-          heatmapShadow: (pp.heatmapShadow?.cells ? pp.heatmapShadow.cells : pp.heatmapShadow) || hmShadow.cells,
+          heatmap:       expandHeatmap(pp.heatmap, hm),
+          heatmapProd:   expandHeatmap(pp.heatmapProd, hmProd),
+          heatmapShadow: expandHeatmap(pp.heatmapShadow, hmShadow),
           shadowBasket:   pp.shadowBasket   || raw.shadowBasket,
           shadowFootball: pp.shadowFootball || raw.shadowFootball,
         };
