@@ -3,6 +3,17 @@
  * Production: your Python script regenerates ONLY data.json (see README_PRODUCCION.md).
  */
 (function () {
+  // ============== SAFE NUMERIC OPERATIONS ==============
+  function safeNum(v, def = 0) {
+    const n = Number(v);
+    return isNaN(n) || !isFinite(n) ? def : n;
+  }
+  function safeDivide(num, denom, def = 0) {
+    const n = safeNum(num);
+    const d = safeNum(denom);
+    return d === 0 ? def : num / denom;
+  }
+
   // ============== PERIOD SCALING ==============
   // Used when data.json doesn't pre-compute each period (simple mode).
   // If your Python emits a `periods` map, scaling is skipped.
@@ -20,28 +31,32 @@
     return "red";
   }
   function scaleRow(row, factor, periodKey, stake) {
-    const total = Math.max(0, Math.round(row.total * factor));
+    if (!row || typeof row !== "object") return null;
+    const rowTotal = safeNum(row.total, 0);
+    const total = Math.max(0, Math.round(rowTotal * factor));
     if (total === 0) return null;
-    const wRatio = row.total ? row.w / row.total : 0;
-    const lRatio = row.total ? row.l / row.total : 0;
+    const wRatio = safeDivide(safeNum(row.w, 0), rowTotal, 0);
+    const lRatio = safeDivide(safeNum(row.l, 0), rowTotal, 0);
     const w = Math.round(total * wRatio);
     const l = Math.round(total * lRatio);
-    const winPct = total ? Math.round((w / total) * 100) : 0;
+    const winPct = total ? Math.round(safeDivide(w, total, 0) * 100) : 0;
     const seed = (hash(row.name + periodKey) % 21) - 10;
     const blendK = factor < 0.3 ? 0.55 : factor < 0.75 ? 0.35 : 0;
     const periodMean = PERIOD_BIAS[periodKey] ?? 0;
-    let roi = row.roi * (1 - blendK) + periodMean * blendK + seed * (factor < 0.3 ? 1 : 0.3);
+    let roi = safeNum(row.roi, 0) * (1 - blendK) + periodMean * blendK + seed * (factor < 0.3 ? 1 : 0.3);
     roi = Math.max(-95, Math.min(95, roi));
-    const eur = (roi / 100) * total * (stake || 0.21);
-    return { ...row, total, w, l, winPct, roi: +roi.toFixed(1), eur: +eur.toFixed(2), status: statusFor(total, roi) };
+    const stk = stake || 0.21;
+    const eur = safeDivide(roi, 100, 0) * total * stk;
+    return { ...row, total, w, l, winPct, roi: +roi.toFixed(1), eur: +Math.max(-999999, Math.min(999999, eur)).toFixed(2), status: statusFor(total, roi) };
   }
   function scaleCell(cell, factor, key) {
-    if (!cell) return null;
-    const n = Math.max(0, Math.round(cell.n * factor));
+    if (!cell || typeof cell !== "object") return null;
+    const cellN = safeNum(cell.n, 0);
+    const n = Math.max(0, Math.round(cellN * factor));
     if (n === 0) return null;
     const seed = (hash(key) % 17) - 8;
     const blendK = factor < 0.3 ? 0.4 : factor < 0.75 ? 0.2 : 0;
-    let roi = cell.roi * (1 - blendK) + seed * (factor < 0.3 ? 1.2 : 0.4);
+    let roi = safeNum(cell.roi, 0) * (1 - blendK) + seed * (factor < 0.3 ? 1.2 : 0.4);
     roi = Math.max(-60, Math.min(60, Math.round(roi)));
     return { roi, n };
   }
@@ -128,6 +143,13 @@
         return res.json();
       })
       .then(raw => {
+        if (!raw || typeof raw !== "object") throw new Error("data.json is not an object");
+        if (!raw.meta || typeof raw.meta !== "object") {
+          raw.meta = { generated_at: new Date().toISOString(), stake_default: 0.21 };
+        }
+        if (!raw.bank || typeof raw.bank !== "object") {
+          raw.bank = { current: 0, diff: 0, roi: 0 };
+        }
         window.DASH = buildDash(raw);
         window.dispatchEvent(new Event("dash:ready"));
       })
