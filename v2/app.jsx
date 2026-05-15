@@ -228,6 +228,10 @@ function PicksTab({ period, pd, disabled, onToggleLeague, onToggleMarket, onTogg
 
       <KPIHero period={period} />
 
+      <div className="row-12">
+        <ModelHealthPanel/>
+      </div>
+
       <div className="row-2">
         <div className="panel">
           <div className="panel-h">
