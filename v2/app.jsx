@@ -2,21 +2,6 @@
 
 const { useState: useStateA, useEffect: useEffectA, useMemo: useMemoA } = React;
 
-// Hook que accede a window.DASH de forma segura
-function useD2() {
-  const [d2, setD2] = useStateA(window.DASH || null);
-  useEffectA(() => {
-    if (!window.DASH) {
-      const handler = () => setD2(window.DASH);
-      window.addEventListener("dash:ready", handler);
-      return () => window.removeEventListener("dash:ready", handler);
-    }
-  }, []);
-  return d2;
-}
-
-// D2 variable global para acceso directo fuera de componentes React
-let D2 = window.DASH;
 
 function ErrorBoundary({ children }) {
   const [hasError, setHasError] = useStateA(false);
@@ -489,18 +474,6 @@ function App() {
     leagues: new Set(), markets: new Set(), odds: new Set(), corners: new Set(),
   });
 
-  // Actualizar D2 cuando window.DASH esté listo
-  useEffectA(() => {
-    if (window.DASH && !D2) {
-      window.D2 = window.DASH;
-      D2 = window.DASH;
-    }
-    if (!window.DASH) {
-      window.addEventListener("dash:ready", () => {
-        D2 = window.DASH;
-      });
-    }
-  }, []);
 
   // No renderizar si window.DASH no existe
   if (!window.DASH) {
@@ -510,7 +483,7 @@ function App() {
 
   // SCALED data for current period — flows into every panel
   const pd = useMemoA(() => {
-    if (!D2 || !window.DASH) return {};
+    if (!window.DASH || !window.DASH.getPeriod) return {};
     return window.DASH.getPeriod(period);
   }, [period]);
 
