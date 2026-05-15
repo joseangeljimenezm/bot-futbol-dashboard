@@ -503,6 +503,7 @@ function App() {
   useEffectA(() => {
     const total = disabled.leagues.size + disabled.markets.size + disabled.odds.size + disabled.corners.size;
     if (total === 0) { setImpact(null); return; }
+    if (!pd || !pd.byLeague || !pd.byMarket || !pd.byOdds || !pd.byCorners) { setImpact(null); return; }
     let kept = pd.byLeague.filter(r => !disabled.leagues.has(r.name));
     const keptMarkets = new Set(pd.byMarket.filter(r => !disabled.markets.has(r.name)).map(r=>r.name));
     const keptOdds = new Set(pd.byOdds.filter(r => !disabled.odds.has(r.name)).map(r=>r.name));
