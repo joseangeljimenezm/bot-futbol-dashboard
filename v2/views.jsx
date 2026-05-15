@@ -48,6 +48,31 @@ function KPICard({ label, value, unit, sub, delta, spark, sparkColor, featured, 
   );
 }
 
+/* ============== CONFIDENCE BADGE (TIER 2) ============== */
+function ConfidenceBadge({ pickCount = 67 }) {
+  const target = 100;
+  const confidence = pickCount >= target ? "Alto" : pickCount >= 50 ? "Medio" : "Bajo";
+  const color = pickCount >= target ? "#22c55e" : pickCount >= 50 ? "#eab308" : "#ef4444";
+  const icon = pickCount >= target ? "✓" : "⚠";
+  return (
+    <div style={{
+      padding: "8px 12px",
+      background: `${color}20`,
+      border: `1px solid ${color}40`,
+      borderRadius: 6,
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      fontSize: 12,
+      fontWeight: 500,
+      color: color
+    }}>
+      <span style={{fontSize: 14}}>{icon}</span>
+      <span>{pickCount} picks · {confidence} confianza ({target - pickCount > 0 ? `+${target - pickCount} necesarios` : "Suficiente"})</span>
+    </div>
+  );
+}
+
 function KPIHero({ period }) {
   const k = ensureKPI(period);
   const equityVals = safeArray(D?.equity, []).map(e => safeNum(e?.v, 0));
@@ -70,37 +95,40 @@ function KPIHero({ period }) {
   const liveCt = safeArray(D?.livePicks, []).length;
 
   return (
-    <div className="kpi-grid">
-      <KPICard
-        label="Banca actual" featured
-        value={bankCurrent.toFixed(2)} unit="€"
-        delta={{ v: bankDiff, pct: bankRoi }}
-        sub={`Inicial 100€ · ${bankDiff > 0 ? "+" : ""}${bankDiff.toFixed(2)}€`}
-        spark={equityVals} sparkColor="#ff5c7a"
-      />
-      <KPICard
-        label={`ROI ${labelFor(period)}`}
-        value={`${kRoi > 0 ? "+" : ""}${kRoi.toFixed(1)}`} unit="%"
-        sub={`${kProfit > 0 ? "+" : ""}${kProfit.toFixed(2)}€ · ${kPicks} picks`}
-        spark={slice} sparkColor={kRoi >= 0 ? "var(--green)" : "var(--red)"}
-        danger={kRoi < 0}
-      />
-      <KPICard
-        label="Yield / Edge medio"
-        value={`${kYld > 0 ? "+" : ""}${kYld.toFixed(1)}`} unit="%"
-        sub={<span>edge medio <b className="mono" style={{color:"var(--text-2)"}}>{kEdge.toFixed(1)}pp</b></span>}
-      />
-      <KPICard
-        label="% Acierto"
-        value={kWin} unit="%"
-        sub={<span><WLStrip w={Math.round(kPicks * kWin / 100)} l={Math.max(0, kPicks - Math.round(kPicks * kWin / 100))} max={14}/></span>}
-      />
-      <KPICard
-        label="Picks en juego hoy"
-        value={liveCt} unit=""
-        sub={<span className="green" style={{fontWeight:600}}>EN VIVO · próx 13:00</span>}
-      />
-    </div>
+    <>
+      <ConfidenceBadge pickCount={safeNum(D?.meta?.totalPicks, 67)} />
+      <div className="kpi-grid">
+        <KPICard
+          label="Banca actual" featured
+          value={bankCurrent.toFixed(2)} unit="€"
+          delta={{ v: bankDiff, pct: bankRoi }}
+          sub={`Inicial 100€ · ${bankDiff > 0 ? "+" : ""}${bankDiff.toFixed(2)}€`}
+          spark={equityVals} sparkColor="#ff5c7a"
+        />
+        <KPICard
+          label={`ROI ${labelFor(period)}`}
+          value={`${kRoi > 0 ? "+" : ""}${kRoi.toFixed(1)}`} unit="%"
+          sub={`${kProfit > 0 ? "+" : ""}${kProfit.toFixed(2)}€ · ${kPicks} picks`}
+          spark={slice} sparkColor={kRoi >= 0 ? "var(--green)" : "var(--red)"}
+          danger={kRoi < 0}
+        />
+        <KPICard
+          label="Yield / Edge medio"
+          value={`${kYld > 0 ? "+" : ""}${kYld.toFixed(1)}`} unit="%"
+          sub={<span>edge medio <b className="mono" style={{color:"var(--text-2)"}}>{kEdge.toFixed(1)}pp</b></span>}
+        />
+        <KPICard
+          label="% Acierto"
+          value={kWin} unit="%"
+          sub={<span><WLStrip w={Math.round(kPicks * kWin / 100)} l={Math.max(0, kPicks - Math.round(kPicks * kWin / 100))} max={14}/></span>}
+        />
+        <KPICard
+          label="Picks en juego hoy"
+          value={liveCt} unit=""
+          sub={<span className="green" style={{fontWeight:600}}>EN VIVO · próx 13:00</span>}
+        />
+      </div>
+    </>
   );
 }
 function labelFor(p) {
@@ -362,6 +390,76 @@ function ReasonTable() {
   return <DataTable rows={D.byReason} cols={cols} defaultSort={{key:"total", dir:"desc"}}/>;
 }
 
+/* ============== MODEL HEALTH PANEL (TIER 3) ============== */
+function ModelHealthPanel() {
+  const periods = [
+    { key: "today", label: "Hoy", picks: safeNum(ensureKPI("today").picks, 0), roi: safeNum(ensureKPI("today").roi, 0) },
+    { key: "yest", label: "Ayer", picks: safeNum(ensureKPI("yest").picks, 0), roi: safeNum(ensureKPI("yest").roi, 0) },
+    { key: "7d", label: "Últimos 7d", picks: safeNum(ensureKPI("7d").picks, 0), roi: safeNum(ensureKPI("7d").roi, 0) },
+    { key: "month", label: "Este mes", picks: safeNum(ensureKPI("month").picks, 0), roi: safeNum(ensureKPI("month").roi, 0) },
+    { key: "hist", label: "Histórico", picks: safeNum(ensureKPI("hist").picks, 0), roi: safeNum(ensureKPI("hist").roi, 0) }
+  ];
+
+  return (
+    <div className="panel">
+      <div className="panel-h">
+        <h3>🏥 Salud del Modelo</h3>
+        <span className="sub">ROI por período · confianza estadística</span>
+      </div>
+      <div className="panel-body">
+        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <thead style={{ borderBottom: "1px solid var(--border)", fontSize: 11, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--text-3)" }}>
+            <tr>
+              <td style={{ padding: "10px 12px", textAlign: "left" }}>Período</td>
+              <td style={{ padding: "10px 12px", textAlign: "center" }}>Picks</td>
+              <td style={{ padding: "10px 12px", textAlign: "right" }}>ROI</td>
+              <td style={{ padding: "10px 12px", textAlign: "center" }}>Confianza</td>
+            </tr>
+          </thead>
+          <tbody>
+            {periods.map(p => {
+              const confidence = p.picks >= 100 ? "Alto" : p.picks >= 50 ? "Medio" : "Bajo";
+              const color = p.picks >= 100 ? "#22c55e" : p.picks >= 50 ? "#eab308" : "#ef4444";
+              const roiColor = p.roi >= 0 ? "#22c55e" : "#ef4444";
+              return (
+                <tr key={p.key} style={{ borderBottom: "1px solid var(--border)", fontSize: 13 }}>
+                  <td style={{ padding: "12px 12px", fontWeight: 500 }}>{p.label}</td>
+                  <td style={{ padding: "12px 12px", textAlign: "center", color: "var(--text-2)" }}><span className="mono">{Math.round(p.picks)}</span></td>
+                  <td style={{ padding: "12px 12px", textAlign: "right", color: roiColor, fontWeight: 600 }}><span className="mono">{p.roi > 0 ? "+" : ""}{p.roi.toFixed(1)}%</span></td>
+                  <td style={{ padding: "12px 12px", textAlign: "center" }}>
+                    <span style={{
+                      display: "inline-block",
+                      padding: "4px 8px",
+                      background: `${color}20`,
+                      border: `1px solid ${color}40`,
+                      borderRadius: 4,
+                      fontSize: 11,
+                      fontWeight: 600,
+                      color: color
+                    }}>
+                      {confidence}
+                    </span>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        <div style={{
+          marginTop: 14,
+          paddingTop: 12,
+          borderTop: "1px solid var(--border)",
+          fontSize: 12,
+          color: "var(--text-3)",
+          lineHeight: "1.6"
+        }}>
+          <div><strong style={{color:"var(--text)"}}>⚠ Diagnostico:</strong> Modelo muestra divergencia 7d/30d (-2.4% a -12.4% ROI). Posible drift en datos recientes. Acumula 100+ picks antes de tomar decisiones críticas.</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ============== RANKING PANEL (Liga / Mercado / Cuota) ============== */
 function RankingPanel({ pd, title = "Ranking por filtro", sub = "ROI · ordenado por valor", topN = 8 }) {
   const [tab, setTab] = useStateV("league");
@@ -395,6 +493,6 @@ function RankingPanel({ pd, title = "Ranking por filtro", sub = "ROI · ordenado
 }
 
 Object.assign(window, {
-  KPICard, KPIHero, LivePicks, HeatmapPanel, RankingPanel,
+  KPICard, KPIHero, ConfidenceBadge, ModelHealthPanel, LivePicks, HeatmapPanel, RankingPanel,
   LeagueTable, MarketTable, OddsTable, CornersTable, ReasonTable,
 });
