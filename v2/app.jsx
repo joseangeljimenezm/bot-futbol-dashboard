@@ -27,6 +27,16 @@ const PERIODS = [
 
 function TopBar({ period, setPeriod, tab }) {
   const tabName = ({picks:"Picks Reales", virtual:"Análisis Virtual", shadow:"Modo Sombra"})[tab];
+  let updatedTime = "—";
+  try {
+    const dt = new Date(D2.meta.generated_at);
+    const d = dt.getDate().toString().padStart(2,"0");
+    const m = (dt.getMonth()+1).toString().padStart(2,"0");
+    const y = dt.getFullYear();
+    const h = dt.getHours().toString().padStart(2,"0");
+    const min = dt.getMinutes().toString().padStart(2,"0");
+    updatedTime = `${d}/${m}/${y} · ${h}:${min}`;
+  } catch (e) {}
   return (
     <div className="topbar">
       <div className="topbar-left">
@@ -41,7 +51,7 @@ function TopBar({ period, setPeriod, tab }) {
           </button>
         ))}
       </div>
-      <span className="updated-at">10/05/2026 · 15:29</span>
+      <span className="updated-at">{updatedTime}</span>
       <button className="icon-btn" title="Exportar">
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
           <path d="M8 2v8m0 0l-3-3m3 3l3-3M3 13h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -237,15 +247,15 @@ function PicksTab({ period, pd, disabled, onToggleLeague, onToggleMarket, onTogg
             <div style={{display:"flex", gap:24, paddingTop:14, borderTop:"1px solid var(--border)"}}>
               <div>
                 <div className="text-3" style={{fontSize:10.5, textTransform:"uppercase", letterSpacing:"0.06em", fontWeight:600}}>Drawdown</div>
-                <div className="mono red" style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>-10.9%</div>
+                <div className={`mono ${D2.drawdown < -5 ? "red" : "amber"}`} style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>{D2.drawdown}%</div>
               </div>
               <div>
                 <div className="text-3" style={{fontSize:10.5, textTransform:"uppercase", letterSpacing:"0.06em", fontWeight:600}}>Racha actual</div>
-                <div className="mono red" style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>−3 L</div>
+                <div className={`mono ${D2.currentStreak.type === "W" ? "green" : "red"}`} style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>{D2.currentStreak.status}</div>
               </div>
               <div>
                 <div className="text-3" style={{fontSize:10.5, textTransform:"uppercase", letterSpacing:"0.06em", fontWeight:600}}>Mejor racha</div>
-                <div className="mono green" style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>+5 W</div>
+                <div className={`mono ${D2.bestStreak.type === "W" ? "green" : "red"}`} style={{fontSize:22, fontWeight:700, letterSpacing:"-0.02em"}}>{D2.bestStreak.status}</div>
               </div>
             </div>
           </div>
