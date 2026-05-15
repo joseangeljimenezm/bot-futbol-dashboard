@@ -545,4 +545,16 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<ErrorBoundary><App/></ErrorBoundary>);
+// Render React app only after data.json is loaded
+function renderApp() {
+  if (!window.DASH) return; // Safety check
+  ReactDOM.createRoot(document.getElementById("root")).render(<ErrorBoundary><App/></ErrorBoundary>);
+}
+
+// If data is already loaded, render immediately
+if (window.DASH) {
+  renderApp();
+} else {
+  // Otherwise wait for the data to load
+  window.addEventListener("dash:ready", renderApp);
+}
