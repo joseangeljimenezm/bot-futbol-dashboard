@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-15T22:31:42",
+    "generated_at": "2026-05-15T23:00:03",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -86,15 +86,15 @@
       "roi": 0.0,
       "roi_percent": 0.0,
       "profit": 0,
-      "picks": 0,
+      "picks": 2,
       "wins": 0,
-      "losses": 0,
+      "losses": 2,
       "win": 0,
       "winPct": 0,
       "edge": 0,
       "yld": 0.0,
       "yield": 0.0,
-      "staked": 0,
+      "staked": 4.0,
       "bank_inicial": 107.42,
       "bank_final": 107.42,
       "bank_current": 107.42,
@@ -863,15 +863,88 @@
   },
   "periods": {
     "today": {
-      "byLeague": [],
-      "byMarket": [],
-      "byOdds": [],
+      "byLeague": [
+        {
+          "name": "FIN1",
+          "total": 2,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 4.0,
+          "status": "insuf"
+        }
+      ],
+      "byMarket": [
+        {
+          "name": "Under 2.5",
+          "total": 1,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 1.5,
+          "status": "insuf"
+        },
+        {
+          "name": "Hánd. V +1.0",
+          "total": 1,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 2.5,
+          "status": "insuf"
+        }
+      ],
+      "byOdds": [
+        {
+          "name": "3. 1.60-2.10",
+          "total": 2,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0.0,
+          "pnl": 0.0,
+          "staked": 4.0,
+          "status": "insuf"
+        }
+      ],
       "byCorners": [],
       "byReason": [],
       "heatmap": {
-        "leagues": [],
-        "markets": [],
-        "cells": [],
+        "leagues": [
+          "FIN1"
+        ],
+        "markets": [
+          "Under 2.5",
+          "Hánd. V +1.0"
+        ],
+        "cells": [
+          [
+            null,
+            null
+          ]
+        ],
         "min_picks": 2
       }
     },
