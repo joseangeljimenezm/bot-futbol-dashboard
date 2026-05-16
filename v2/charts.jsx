@@ -173,6 +173,16 @@ function DailyStrip({ days }) {
 
 /* ========== Heatmap (with volume) ========== */
 function Heatmap({ rows, cols, matrix, onSelect, selected, disabled, cellHeight = 64 }) {
+  // Validate matrix structure
+  const isValidMatrix = Array.isArray(matrix) && matrix.length === rows.length &&
+    matrix.every(row => Array.isArray(row) && row.length === cols.length);
+
+  if (!isValidMatrix) {
+    return <div style={{padding: "20px", textAlign: "center", color: "#ff5c7a"}}>
+      Matriz de datos inválida: {rows.length} ligas pero {matrix ? matrix.length : 0} filas
+    </div>;
+  }
+
   function color(v) {
     if (v == null) return "rgba(255,255,255,0.025)";
     const intensity = Math.min(Math.abs(v) / 30, 1);
