@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-17T22:43:45",
+    "generated_at": "2026-05-18T22:29:41",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -76,7 +76,7 @@
       "v": 100.39
     },
     {
-      "d": "17/05",
+      "d": "18/05",
       "v": 100.39,
       "pending": true
     }
@@ -137,22 +137,22 @@
       "ganancia_neto": 0.0
     },
     "7d": {
-      "roi": 100.0,
-      "roi_percent": 100.0,
-      "profit": 0.07,
-      "picks": 1,
-      "wins": 1,
+      "roi": 0.0,
+      "roi_percent": 0.0,
+      "profit": 0,
+      "picks": 0,
+      "wins": 0,
       "losses": 0,
-      "win": 100,
-      "winPct": 100,
-      "edge": 9.8,
-      "yld": 100.0,
-      "yield": 100.0,
-      "staked": 0.07,
-      "bank_inicial": 107.35,
+      "win": 0,
+      "winPct": 0,
+      "edge": 0,
+      "yld": 0.0,
+      "yield": 0.0,
+      "staked": 0,
+      "bank_inicial": 107.42,
       "bank_final": 107.42,
       "bank_current": 107.42,
-      "ganancia_neto": 0.07
+      "ganancia_neto": 0.0
     },
     "month": {
       "roi": 5.2,
@@ -1730,20 +1730,7 @@
         "cells": [],
         "min_picks": 2
       },
-      "picks": [
-        {
-          "liga": "ERD",
-          "local": "AZ Alkmaar",
-          "visitante": "NAC Breda",
-          "mercado": "Hánd. V +1.5",
-          "odd": 1.88,
-          "stake": 10.0,
-          "ganancia": 0.0,
-          "resultado": "PENDIENTE",
-          "roi_pct": 0.0,
-          "fecha": "2026-05-16"
-        }
-      ]
+      "picks": []
     },
     "weekend": {
       "byLeague": [],
@@ -1773,71 +1760,15 @@
       ]
     },
     "7d": {
-      "byLeague": [
-        {
-          "name": "K League 1",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 100.0,
-          "yield": 100.0,
-          "eur": 0.07,
-          "pnl": 0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        }
-      ],
-      "byMarket": [
-        {
-          "name": "Under 2.5",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 100.0,
-          "yield": 100.0,
-          "eur": 0.07,
-          "pnl": 0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        }
-      ],
-      "byOdds": [
-        {
-          "name": "3. 1.60-2.10",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 100.0,
-          "yield": 100.0,
-          "eur": 0.07,
-          "pnl": 0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        }
-      ],
+      "byLeague": [],
+      "byMarket": [],
+      "byOdds": [],
       "byCorners": [],
       "byReason": [],
       "heatmap": {
-        "leagues": [
-          "K League 1"
-        ],
-        "markets": [
-          "Under 2.5"
-        ],
-        "cells": [
-          [
-            null
-          ]
-        ],
+        "leagues": [],
+        "markets": [],
+        "cells": [],
         "min_picks": 2
       },
       "picks": [
@@ -1876,18 +1807,6 @@
           "resultado": "PENDIENTE",
           "roi_pct": 0.0,
           "fecha": "2026-05-15"
-        },
-        {
-          "liga": "K League 1",
-          "local": "Gwangju FC",
-          "visitante": "FC Seoul",
-          "mercado": "Under 2.5",
-          "odd": 1.98,
-          "stake": 0.07,
-          "ganancia": 0.07,
-          "resultado": "GANADA",
-          "roi_pct": -2.0,
-          "fecha": "2026-05-11"
         }
       ]
     },
