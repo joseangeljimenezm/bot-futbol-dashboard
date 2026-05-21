@@ -40,9 +40,7 @@ function Logo() {
 }
 
 const PERIODS = [
-  { k: "today", l: "Hoy" },
   { k: "yest", l: "Ayer" },
-  { k: "weekend", l: "Fin sem." },
   { k: "7d", l: "7d" },
   { k: "month", l: "Mes" },
   { k: "since", l: "Desde 23-ABR", star: true },
