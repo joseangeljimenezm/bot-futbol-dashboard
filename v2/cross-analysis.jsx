@@ -217,17 +217,62 @@ function ScatterView({ period }) {
   );
 }
 
+/* ============== ROI ANALYTICS: Ranked Bars ============== */
+function ROIAnalyticsView({ period }) {
+  const data = useMemoCA(() => {
+    const p = window.DASH?.periods?.[period];
+    return {
+      byLeague: (p?.byLeague || []).sort((a, b) => b.roi - a.roi),
+      byMarket: (p?.byMarket || []).sort((a, b) => b.roi - a.roi),
+      byOdds: (p?.byOdds || []).sort((a, b) => b.roi - a.roi),
+    };
+  }, [period]);
+
+  return (
+    <div className="analysis-view" style={{display:"flex", flexDirection:"column", gap:32}}>
+      <div>
+        <div className="view-header" style={{marginBottom:16}}>
+          <h3>📊 ROI por Liga</h3>
+          <span className="text-3">Ordenado por rentabilidad. n &lt; 30 = datos insuficientes</span>
+        </div>
+        <RankedBars rows={data.byLeague} max={60} valueKey="roi" labelKey="name" volumeKey="total" />
+      </div>
+
+      <div>
+        <div className="view-header" style={{marginBottom:16}}>
+          <h3>🎲 ROI por Mercado</h3>
+          <span className="text-3">Estrategias: over/under, hándicap, corners</span>
+        </div>
+        <RankedBars rows={data.byMarket} max={60} valueKey="roi" labelKey="name" volumeKey="total" />
+      </div>
+
+      <div>
+        <div className="view-header" style={{marginBottom:16}}>
+          <h3>📈 ROI por Rango de Cuota</h3>
+          <span className="text-3">Relación cuota ↔ rentabilidad. Detecta sweet spots</span>
+        </div>
+        <RankedBars rows={data.byOdds} max={60} valueKey="roi" labelKey="name" volumeKey="total" />
+      </div>
+    </div>
+  );
+}
+
 /* ============== MAIN CROSS ANALYSIS COMPONENT ============== */
 function CrossAnalysisPanel({ period }) {
-  const [subview, setSubview] = useStateCA("liga-mercado");
+  const [subview, setSubview] = useStateCA("analytics");
 
   return (
     <div style={{display:"flex", flexDirection:"column", gap:20}}>
       <div style={{display:"flex", gap:8, borderBottom:"1px solid var(--border)", paddingBottom:12}}>
         <button
+          className={`tab-btn ${subview === "analytics" ? "active" : ""}`}
+          onClick={() => setSubview("analytics")}>
+          📊 ROI Analytics
+        </button>
+        <button
           className={`tab-btn ${subview === "liga-mercado" ? "active" : ""}`}
           onClick={() => setSubview("liga-mercado")}>
-          📊 Liga × Mercado
+          🔥 Liga × Mercado
         </button>
         <button
           className={`tab-btn ${subview === "timeline" ? "active" : ""}`}
@@ -241,6 +286,7 @@ function CrossAnalysisPanel({ period }) {
         </button>
       </div>
 
+      {subview === "analytics" && <ROIAnalyticsView period={period} />}
       {subview === "liga-mercado" && <LigaByMercadoView period={period} />}
       {subview === "timeline" && <TimelineView period={period} />}
       {subview === "scatter" && <ScatterView period={period} />}
