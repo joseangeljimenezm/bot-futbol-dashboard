@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-24T22:29:06",
+    "generated_at": "2026-05-24T22:40:29",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -94,15 +94,15 @@
       "roi": 0.0,
       "roi_percent": 0.0,
       "profit": 0,
-      "picks": 1,
+      "picks": 6,
       "wins": 0,
-      "losses": 1,
+      "losses": 6,
       "win": 0,
       "winPct": 0,
       "edge": 0,
       "yld": 0.0,
       "yield": 0.0,
-      "staked": 0.07,
+      "staked": 0.42,
       "bank_inicial": 106.32,
       "bank_final": 106.32,
       "bank_current": 106.32,
@@ -885,6 +885,66 @@
     "min_picks": 2
   },
   "picks": [
+    {
+      "liga": "Eliteserien",
+      "local": "Sandefjord",
+      "visitante": "Fredrikstad FK",
+      "mercado": "Hánd. V +0.75",
+      "odd": 1.72,
+      "stake": 0.07,
+      "ganancia": 0.0,
+      "resultado": "PENDIENTE",
+      "roi_pct": 0.0,
+      "fecha": "2026-05-24"
+    },
+    {
+      "liga": "Eliteserien",
+      "local": "Sarpsborg FK",
+      "visitante": "Molde",
+      "mercado": "Under 3.5",
+      "odd": 1.67,
+      "stake": 0.07,
+      "ganancia": 0.0,
+      "resultado": "PENDIENTE",
+      "roi_pct": 0.0,
+      "fecha": "2026-05-24"
+    },
+    {
+      "liga": "Eliteserien",
+      "local": "HamKam",
+      "visitante": "Lillestrom",
+      "mercado": "Hánd. L +0.5",
+      "odd": 1.61,
+      "stake": 0.07,
+      "ganancia": 0.0,
+      "resultado": "PENDIENTE",
+      "roi_pct": 0.0,
+      "fecha": "2026-05-24"
+    },
+    {
+      "liga": "Eliteserien",
+      "local": "Tromso",
+      "visitante": "Aalesund",
+      "mercado": "hc_away_+1.25",
+      "odd": 1.91,
+      "stake": 0.07,
+      "ganancia": 0.0,
+      "resultado": "PENDIENTE",
+      "roi_pct": 0.0,
+      "fecha": "2026-05-24"
+    },
+    {
+      "liga": "Allsvenskan",
+      "local": "IF Elfsborg",
+      "visitante": "BK Hacken",
+      "mercado": "Over 2.5",
+      "odd": 1.85,
+      "stake": 0.07,
+      "ganancia": 0.0,
+      "resultado": "PENDIENTE",
+      "roi_pct": 0.0,
+      "fecha": "2026-05-24"
+    },
     {
       "liga": "Allsvenskan",
       "local": "Malmo FF",
@@ -1814,7 +1874,54 @@
     "today": {
       "byLeague": [
         {
+          "name": "Eliteserien",
+          "total": 4,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 0.28,
+          "status": "insuf"
+        },
+        {
           "name": "Allsvenskan",
+          "total": 2,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 0.14,
+          "status": "insuf"
+        }
+      ],
+      "byMarket": [
+        {
+          "name": "Hánd. V +0.75",
+          "total": 2,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 0.14,
+          "status": "insuf"
+        },
+        {
+          "name": "Under 3.5",
           "total": 1,
           "w": 0,
           "l": 0,
@@ -1827,11 +1934,39 @@
           "pnl": 0,
           "staked": 0.07,
           "status": "insuf"
-        }
-      ],
-      "byMarket": [
+        },
         {
-          "name": "Hánd. V +0.75",
+          "name": "Over 2.5",
+          "total": 1,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 0.07,
+          "status": "insuf"
+        },
+        {
+          "name": "Hánd. L +0.5",
+          "total": 1,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 0.07,
+          "status": "insuf"
+        },
+        {
+          "name": "hc_away_+1.25",
           "total": 1,
           "w": 0,
           "l": 0,
@@ -1849,7 +1984,7 @@
       "byOdds": [
         {
           "name": "3. 1.60-2.10",
-          "total": 1,
+          "total": 6,
           "w": 0,
           "l": 0,
           "losses": 0,
@@ -1859,27 +1994,103 @@
           "yield": 0.0,
           "eur": 0.0,
           "pnl": 0.0,
-          "staked": 0.07,
-          "status": "insuf"
+          "staked": 0.42,
+          "status": "amber"
         }
       ],
       "byCorners": [],
       "byReason": [],
       "heatmap": {
         "leagues": [
+          "Eliteserien",
           "Allsvenskan"
         ],
         "markets": [
-          "Hánd. V +0.75"
+          "Hánd. V +0.75",
+          "Under 3.5",
+          "Over 2.5",
+          "Hánd. L +0.5",
+          "hc_away_+1.25"
         ],
         "cells": [
           [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
             null
           ]
         ],
         "min_picks": 2
       },
       "picks": [
+        {
+          "liga": "Eliteserien",
+          "local": "Sandefjord",
+          "visitante": "Fredrikstad FK",
+          "mercado": "Hánd. V +0.75",
+          "odd": 1.72,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Sarpsborg FK",
+          "visitante": "Molde",
+          "mercado": "Under 3.5",
+          "odd": 1.67,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "HamKam",
+          "visitante": "Lillestrom",
+          "mercado": "Hánd. L +0.5",
+          "odd": 1.61,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Tromso",
+          "visitante": "Aalesund",
+          "mercado": "hc_away_+1.25",
+          "odd": 1.91,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Allsvenskan",
+          "local": "IF Elfsborg",
+          "visitante": "BK Hacken",
+          "mercado": "Over 2.5",
+          "odd": 1.85,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
         {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
@@ -1947,6 +2158,66 @@
       },
       "picks": [
         {
+          "liga": "Eliteserien",
+          "local": "Sandefjord",
+          "visitante": "Fredrikstad FK",
+          "mercado": "Hánd. V +0.75",
+          "odd": 1.72,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Sarpsborg FK",
+          "visitante": "Molde",
+          "mercado": "Under 3.5",
+          "odd": 1.67,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "HamKam",
+          "visitante": "Lillestrom",
+          "mercado": "Hánd. L +0.5",
+          "odd": 1.61,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Tromso",
+          "visitante": "Aalesund",
+          "mercado": "hc_away_+1.25",
+          "odd": 1.91,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Allsvenskan",
+          "local": "IF Elfsborg",
+          "visitante": "BK Hacken",
+          "mercado": "Over 2.5",
+          "odd": 1.85,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
           "visitante": "Västerås SK",
@@ -1997,6 +2268,66 @@
         "min_picks": 2
       },
       "picks": [
+        {
+          "liga": "Eliteserien",
+          "local": "Sandefjord",
+          "visitante": "Fredrikstad FK",
+          "mercado": "Hánd. V +0.75",
+          "odd": 1.72,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Sarpsborg FK",
+          "visitante": "Molde",
+          "mercado": "Under 3.5",
+          "odd": 1.67,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "HamKam",
+          "visitante": "Lillestrom",
+          "mercado": "Hánd. L +0.5",
+          "odd": 1.61,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Tromso",
+          "visitante": "Aalesund",
+          "mercado": "hc_away_+1.25",
+          "odd": 1.91,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Allsvenskan",
+          "local": "IF Elfsborg",
+          "visitante": "BK Hacken",
+          "mercado": "Over 2.5",
+          "odd": 1.85,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
         {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
@@ -2703,6 +3034,66 @@
         "min_picks": 2
       },
       "picks": [
+        {
+          "liga": "Eliteserien",
+          "local": "Sandefjord",
+          "visitante": "Fredrikstad FK",
+          "mercado": "Hánd. V +0.75",
+          "odd": 1.72,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Sarpsborg FK",
+          "visitante": "Molde",
+          "mercado": "Under 3.5",
+          "odd": 1.67,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "HamKam",
+          "visitante": "Lillestrom",
+          "mercado": "Hánd. L +0.5",
+          "odd": 1.61,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Tromso",
+          "visitante": "Aalesund",
+          "mercado": "hc_away_+1.25",
+          "odd": 1.91,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Allsvenskan",
+          "local": "IF Elfsborg",
+          "visitante": "BK Hacken",
+          "mercado": "Over 2.5",
+          "odd": 1.85,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
         {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
@@ -4285,6 +4676,66 @@
         "min_picks": 2
       },
       "picks": [
+        {
+          "liga": "Eliteserien",
+          "local": "Sandefjord",
+          "visitante": "Fredrikstad FK",
+          "mercado": "Hánd. V +0.75",
+          "odd": 1.72,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Sarpsborg FK",
+          "visitante": "Molde",
+          "mercado": "Under 3.5",
+          "odd": 1.67,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "HamKam",
+          "visitante": "Lillestrom",
+          "mercado": "Hánd. L +0.5",
+          "odd": 1.61,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Tromso",
+          "visitante": "Aalesund",
+          "mercado": "hc_away_+1.25",
+          "odd": 1.91,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Allsvenskan",
+          "local": "IF Elfsborg",
+          "visitante": "BK Hacken",
+          "mercado": "Over 2.5",
+          "odd": 1.85,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
         {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
@@ -6200,6 +6651,66 @@
       },
       "picks": [
         {
+          "liga": "Eliteserien",
+          "local": "Sandefjord",
+          "visitante": "Fredrikstad FK",
+          "mercado": "Hánd. V +0.75",
+          "odd": 1.72,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Sarpsborg FK",
+          "visitante": "Molde",
+          "mercado": "Under 3.5",
+          "odd": 1.67,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "HamKam",
+          "visitante": "Lillestrom",
+          "mercado": "Hánd. L +0.5",
+          "odd": 1.61,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Eliteserien",
+          "local": "Tromso",
+          "visitante": "Aalesund",
+          "mercado": "hc_away_+1.25",
+          "odd": 1.91,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
+          "liga": "Allsvenskan",
+          "local": "IF Elfsborg",
+          "visitante": "BK Hacken",
+          "mercado": "Over 2.5",
+          "odd": 1.85,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-24"
+        },
+        {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
           "visitante": "Västerås SK",
@@ -7892,7 +8403,7 @@
     "basketball_shadow_pnl": -3.94,
     "basketball_shadow_staked": 31.5,
     "basketball_shadow_win_pct": 33,
-    "rejected_total": 792,
-    "total_analysis": 993
+    "rejected_total": 834,
+    "total_analysis": 1035
   }
 }
