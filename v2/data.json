@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-25T22:58:46",
+    "generated_at": "2026-05-26T07:37:43",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -94,44 +94,49 @@
     {
       "d": "25/05",
       "v": 99.78
+    },
+    {
+      "d": "26/05",
+      "v": 99.78,
+      "pending": true
     }
   ],
   "kpis": {
     "today": {
-      "roi": -4.1,
-      "roi_percent": -4.1,
-      "profit": -0.07,
-      "picks": 2,
+      "roi": 0.0,
+      "roi_percent": 0.0,
+      "profit": 0,
+      "picks": 0,
       "wins": 0,
-      "losses": 2,
+      "losses": 0,
+      "win": 0,
+      "winPct": 0,
+      "edge": 0,
+      "yld": 0.0,
+      "yield": 0.0,
+      "staked": 0,
+      "bank_inicial": 106.33,
+      "bank_final": 106.33,
+      "bank_current": 106.33,
+      "ganancia_neto": 0.0
+    },
+    "yest": {
+      "roi": -100.0,
+      "roi_percent": -100.0,
+      "profit": -0.07,
+      "picks": 1,
+      "wins": 0,
+      "losses": 1,
       "win": 0,
       "winPct": 0,
       "edge": 13.2,
-      "yld": -4.1,
-      "yield": -4.1,
-      "staked": 1.71,
+      "yld": -100.0,
+      "yield": -100.0,
+      "staked": 0.07,
       "bank_inicial": 106.4,
       "bank_final": 106.33,
       "bank_current": 106.33,
       "ganancia_neto": -0.07
-    },
-    "yest": {
-      "roi": 20.7,
-      "roi_percent": 20.7,
-      "profit": 0.09,
-      "picks": 6,
-      "wins": 4,
-      "losses": 2,
-      "win": 67,
-      "winPct": 67,
-      "edge": 10.4,
-      "yld": 20.7,
-      "yield": 20.7,
-      "staked": 0.42,
-      "bank_inicial": 106.31,
-      "bank_final": 106.4,
-      "bank_current": 106.4,
-      "ganancia_neto": 0.09
     },
     "weekend": {
       "roi": 13.7,
@@ -941,18 +946,6 @@
     "min_picks": 2
   },
   "picks": [
-    {
-      "liga": "TENIS",
-      "local": "Guo Hanyu",
-      "visitante": "McCartney Kessler",
-      "mercado": "Victoria McCartney Kessler",
-      "odd": 1.68,
-      "stake": 1.64,
-      "ganancia": 0.0,
-      "resultado": "PENDIENTE",
-      "roi_pct": 0.0,
-      "fecha": "2026-05-25"
-    },
     {
       "liga": "Eliteserien",
       "local": "KFUM",
@@ -1952,22 +1945,21 @@
   ],
   "periods": {
     "today": {
+      "byLeague": [],
+      "byMarket": [],
+      "byOdds": [],
+      "byCorners": [],
+      "byReason": [],
+      "heatmap": {
+        "leagues": [],
+        "markets": [],
+        "cells": [],
+        "min_picks": 2
+      },
+      "picks": []
+    },
+    "yest": {
       "byLeague": [
-        {
-          "name": "TENIS",
-          "total": 1,
-          "w": 0,
-          "l": 0,
-          "losses": 0,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0,
-          "pnl": 0,
-          "staked": 1.64,
-          "status": "insuf"
-        },
         {
           "name": "Eliteserien",
           "total": 1,
@@ -1999,39 +1991,9 @@
           "pnl": -0.07,
           "staked": 0.07,
           "status": "insuf"
-        },
-        {
-          "name": "Victoria McCartney Kessler",
-          "total": 1,
-          "w": 0,
-          "l": 0,
-          "losses": 0,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0,
-          "pnl": 0,
-          "staked": 1.64,
-          "status": "insuf"
         }
       ],
       "byOdds": [
-        {
-          "name": "3. 1.60-2.10",
-          "total": 1,
-          "w": 0,
-          "l": 0,
-          "losses": 0,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0.0,
-          "pnl": 0.0,
-          "staked": 1.64,
-          "status": "insuf"
-        },
         {
           "name": "2. 1.35-1.60",
           "total": 1,
@@ -2052,38 +2014,19 @@
       "byReason": [],
       "heatmap": {
         "leagues": [
-          "TENIS",
           "Eliteserien"
         ],
         "markets": [
-          "Hánd. V +0.5",
-          "Victoria McCartney Kessler"
+          "Hánd. V +0.5"
         ],
         "cells": [
           [
-            null,
-            null
-          ],
-          [
-            null,
             null
           ]
         ],
         "min_picks": 2
       },
       "picks": [
-        {
-          "liga": "TENIS",
-          "local": "Guo Hanyu",
-          "visitante": "McCartney Kessler",
-          "mercado": "Victoria McCartney Kessler",
-          "odd": 1.68,
-          "stake": 1.64,
-          "ganancia": 0.0,
-          "resultado": "PENDIENTE",
-          "roi_pct": 0.0,
-          "fecha": "2026-05-25"
-        },
         {
           "liga": "Eliteserien",
           "local": "KFUM",
@@ -2095,240 +2038,6 @@
           "resultado": "PERDIDA",
           "roi_pct": -100.0,
           "fecha": "2026-05-25"
-        }
-      ]
-    },
-    "yest": {
-      "byLeague": [
-        {
-          "name": "Eliteserien",
-          "total": 4,
-          "w": 3,
-          "l": 1,
-          "losses": 1,
-          "winPct": 75,
-          "win_pct": 75,
-          "roi": 31.0,
-          "yield": 31.0,
-          "eur": 0.09,
-          "pnl": 0.09,
-          "staked": 0.28,
-          "status": "insuf"
-        },
-        {
-          "name": "Allsvenskan",
-          "total": 2,
-          "w": 1,
-          "l": 1,
-          "losses": 1,
-          "winPct": 50,
-          "win_pct": 50,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0.0,
-          "pnl": 0.0,
-          "staked": 0.14,
-          "status": "insuf"
-        }
-      ],
-      "byMarket": [
-        {
-          "name": "Hánd. V +0.75",
-          "total": 2,
-          "w": 2,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 86.0,
-          "yield": 86.0,
-          "eur": 0.12,
-          "pnl": 0.12,
-          "staked": 0.14,
-          "status": "insuf"
-        },
-        {
-          "name": "Under 3.5",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "Over 2.5",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "Hánd. L +0.5",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 61.0,
-          "yield": 61.0,
-          "eur": 0.04,
-          "pnl": 0.04,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "hc_away_+1.25",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 91.0,
-          "yield": 91.0,
-          "eur": 0.06,
-          "pnl": 0.06,
-          "staked": 0.07,
-          "status": "insuf"
-        }
-      ],
-      "byOdds": [
-        {
-          "name": "3. 1.60-2.10",
-          "total": 6,
-          "w": 4,
-          "l": 2,
-          "losses": 2,
-          "winPct": 67,
-          "win_pct": 67,
-          "roi": 20.7,
-          "yield": 20.7,
-          "eur": 0.09,
-          "pnl": 0.09,
-          "staked": 0.42,
-          "status": "green"
-        }
-      ],
-      "byCorners": [],
-      "byReason": [],
-      "heatmap": {
-        "leagues": [
-          "Eliteserien",
-          "Allsvenskan"
-        ],
-        "markets": [
-          "Hánd. V +0.75",
-          "Under 3.5",
-          "Over 2.5",
-          "Hánd. L +0.5",
-          "hc_away_+1.25"
-        ],
-        "cells": [
-          [
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
-          [
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        ],
-        "min_picks": 2
-      },
-      "picks": [
-        {
-          "liga": "Eliteserien",
-          "local": "Sandefjord",
-          "visitante": "Fredrikstad FK",
-          "mercado": "Hánd. V +0.75",
-          "odd": 1.72,
-          "stake": 0.07,
-          "ganancia": 0.0504,
-          "resultado": "GANADA",
-          "roi_pct": -28.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "Sarpsborg FK",
-          "visitante": "Molde",
-          "mercado": "Under 3.5",
-          "odd": 1.67,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "HamKam",
-          "visitante": "Lillestrom",
-          "mercado": "Hánd. L +0.5",
-          "odd": 1.61,
-          "stake": 0.07,
-          "ganancia": 0.04270000000000001,
-          "resultado": "GANADA",
-          "roi_pct": -39.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "Tromso",
-          "visitante": "Aalesund",
-          "mercado": "hc_away_+1.25",
-          "odd": 1.91,
-          "stake": 0.07,
-          "ganancia": 0.0637,
-          "resultado": "GANADA",
-          "roi_pct": -9.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "IF Elfsborg",
-          "visitante": "BK Hacken",
-          "mercado": "Over 2.5",
-          "odd": 1.85,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "Malmo FF",
-          "visitante": "Västerås SK",
-          "mercado": "Hánd. V +0.75",
-          "odd": 1.96,
-          "stake": 0.07,
-          "ganancia": 0.07,
-          "resultado": "GANADA",
-          "roi_pct": -4.0,
-          "fecha": "2026-05-24"
         }
       ]
     },
@@ -2876,18 +2585,6 @@
         "min_picks": 2
       },
       "picks": [
-        {
-          "liga": "TENIS",
-          "local": "Guo Hanyu",
-          "visitante": "McCartney Kessler",
-          "mercado": "Victoria McCartney Kessler",
-          "odd": 1.68,
-          "stake": 1.64,
-          "ganancia": 0.0,
-          "resultado": "PENDIENTE",
-          "roi_pct": 0.0,
-          "fecha": "2026-05-25"
-        },
         {
           "liga": "Eliteserien",
           "local": "KFUM",
@@ -3647,18 +3344,6 @@
         "min_picks": 2
       },
       "picks": [
-        {
-          "liga": "TENIS",
-          "local": "Guo Hanyu",
-          "visitante": "McCartney Kessler",
-          "mercado": "Victoria McCartney Kessler",
-          "odd": 1.68,
-          "stake": 1.64,
-          "ganancia": 0.0,
-          "resultado": "PENDIENTE",
-          "roi_pct": 0.0,
-          "fecha": "2026-05-25"
-        },
         {
           "liga": "Eliteserien",
           "local": "KFUM",
@@ -5158,18 +4843,6 @@
         "min_picks": 2
       },
       "picks": [
-        {
-          "liga": "TENIS",
-          "local": "Guo Hanyu",
-          "visitante": "McCartney Kessler",
-          "mercado": "Victoria McCartney Kessler",
-          "odd": 1.68,
-          "stake": 1.64,
-          "ganancia": 0.0,
-          "resultado": "PENDIENTE",
-          "roi_pct": 0.0,
-          "fecha": "2026-05-25"
-        },
         {
           "liga": "Eliteserien",
           "local": "KFUM",
@@ -7190,18 +6863,6 @@
         "min_picks": 2
       },
       "picks": [
-        {
-          "liga": "TENIS",
-          "local": "Guo Hanyu",
-          "visitante": "McCartney Kessler",
-          "mercado": "Victoria McCartney Kessler",
-          "odd": 1.68,
-          "stake": 1.64,
-          "ganancia": 0.0,
-          "resultado": "PENDIENTE",
-          "roi_pct": 0.0,
-          "fecha": "2026-05-25"
-        },
         {
           "liga": "Eliteserien",
           "local": "KFUM",
