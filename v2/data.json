@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-28T18:58:37",
+    "generated_at": "2026-05-29T07:55:32",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -96,7 +96,7 @@
       "v": 99.78
     },
     {
-      "d": "28/05",
+      "d": "29/05",
       "v": 99.78,
       "pending": true
     }
@@ -175,22 +175,22 @@
       "ganancia_neto": 0.01
     },
     "month": {
-      "roi": -7.2,
-      "roi_percent": -7.2,
-      "profit": -0.61,
-      "picks": 61,
-      "wins": 34,
+      "roi": -10.9,
+      "roi_percent": -10.9,
+      "profit": -0.89,
+      "picks": 59,
+      "wins": 32,
       "losses": 27,
-      "win": 56,
-      "winPct": 56,
-      "edge": 9.2,
-      "yld": -7.2,
-      "yield": -7.2,
-      "staked": 8.45,
-      "bank_inicial": 106.94,
+      "win": 54,
+      "winPct": 54,
+      "edge": 9.4,
+      "yld": -10.9,
+      "yield": -10.9,
+      "staked": 8.15,
+      "bank_inicial": 107.22,
       "bank_final": 106.33,
       "bank_current": 106.33,
-      "ganancia_neto": -0.61
+      "ganancia_neto": -0.89
     },
     "since": {
       "roi": -1.8,
@@ -2659,21 +2659,6 @@
           "status": "red"
         },
         {
-          "name": "J League",
-          "total": 7,
-          "w": 4,
-          "l": 3,
-          "losses": 3,
-          "winPct": 57,
-          "win_pct": 57,
-          "roi": 9.5,
-          "yield": 9.5,
-          "eur": 0.1,
-          "pnl": 0.1,
-          "staked": 1.05,
-          "status": "green"
-        },
-        {
           "name": "Allsvenskan",
           "total": 5,
           "w": 2,
@@ -2716,6 +2701,21 @@
           "eur": -0.18,
           "pnl": -0.18,
           "staked": 0.87,
+          "status": "red"
+        },
+        {
+          "name": "J League",
+          "total": 5,
+          "w": 2,
+          "l": 3,
+          "losses": 3,
+          "winPct": 40,
+          "win_pct": 40,
+          "roi": -24.0,
+          "yield": -24.0,
+          "eur": -0.18,
+          "pnl": -0.18,
+          "staked": 0.75,
           "status": "red"
         },
         {
@@ -2811,21 +2811,6 @@
       ],
       "byMarket": [
         {
-          "name": "Under 2.5",
-          "total": 12,
-          "w": 5,
-          "l": 7,
-          "losses": 7,
-          "winPct": 42,
-          "win_pct": 42,
-          "roi": -32.1,
-          "yield": -32.1,
-          "eur": -0.54,
-          "pnl": -0.54,
-          "staked": 1.68,
-          "status": "red"
-        },
-        {
           "name": "Under 3.5",
           "total": 10,
           "w": 7,
@@ -2839,6 +2824,21 @@
           "pnl": 0.36,
           "staked": 1.32,
           "status": "green"
+        },
+        {
+          "name": "Under 2.5",
+          "total": 10,
+          "w": 3,
+          "l": 7,
+          "losses": 7,
+          "winPct": 30,
+          "win_pct": 30,
+          "roi": -59.4,
+          "yield": -59.4,
+          "eur": -0.82,
+          "pnl": -0.82,
+          "staked": 1.38,
+          "status": "red"
         },
         {
           "name": "Hánd. V +1.5",
@@ -3069,17 +3069,17 @@
       "byOdds": [
         {
           "name": "3. 1.60-2.10",
-          "total": 44,
-          "w": 22,
+          "total": 42,
+          "w": 20,
           "l": 22,
           "losses": 22,
-          "winPct": 50,
-          "win_pct": 50,
-          "roi": -16.2,
-          "yield": -16.2,
-          "eur": -0.94,
-          "pnl": -0.94,
-          "staked": 5.82,
+          "winPct": 48,
+          "win_pct": 48,
+          "roi": -22.1,
+          "yield": -22.1,
+          "eur": -1.22,
+          "pnl": -1.22,
+          "staked": 5.52,
           "status": "red"
         },
         {
@@ -3119,16 +3119,16 @@
         "leagues": [
           "Eliteserien",
           "K League 1",
-          "J League",
           "Allsvenskan",
           "Serie A",
           "La Liga",
+          "J League",
           "FIN1",
           "Eredivisie"
         ],
         "markets": [
-          "Under 2.5",
           "Under 3.5",
+          "Under 2.5",
           "Hánd. V +1.5",
           "Hánd. V +0.25",
           "Hánd. L +1.5",
@@ -3138,12 +3138,12 @@
         ],
         "cells": [
           [
-            null,
             {
               "roi": -8,
               "n": 6,
               "status": "red"
             },
+            null,
             {
               "roi": -54,
               "n": 5,
@@ -3156,6 +3156,7 @@
             null
           ],
           [
+            null,
             {
               "roi": -78,
               "n": 4,
@@ -3163,25 +3164,6 @@
             },
             null,
             null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
-          [
-            {
-              "roi": 15,
-              "n": 5,
-              "status": "green"
-            },
-            null,
-            null,
-            {
-              "roi": -3,
-              "n": 2,
-              "status": "red"
-            },
             null,
             null,
             null,
@@ -3216,6 +3198,24 @@
             null,
             null,
             null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            {
+              "roi": -38,
+              "n": 3,
+              "status": "red"
+            },
+            null,
+            {
+              "roi": -3,
+              "n": 2,
+              "status": "red"
+            },
             null,
             null,
             null,
@@ -3952,30 +3952,6 @@
           "resultado": "GANADA",
           "roi_pct": -48.0,
           "fecha": "2026-05-01"
-        },
-        {
-          "liga": "J League",
-          "local": "Kyoto Purple Sanga",
-          "visitante": "Gamba Osaka",
-          "mercado": "Under 2.5",
-          "odd": 1.96,
-          "stake": 0.15,
-          "ganancia": 0.14,
-          "resultado": "GANADA",
-          "roi_pct": -4.0,
-          "fecha": "2026-04-29"
-        },
-        {
-          "liga": "J League",
-          "local": "Nagoya Grampus",
-          "visitante": "Fagiano Okayama",
-          "mercado": "Under 2.5",
-          "odd": 1.91,
-          "stake": 0.15,
-          "ganancia": 0.14,
-          "resultado": "GANADA",
-          "roi_pct": -9.0,
-          "fecha": "2026-04-29"
         }
       ]
     },
