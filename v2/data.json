@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-30T08:24:38",
+    "generated_at": "2026-05-30T08:44:15",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -106,15 +106,15 @@
       "roi": 0.0,
       "roi_percent": 0.0,
       "profit": 0,
-      "picks": 0,
+      "picks": 1,
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "win": 0,
       "winPct": 0,
       "edge": 0,
       "yld": 0.0,
       "yield": 0.0,
-      "staked": 0,
+      "staked": 0.07,
       "bank_inicial": 106.33,
       "bank_final": 106.33,
       "bank_current": 106.33,
@@ -946,6 +946,18 @@
     "min_picks": 2
   },
   "picks": [
+    {
+      "liga": "Eliteserien",
+      "local": "Molde",
+      "visitante": "Sandefjord",
+      "mercado": "Hánd. V +1.0",
+      "odd": 1.9,
+      "stake": 0.07,
+      "ganancia": 0.0,
+      "resultado": "PENDIENTE",
+      "roi_pct": 0.0,
+      "fecha": "2026-05-30"
+    },
     {
       "liga": "Allsvenskan",
       "local": "Malmo FF",
@@ -1981,18 +1993,87 @@
   ],
   "periods": {
     "today": {
-      "byLeague": [],
-      "byMarket": [],
-      "byOdds": [],
+      "byLeague": [
+        {
+          "name": "Eliteserien",
+          "total": 1,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 0.07,
+          "status": "insuf"
+        }
+      ],
+      "byMarket": [
+        {
+          "name": "Hánd. V +1.0",
+          "total": 1,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0,
+          "pnl": 0,
+          "staked": 0.07,
+          "status": "insuf"
+        }
+      ],
+      "byOdds": [
+        {
+          "name": "3. 1.60-2.10",
+          "total": 1,
+          "w": 0,
+          "l": 0,
+          "losses": 0,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": 0.0,
+          "yield": 0.0,
+          "eur": 0.0,
+          "pnl": 0.0,
+          "staked": 0.07,
+          "status": "insuf"
+        }
+      ],
       "byCorners": [],
       "byReason": [],
       "heatmap": {
-        "leagues": [],
-        "markets": [],
-        "cells": [],
+        "leagues": [
+          "Eliteserien"
+        ],
+        "markets": [
+          "Hánd. V +1.0"
+        ],
+        "cells": [
+          [
+            null
+          ]
+        ],
         "min_picks": 2
       },
-      "picks": []
+      "picks": [
+        {
+          "liga": "Eliteserien",
+          "local": "Molde",
+          "visitante": "Sandefjord",
+          "mercado": "Hánd. V +1.0",
+          "odd": 1.9,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-30"
+        }
+      ]
     },
     "yest": {
       "byLeague": [],
@@ -2542,6 +2623,18 @@
         "min_picks": 2
       },
       "picks": [
+        {
+          "liga": "Eliteserien",
+          "local": "Molde",
+          "visitante": "Sandefjord",
+          "mercado": "Hánd. V +1.0",
+          "odd": 1.9,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-30"
+        },
         {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
@@ -3283,6 +3376,18 @@
         "min_picks": 2
       },
       "picks": [
+        {
+          "liga": "Eliteserien",
+          "local": "Molde",
+          "visitante": "Sandefjord",
+          "mercado": "Hánd. V +1.0",
+          "odd": 1.9,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-30"
+        },
         {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
@@ -4746,6 +4851,18 @@
         "min_picks": 2
       },
       "picks": [
+        {
+          "liga": "Eliteserien",
+          "local": "Molde",
+          "visitante": "Sandefjord",
+          "mercado": "Hánd. V +1.0",
+          "odd": 1.9,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-30"
+        },
         {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
@@ -6803,6 +6920,18 @@
       },
       "picks": [
         {
+          "liga": "Eliteserien",
+          "local": "Molde",
+          "visitante": "Sandefjord",
+          "mercado": "Hánd. V +1.0",
+          "odd": 1.9,
+          "stake": 0.07,
+          "ganancia": 0.0,
+          "resultado": "PENDIENTE",
+          "roi_pct": 0.0,
+          "fecha": "2026-05-30"
+        },
+        {
           "liga": "Allsvenskan",
           "local": "Malmo FF",
           "visitante": "Halmstads BK",
@@ -8603,7 +8732,7 @@
     "basketball_shadow_pnl": -3.94,
     "basketball_shadow_staked": 31.5,
     "basketball_shadow_win_pct": 33,
-    "rejected_total": 923,
-    "total_analysis": 1124
+    "rejected_total": 927,
+    "total_analysis": 1128
   }
 }
