@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-30T23:20:59",
+    "generated_at": "2026-05-31T08:39:02",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -96,7 +96,7 @@
       "v": 99.78
     },
     {
-      "d": "30/05",
+      "d": "31/05",
       "v": 99.78,
       "pending": true
     }
@@ -106,15 +106,15 @@
       "roi": 0.0,
       "roi_percent": 0.0,
       "profit": 0,
-      "picks": 2,
+      "picks": 0,
       "wins": 0,
-      "losses": 2,
+      "losses": 0,
       "win": 0,
       "winPct": 0,
       "edge": 0,
       "yld": 0.0,
       "yield": 0.0,
-      "staked": 0.14,
+      "staked": 0,
       "bank_inicial": 106.33,
       "bank_final": 106.33,
       "bank_current": 106.33,
@@ -139,58 +139,58 @@
       "ganancia_neto": 0.0
     },
     "weekend": {
-      "roi": 13.7,
-      "roi_percent": 13.7,
-      "profit": 0.08,
-      "picks": 8,
-      "wins": 5,
-      "losses": 3,
-      "win": 62,
-      "winPct": 62,
-      "edge": 11.0,
-      "yld": 13.7,
-      "yield": 13.7,
-      "staked": 0.56,
-      "bank_inicial": 106.32,
-      "bank_final": 106.4,
-      "bank_current": 106.4,
-      "ganancia_neto": 0.08
+      "roi": 0.0,
+      "roi_percent": 0.0,
+      "profit": 0,
+      "picks": 0,
+      "wins": 0,
+      "losses": 0,
+      "win": 0,
+      "winPct": 0,
+      "edge": 0,
+      "yld": 0.0,
+      "yield": 0.0,
+      "staked": 0,
+      "bank_inicial": 106.33,
+      "bank_final": 106.33,
+      "bank_current": 106.33,
+      "ganancia_neto": 0.0
     },
     "7d": {
-      "roi": 3.4,
-      "roi_percent": 3.4,
-      "profit": 0.02,
-      "picks": 7,
-      "wins": 4,
-      "losses": 3,
-      "win": 57,
-      "winPct": 57,
-      "edge": 10.8,
-      "yld": 3.4,
-      "yield": 3.4,
-      "staked": 0.49,
-      "bank_inicial": 106.31,
+      "roi": -100.0,
+      "roi_percent": -100.0,
+      "profit": -0.07,
+      "picks": 1,
+      "wins": 0,
+      "losses": 1,
+      "win": 0,
+      "winPct": 0,
+      "edge": 13.2,
+      "yld": -100.0,
+      "yield": -100.0,
+      "staked": 0.07,
+      "bank_inicial": 106.4,
       "bank_final": 106.33,
       "bank_current": 106.33,
-      "ganancia_neto": 0.02
+      "ganancia_neto": -0.07
     },
     "month": {
-      "roi": -10.9,
-      "roi_percent": -10.9,
-      "profit": -0.89,
-      "picks": 59,
-      "wins": 32,
-      "losses": 27,
-      "win": 54,
-      "winPct": 54,
+      "roi": -16.4,
+      "roi_percent": -16.4,
+      "profit": -1.19,
+      "picks": 53,
+      "wins": 27,
+      "losses": 26,
+      "win": 51,
+      "winPct": 51,
       "edge": 9.4,
-      "yld": -10.9,
-      "yield": -10.9,
-      "staked": 8.15,
-      "bank_inicial": 107.22,
+      "yld": -16.4,
+      "yield": -16.4,
+      "staked": 7.25,
+      "bank_inicial": 107.52,
       "bank_final": 106.33,
       "bank_current": 106.33,
-      "ganancia_neto": -0.89
+      "ganancia_neto": -1.19
     },
     "since": {
       "roi": -1.8,
@@ -2005,108 +2005,29 @@
   ],
   "periods": {
     "today": {
-      "byLeague": [
-        {
-          "name": "Allsvenskan",
-          "total": 1,
-          "w": 0,
-          "l": 0,
-          "losses": 0,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0,
-          "pnl": 0,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "Eliteserien",
-          "total": 1,
-          "w": 0,
-          "l": 0,
-          "losses": 0,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0,
-          "pnl": 0,
-          "staked": 0.07,
-          "status": "insuf"
-        }
-      ],
-      "byMarket": [
-        {
-          "name": "Hánd. Local 0.0",
-          "total": 1,
-          "w": 0,
-          "l": 0,
-          "losses": 0,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0,
-          "pnl": 0,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "Hánd. V +1.0",
-          "total": 1,
-          "w": 0,
-          "l": 0,
-          "losses": 0,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0,
-          "pnl": 0,
-          "staked": 0.07,
-          "status": "insuf"
-        }
-      ],
-      "byOdds": [
-        {
-          "name": "3. 1.60-2.10",
-          "total": 2,
-          "w": 0,
-          "l": 0,
-          "losses": 0,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0.0,
-          "pnl": 0.0,
-          "staked": 0.14,
-          "status": "insuf"
-        }
-      ],
+      "byLeague": [],
+      "byMarket": [],
+      "byOdds": [],
       "byCorners": [],
       "byReason": [],
       "heatmap": {
-        "leagues": [
-          "Allsvenskan",
-          "Eliteserien"
-        ],
-        "markets": [
-          "Hánd. Local 0.0",
-          "Hánd. V +1.0"
-        ],
-        "cells": [
-          [
-            null,
-            null
-          ],
-          [
-            null,
-            null
-          ]
-        ],
+        "leagues": [],
+        "markets": [],
+        "cells": [],
+        "min_picks": 2
+      },
+      "picks": []
+    },
+    "yest": {
+      "byLeague": [],
+      "byMarket": [],
+      "byOdds": [],
+      "byCorners": [],
+      "byReason": [],
+      "heatmap": {
+        "leagues": [],
+        "markets": [],
+        "cells": [],
         "min_picks": 2
       },
       "picks": [
@@ -2136,7 +2057,7 @@
         }
       ]
     },
-    "yest": {
+    "weekend": {
       "byLeague": [],
       "byMarket": [],
       "byOdds": [],
@@ -2151,343 +2072,27 @@
       "picks": [
         {
           "liga": "Allsvenskan",
-          "local": "Malmo FF",
-          "visitante": "Halmstads BK",
-          "mercado": "hc_away_+1.25",
-          "odd": 1.76,
+          "local": "Västerås SK",
+          "visitante": "IFK Goteborg",
+          "mercado": "Hánd. Local 0.0",
+          "odd": 1.93,
           "stake": 0.07,
           "ganancia": 0.0,
           "resultado": "PENDIENTE",
           "roi_pct": 0.0,
-          "fecha": "2026-05-29"
+          "fecha": "2026-05-30"
         },
         {
-          "liga": "Allsvenskan",
-          "local": "GAIS",
-          "visitante": "Kalmar FF",
-          "mercado": "Hánd. V +0.75",
-          "odd": 1.73,
+          "liga": "Eliteserien",
+          "local": "Molde",
+          "visitante": "Sandefjord",
+          "mercado": "Hánd. V +1.0",
+          "odd": 1.9,
           "stake": 0.07,
           "ganancia": 0.0,
           "resultado": "PENDIENTE",
           "roi_pct": 0.0,
-          "fecha": "2026-05-29"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "Örgryte IS",
-          "visitante": "IF Elfsborg",
-          "mercado": "Hánd. L +1.0",
-          "odd": 1.49,
-          "stake": 0.07,
-          "ganancia": 0.0,
-          "resultado": "PENDIENTE",
-          "roi_pct": 0.0,
-          "fecha": "2026-05-29"
-        }
-      ]
-    },
-    "weekend": {
-      "byLeague": [
-        {
-          "name": "Eliteserien",
-          "total": 5,
-          "w": 4,
-          "l": 1,
-          "losses": 1,
-          "winPct": 80,
-          "win_pct": 80,
-          "roi": 41.9,
-          "yield": 41.9,
-          "eur": 0.15,
-          "pnl": 0.15,
-          "staked": 0.35,
-          "status": "green"
-        },
-        {
-          "name": "Allsvenskan",
-          "total": 2,
-          "w": 1,
-          "l": 1,
-          "losses": 1,
-          "winPct": 50,
-          "win_pct": 50,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0.0,
-          "pnl": 0.0,
-          "staked": 0.14,
-          "status": "insuf"
-        },
-        {
-          "name": "Eredivisie",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        }
-      ],
-      "byMarket": [
-        {
-          "name": "Under 3.5",
-          "total": 2,
-          "w": 1,
-          "l": 1,
-          "losses": 1,
-          "winPct": 50,
-          "win_pct": 50,
-          "roi": -7.1,
-          "yield": -7.1,
-          "eur": -0.01,
-          "pnl": -0.01,
-          "staked": 0.14,
-          "status": "insuf"
-        },
-        {
-          "name": "Hánd. V +0.75",
-          "total": 2,
-          "w": 2,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 86.0,
-          "yield": 86.0,
-          "eur": 0.12,
-          "pnl": 0.12,
-          "staked": 0.14,
-          "status": "insuf"
-        },
-        {
-          "name": "Over 2.5",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "Hánd. L -0.25",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "Hánd. L +0.5",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 61.0,
-          "yield": 61.0,
-          "eur": 0.04,
-          "pnl": 0.04,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "hc_away_+1.25",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 91.0,
-          "yield": 91.0,
-          "eur": 0.06,
-          "pnl": 0.06,
-          "staked": 0.07,
-          "status": "insuf"
-        }
-      ],
-      "byOdds": [
-        {
-          "name": "3. 1.60-2.10",
-          "total": 8,
-          "w": 5,
-          "l": 3,
-          "losses": 3,
-          "winPct": 62,
-          "win_pct": 62,
-          "roi": 13.7,
-          "yield": 13.7,
-          "eur": 0.08,
-          "pnl": 0.08,
-          "staked": 0.56,
-          "status": "green"
-        }
-      ],
-      "byCorners": [],
-      "byReason": [],
-      "heatmap": {
-        "leagues": [
-          "Eliteserien",
-          "Allsvenskan",
-          "Eredivisie"
-        ],
-        "markets": [
-          "Under 3.5",
-          "Hánd. V +0.75",
-          "Over 2.5",
-          "Hánd. L -0.25",
-          "Hánd. L +0.5",
-          "hc_away_+1.25"
-        ],
-        "cells": [
-          [
-            {
-              "roi": -7,
-              "n": 2,
-              "status": "red"
-            },
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
-          [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
-          [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ]
-        ],
-        "min_picks": 2
-      },
-      "picks": [
-        {
-          "liga": "Eliteserien",
-          "local": "Sandefjord",
-          "visitante": "Fredrikstad FK",
-          "mercado": "Hánd. V +0.75",
-          "odd": 1.72,
-          "stake": 0.07,
-          "ganancia": 0.0504,
-          "resultado": "GANADA",
-          "roi_pct": -28.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "Sarpsborg FK",
-          "visitante": "Molde",
-          "mercado": "Under 3.5",
-          "odd": 1.67,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "HamKam",
-          "visitante": "Lillestrom",
-          "mercado": "Hánd. L +0.5",
-          "odd": 1.61,
-          "stake": 0.07,
-          "ganancia": 0.04270000000000001,
-          "resultado": "GANADA",
-          "roi_pct": -39.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "Tromso",
-          "visitante": "Aalesund",
-          "mercado": "hc_away_+1.25",
-          "odd": 1.91,
-          "stake": 0.07,
-          "ganancia": 0.0637,
-          "resultado": "GANADA",
-          "roi_pct": -9.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "IF Elfsborg",
-          "visitante": "BK Hacken",
-          "mercado": "Over 2.5",
-          "odd": 1.85,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "Malmo FF",
-          "visitante": "Västerås SK",
-          "mercado": "Hánd. V +0.75",
-          "odd": 1.96,
-          "stake": 0.07,
-          "ganancia": 0.07,
-          "resultado": "GANADA",
-          "roi_pct": -4.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "Kristiansund BK",
-          "visitante": "Viking FK",
-          "mercado": "Under 3.5",
-          "odd": 1.87,
-          "stake": 0.07,
-          "ganancia": 0.06,
-          "resultado": "GANADA",
-          "roi_pct": -13.0,
-          "fecha": "2026-05-23"
-        },
-        {
-          "liga": "Eredivisie",
-          "local": "FC Volendam",
-          "visitante": "Willem II",
-          "mercado": "Hánd. L -0.25",
-          "odd": 1.97,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-23"
+          "fecha": "2026-05-30"
         }
       ]
     },
@@ -2495,111 +2100,21 @@
       "byLeague": [
         {
           "name": "Eliteserien",
-          "total": 5,
-          "w": 3,
-          "l": 2,
-          "losses": 2,
-          "winPct": 60,
-          "win_pct": 60,
-          "roi": 4.8,
-          "yield": 4.8,
-          "eur": 0.02,
-          "pnl": 0.02,
-          "staked": 0.35,
-          "status": "amber"
-        },
-        {
-          "name": "Allsvenskan",
-          "total": 2,
-          "w": 1,
+          "total": 1,
+          "w": 0,
           "l": 1,
           "losses": 1,
-          "winPct": 50,
-          "win_pct": 50,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0.0,
-          "pnl": 0.0,
-          "staked": 0.14,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": -100.0,
+          "yield": -100.0,
+          "eur": -0.07,
+          "pnl": -0.07,
+          "staked": 0.07,
           "status": "insuf"
         }
       ],
       "byMarket": [
-        {
-          "name": "Hánd. V +0.75",
-          "total": 2,
-          "w": 2,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 86.0,
-          "yield": 86.0,
-          "eur": 0.12,
-          "pnl": 0.12,
-          "staked": 0.14,
-          "status": "insuf"
-        },
-        {
-          "name": "Under 3.5",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "Over 2.5",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "Hánd. L +0.5",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 61.0,
-          "yield": 61.0,
-          "eur": 0.04,
-          "pnl": 0.04,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "hc_away_+1.25",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 91.0,
-          "yield": 91.0,
-          "eur": 0.06,
-          "pnl": 0.06,
-          "staked": 0.07,
-          "status": "insuf"
-        },
         {
           "name": "Hánd. V +0.5",
           "total": 1,
@@ -2617,21 +2132,6 @@
         }
       ],
       "byOdds": [
-        {
-          "name": "3. 1.60-2.10",
-          "total": 6,
-          "w": 4,
-          "l": 2,
-          "losses": 2,
-          "winPct": 67,
-          "win_pct": 67,
-          "roi": 20.7,
-          "yield": 20.7,
-          "eur": 0.09,
-          "pnl": 0.09,
-          "staked": 0.42,
-          "status": "green"
-        },
         {
           "name": "2. 1.35-1.60",
           "total": 1,
@@ -2652,32 +2152,13 @@
       "byReason": [],
       "heatmap": {
         "leagues": [
-          "Eliteserien",
-          "Allsvenskan"
+          "Eliteserien"
         ],
         "markets": [
-          "Hánd. V +0.75",
-          "Under 3.5",
-          "Over 2.5",
-          "Hánd. L +0.5",
-          "hc_away_+1.25",
           "Hánd. V +0.5"
         ],
         "cells": [
           [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
-          [
-            null,
-            null,
-            null,
-            null,
-            null,
             null
           ]
         ],
@@ -2755,78 +2236,6 @@
           "resultado": "PERDIDA",
           "roi_pct": -100.0,
           "fecha": "2026-05-25"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "Sandefjord",
-          "visitante": "Fredrikstad FK",
-          "mercado": "Hánd. V +0.75",
-          "odd": 1.72,
-          "stake": 0.07,
-          "ganancia": 0.0504,
-          "resultado": "GANADA",
-          "roi_pct": -28.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "Sarpsborg FK",
-          "visitante": "Molde",
-          "mercado": "Under 3.5",
-          "odd": 1.67,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "HamKam",
-          "visitante": "Lillestrom",
-          "mercado": "Hánd. L +0.5",
-          "odd": 1.61,
-          "stake": 0.07,
-          "ganancia": 0.04270000000000001,
-          "resultado": "GANADA",
-          "roi_pct": -39.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "Tromso",
-          "visitante": "Aalesund",
-          "mercado": "hc_away_+1.25",
-          "odd": 1.91,
-          "stake": 0.07,
-          "ganancia": 0.0637,
-          "resultado": "GANADA",
-          "roi_pct": -9.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "IF Elfsborg",
-          "visitante": "BK Hacken",
-          "mercado": "Over 2.5",
-          "odd": 1.85,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-24"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "Malmo FF",
-          "visitante": "Västerås SK",
-          "mercado": "Hánd. V +0.75",
-          "odd": 1.96,
-          "stake": 0.07,
-          "ganancia": 0.07,
-          "resultado": "GANADA",
-          "roi_pct": -4.0,
-          "fecha": "2026-05-24"
         }
       ]
     },
@@ -2849,62 +2258,17 @@
         },
         {
           "name": "K League 1",
-          "total": 9,
+          "total": 8,
           "w": 4,
-          "l": 5,
-          "losses": 5,
-          "winPct": 44,
-          "win_pct": 44,
-          "roi": -28.3,
-          "yield": -28.3,
-          "eur": -0.41,
-          "pnl": -0.41,
-          "staked": 1.45,
-          "status": "red"
-        },
-        {
-          "name": "Allsvenskan",
-          "total": 5,
-          "w": 2,
-          "l": 3,
-          "losses": 3,
-          "winPct": 40,
-          "win_pct": 40,
-          "roi": -41.5,
-          "yield": -41.5,
-          "eur": -0.27,
-          "pnl": -0.27,
-          "staked": 0.65,
-          "status": "red"
-        },
-        {
-          "name": "Serie A",
-          "total": 5,
-          "w": 2,
-          "l": 3,
-          "losses": 3,
-          "winPct": 40,
-          "win_pct": 40,
-          "roi": -37.0,
-          "yield": -37.0,
-          "eur": -0.3,
-          "pnl": -0.3,
-          "staked": 0.81,
-          "status": "red"
-        },
-        {
-          "name": "La Liga",
-          "total": 5,
-          "w": 3,
-          "l": 2,
-          "losses": 2,
-          "winPct": 60,
-          "win_pct": 60,
-          "roi": -20.7,
-          "yield": -20.7,
-          "eur": -0.18,
-          "pnl": -0.18,
-          "staked": 0.87,
+          "l": 4,
+          "losses": 4,
+          "winPct": 50,
+          "win_pct": 50,
+          "roi": -20.0,
+          "yield": -20.0,
+          "eur": -0.26,
+          "pnl": -0.26,
+          "staked": 1.3,
           "status": "red"
         },
         {
@@ -2923,6 +2287,36 @@
           "status": "red"
         },
         {
+          "name": "Allsvenskan",
+          "total": 4,
+          "w": 1,
+          "l": 3,
+          "losses": 3,
+          "winPct": 25,
+          "win_pct": 25,
+          "roi": -72.0,
+          "yield": -72.0,
+          "eur": -0.36,
+          "pnl": -0.36,
+          "staked": 0.5,
+          "status": "insuf"
+        },
+        {
+          "name": "Serie A",
+          "total": 4,
+          "w": 1,
+          "l": 3,
+          "losses": 3,
+          "winPct": 25,
+          "win_pct": 25,
+          "roi": -59.1,
+          "yield": -59.1,
+          "eur": -0.39,
+          "pnl": -0.39,
+          "staked": 0.66,
+          "status": "insuf"
+        },
+        {
           "name": "FIN1",
           "total": 4,
           "w": 4,
@@ -2935,6 +2329,21 @@
           "eur": 0.39,
           "pnl": 0.39,
           "staked": 0.5,
+          "status": "insuf"
+        },
+        {
+          "name": "La Liga",
+          "total": 3,
+          "w": 1,
+          "l": 2,
+          "losses": 2,
+          "winPct": 33,
+          "win_pct": 33,
+          "roi": -63.2,
+          "yield": -63.2,
+          "eur": -0.36,
+          "pnl": -0.36,
+          "staked": 0.57,
           "status": "insuf"
         },
         {
@@ -2983,21 +2392,6 @@
           "status": "insuf"
         },
         {
-          "name": "Primeira Liga",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 60.0,
-          "yield": 60.0,
-          "eur": 0.09,
-          "pnl": 0.09,
-          "staked": 0.15,
-          "status": "insuf"
-        },
-        {
           "name": "Bundesliga (Aut.)",
           "total": 1,
           "w": 0,
@@ -3015,48 +2409,48 @@
       ],
       "byMarket": [
         {
-          "name": "Under 3.5",
-          "total": 10,
-          "w": 7,
-          "l": 3,
-          "losses": 3,
-          "winPct": 70,
-          "win_pct": 70,
-          "roi": 27.3,
-          "yield": 27.3,
-          "eur": 0.36,
-          "pnl": 0.36,
-          "staked": 1.32,
-          "status": "green"
-        },
-        {
           "name": "Under 2.5",
-          "total": 10,
+          "total": 9,
           "w": 3,
-          "l": 7,
-          "losses": 7,
-          "winPct": 30,
-          "win_pct": 30,
-          "roi": -59.4,
-          "yield": -59.4,
-          "eur": -0.82,
-          "pnl": -0.82,
-          "staked": 1.38,
+          "l": 6,
+          "losses": 6,
+          "winPct": 33,
+          "win_pct": 33,
+          "roi": -54.5,
+          "yield": -54.5,
+          "eur": -0.67,
+          "pnl": -0.67,
+          "staked": 1.23,
           "status": "red"
         },
         {
-          "name": "Hánd. V +1.5",
-          "total": 10,
+          "name": "Under 3.5",
+          "total": 8,
           "w": 5,
+          "l": 3,
+          "losses": 3,
+          "winPct": 62,
+          "win_pct": 62,
+          "roi": 16.7,
+          "yield": 16.7,
+          "eur": 0.17,
+          "pnl": 0.17,
+          "staked": 1.02,
+          "status": "green"
+        },
+        {
+          "name": "Hánd. V +1.5",
+          "total": 8,
+          "w": 3,
           "l": 5,
           "losses": 5,
-          "winPct": 50,
-          "win_pct": 50,
-          "roi": -8.9,
-          "yield": -8.9,
-          "eur": -0.13,
-          "pnl": -0.13,
-          "staked": 1.44,
+          "winPct": 38,
+          "win_pct": 38,
+          "roi": -27.0,
+          "yield": -27.0,
+          "eur": -0.31,
+          "pnl": -0.31,
+          "staked": 1.14,
           "status": "red"
         },
         {
@@ -3076,17 +2470,17 @@
         },
         {
           "name": "Hánd. L +1.5",
-          "total": 4,
-          "w": 4,
+          "total": 3,
+          "w": 3,
           "l": 0,
           "losses": 0,
           "winPct": 100,
           "win_pct": 100,
           "roi": 53.3,
           "yield": 53.3,
-          "eur": 0.32,
-          "pnl": 0.32,
-          "staked": 0.6,
+          "eur": 0.24,
+          "pnl": 0.24,
+          "staked": 0.45,
           "status": "insuf"
         },
         {
@@ -3273,33 +2667,33 @@
       "byOdds": [
         {
           "name": "3. 1.60-2.10",
-          "total": 42,
-          "w": 20,
-          "l": 22,
-          "losses": 22,
-          "winPct": 48,
-          "win_pct": 48,
-          "roi": -22.1,
-          "yield": -22.1,
-          "eur": -1.22,
-          "pnl": -1.22,
-          "staked": 5.52,
+          "total": 39,
+          "w": 18,
+          "l": 21,
+          "losses": 21,
+          "winPct": 46,
+          "win_pct": 46,
+          "roi": -24.9,
+          "yield": -24.9,
+          "eur": -1.26,
+          "pnl": -1.26,
+          "staked": 5.07,
           "status": "red"
         },
         {
           "name": "2. 1.35-1.60",
-          "total": 16,
-          "w": 12,
+          "total": 13,
+          "w": 9,
           "l": 4,
           "losses": 4,
-          "winPct": 75,
-          "win_pct": 75,
-          "roi": 15.6,
-          "yield": 15.6,
-          "eur": 0.4,
-          "pnl": 0.4,
-          "staked": 2.56,
-          "status": "green"
+          "winPct": 69,
+          "win_pct": 69,
+          "roi": 6.6,
+          "yield": 6.6,
+          "eur": 0.14,
+          "pnl": 0.14,
+          "staked": 2.11,
+          "status": "amber"
         },
         {
           "name": "1. <1.35",
@@ -3323,16 +2717,16 @@
         "leagues": [
           "Eliteserien",
           "K League 1",
+          "J League",
           "Allsvenskan",
           "Serie A",
-          "La Liga",
-          "J League",
           "FIN1",
+          "La Liga",
           "Eredivisie"
         ],
         "markets": [
-          "Under 3.5",
           "Under 2.5",
+          "Under 3.5",
           "Hánd. V +1.5",
           "Hánd. V +0.25",
           "Hánd. L +1.5",
@@ -3342,12 +2736,12 @@
         ],
         "cells": [
           [
+            null,
             {
               "roi": -8,
               "n": 6,
               "status": "red"
             },
-            null,
             {
               "roi": -54,
               "n": 5,
@@ -3360,10 +2754,9 @@
             null
           ],
           [
-            null,
             {
-              "roi": -78,
-              "n": 4,
+              "roi": -71,
+              "n": 3,
               "status": "red"
             },
             null,
@@ -3371,55 +2764,52 @@
             null,
             null,
             null,
-            null
-          ],
-          [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
             null,
             null
           ],
           [
-            null,
-            null,
-            {
-              "roi": -33,
-              "n": 2,
-              "status": "red"
-            },
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
-          [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
-          [
-            null,
             {
               "roi": -38,
               "n": 3,
               "status": "red"
             },
             null,
+            null,
             {
               "roi": -3,
               "n": 2,
               "status": "red"
             },
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
             null,
             null,
             null,
@@ -4144,78 +3534,6 @@
           "resultado": "GANADA",
           "roi_pct": -36.0,
           "fecha": "2026-05-02"
-        },
-        {
-          "liga": "K League 1",
-          "local": "FC Seoul",
-          "visitante": "Sangju Sangmu FC",
-          "mercado": "Under 2.5",
-          "odd": 1.88,
-          "stake": 0.15,
-          "ganancia": -0.15,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-01"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "IK Sirius",
-          "visitante": "Kalmar FF",
-          "mercado": "Hánd. V +1.5",
-          "odd": 1.57,
-          "stake": 0.15,
-          "ganancia": 0.09,
-          "resultado": "GANADA",
-          "roi_pct": -43.0,
-          "fecha": "2026-05-01"
-        },
-        {
-          "liga": "Primeira Liga",
-          "local": "FC Porto",
-          "visitante": "Alverca",
-          "mercado": "Under 3.5",
-          "odd": 1.62,
-          "stake": 0.15,
-          "ganancia": 0.09,
-          "resultado": "GANADA",
-          "roi_pct": -38.0,
-          "fecha": "2026-05-01"
-        },
-        {
-          "liga": "Serie A",
-          "local": "Atalanta BC",
-          "visitante": "Genoa",
-          "mercado": "Hánd. V +1.5",
-          "odd": 1.59,
-          "stake": 0.15,
-          "ganancia": 0.09,
-          "resultado": "GANADA",
-          "roi_pct": -41.0,
-          "fecha": "2026-05-01"
-        },
-        {
-          "liga": "La Liga",
-          "local": "CA Osasuna",
-          "visitante": "Barcelona",
-          "mercado": "Under 3.5",
-          "odd": 1.64,
-          "stake": 0.15,
-          "ganancia": 0.1,
-          "resultado": "GANADA",
-          "roi_pct": -36.0,
-          "fecha": "2026-05-01"
-        },
-        {
-          "liga": "La Liga",
-          "local": "CA Osasuna",
-          "visitante": "Barcelona",
-          "mercado": "Hánd. L +1.5",
-          "odd": 1.52,
-          "stake": 0.15,
-          "ganancia": 0.08,
-          "resultado": "GANADA",
-          "roi_pct": -48.0,
-          "fecha": "2026-05-01"
         }
       ]
     },
