@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-13T11:05:15",
+    "generated_at": "2026-06-13T22:30:06",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -7348,13 +7348,13 @@
     "status": "+9"
   },
   "analysis": {
-    "shadow_total": 203,
-    "shadow_wins": 67,
-    "shadow_losses": 136,
-    "shadow_roi": -13.5,
-    "shadow_pnl": -5.75,
-    "shadow_staked": 42.63,
-    "shadow_win_pct": 33,
+    "shadow_total": 204,
+    "shadow_wins": 69,
+    "shadow_losses": 135,
+    "shadow_roi": -9.3,
+    "shadow_pnl": -3.97,
+    "shadow_staked": 42.84,
+    "shadow_win_pct": 34,
     "basketball_shadow_total": 150,
     "basketball_shadow_wins": 50,
     "basketball_shadow_losses": 100,
@@ -7363,7 +7363,32 @@
     "basketball_shadow_staked": 31.5,
     "basketball_shadow_win_pct": 33,
     "rejected_total": 1001,
-    "total_analysis": 1204
+    "total_analysis": 1205
   },
-  "coberturaAnalisis": []
+  "coberturaAnalisis": [
+    {
+      "liga": "CHI1",
+      "partidos_evaluados": 4,
+      "con_valor": 0,
+      "sombra": 0,
+      "sin_valor": 0,
+      "sin_odds": 4
+    },
+    {
+      "liga": "WC",
+      "partidos_evaluados": 2,
+      "con_valor": 1,
+      "sombra": 1,
+      "sin_valor": 0,
+      "sin_odds": 0
+    },
+    {
+      "liga": "FIN1",
+      "partidos_evaluados": 2,
+      "con_valor": 2,
+      "sombra": 0,
+      "sin_valor": 0,
+      "sin_odds": 0
+    }
+  ]
 }
