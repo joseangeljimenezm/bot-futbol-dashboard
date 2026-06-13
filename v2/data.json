@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-13T22:30:06",
+    "generated_at": "2026-06-13T22:32:03",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -7362,23 +7362,23 @@
     "basketball_shadow_pnl": -3.94,
     "basketball_shadow_staked": 31.5,
     "basketball_shadow_win_pct": 33,
-    "rejected_total": 1001,
-    "total_analysis": 1205
+    "rejected_total": 1007,
+    "total_analysis": 1211
   },
   "coberturaAnalisis": [
     {
       "liga": "CHI1",
-      "partidos_evaluados": 4,
+      "partidos_evaluados": 5,
       "con_valor": 0,
       "sombra": 0,
       "sin_valor": 0,
-      "sin_odds": 4
+      "sin_odds": 5
     },
     {
       "liga": "WC",
-      "partidos_evaluados": 2,
+      "partidos_evaluados": 3,
       "con_valor": 1,
-      "sombra": 1,
+      "sombra": 2,
       "sin_valor": 0,
       "sin_odds": 0
     },
