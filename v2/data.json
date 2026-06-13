@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-13T10:39:03",
+    "generated_at": "2026-06-13T11:05:15",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -7364,5 +7364,6 @@
     "basketball_shadow_win_pct": 33,
     "rejected_total": 1001,
     "total_analysis": 1204
-  }
+  },
+  "coberturaAnalisis": []
 }
