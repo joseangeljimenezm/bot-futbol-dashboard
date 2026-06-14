@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-13T23:24:57",
+    "generated_at": "2026-06-14T12:18:08",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -104,7 +104,7 @@
       "v": 99.53
     },
     {
-      "d": "13/06",
+      "d": "14/06",
       "v": 99.53,
       "pending": true
     }
@@ -183,22 +183,22 @@
       "ganancia_neto": 0.0
     },
     "month": {
-      "roi": -18.4,
-      "roi_percent": -18.4,
-      "profit": -0.27,
-      "picks": 21,
-      "wins": 9,
+      "roi": -29.4,
+      "roi_percent": -29.4,
+      "profit": -0.39,
+      "picks": 19,
+      "wins": 7,
       "losses": 12,
-      "win": 43,
-      "winPct": 43,
+      "win": 37,
+      "winPct": 37,
       "edge": 9.2,
-      "yld": -18.4,
-      "yield": -18.4,
-      "staked": 1.47,
-      "bank_inicial": 106.35,
+      "yld": -29.4,
+      "yield": -29.4,
+      "staked": 1.33,
+      "bank_inicial": 106.47,
       "bank_final": 106.08,
       "bank_current": 106.08,
-      "ganancia_neto": -0.27
+      "ganancia_neto": -0.39
     },
     "since": {
       "roi": -3.9,
@@ -2109,21 +2109,6 @@
           "status": "red"
         },
         {
-          "name": "FIN1",
-          "total": 2,
-          "w": 2,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 85.7,
-          "yield": 85.7,
-          "eur": 0.12,
-          "pnl": 0.12,
-          "staked": 0.14,
-          "status": "insuf"
-        },
-        {
           "name": "Eredivisie",
           "total": 2,
           "w": 1,
@@ -2201,21 +2186,6 @@
           "status": "insuf"
         },
         {
-          "name": "Under 2.5",
-          "total": 2,
-          "w": 1,
-          "l": 1,
-          "losses": 1,
-          "winPct": 50,
-          "win_pct": 50,
-          "roi": 0.0,
-          "yield": 0.0,
-          "eur": 0.0,
-          "pnl": 0.0,
-          "staked": 0.14,
-          "status": "insuf"
-        },
-        {
           "name": "hc_away_+1.25",
           "total": 2,
           "w": 1,
@@ -2231,18 +2201,18 @@
           "status": "insuf"
         },
         {
-          "name": "Hánd. V +1.0",
-          "total": 2,
-          "w": 1,
+          "name": "Under 2.5",
+          "total": 1,
+          "w": 0,
           "l": 1,
           "losses": 1,
-          "winPct": 50,
-          "win_pct": 50,
-          "roi": -14.3,
-          "yield": -14.3,
-          "eur": -0.02,
-          "pnl": -0.02,
-          "staked": 0.14,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": -100.0,
+          "yield": -100.0,
+          "eur": -0.07,
+          "pnl": -0.07,
+          "staked": 0.07,
           "status": "insuf"
         },
         {
@@ -2321,6 +2291,21 @@
           "status": "insuf"
         },
         {
+          "name": "Hánd. V +1.0",
+          "total": 1,
+          "w": 0,
+          "l": 1,
+          "losses": 1,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": -100.0,
+          "yield": -100.0,
+          "eur": -0.07,
+          "pnl": -0.07,
+          "staked": 0.07,
+          "status": "insuf"
+        },
+        {
           "name": "Hánd. V +0.5",
           "total": 1,
           "w": 0,
@@ -2339,17 +2324,17 @@
       "byOdds": [
         {
           "name": "3. 1.60-2.10",
-          "total": 18,
-          "w": 8,
+          "total": 16,
+          "w": 6,
           "l": 10,
           "losses": 10,
-          "winPct": 44,
-          "win_pct": 44,
-          "roi": -12.8,
-          "yield": -12.8,
-          "eur": -0.16,
-          "pnl": -0.16,
-          "staked": 1.26,
+          "winPct": 38,
+          "win_pct": 38,
+          "roi": -25.1,
+          "yield": -25.1,
+          "eur": -0.28,
+          "pnl": -0.28,
+          "staked": 1.12,
           "status": "red"
         },
         {
@@ -2389,7 +2374,6 @@
         "leagues": [
           "Eliteserien",
           "Allsvenskan",
-          "FIN1",
           "Eredivisie",
           "Bundesliga (Aut.)"
         ],
@@ -2397,11 +2381,11 @@
           "Under 3.5",
           "Hánd. V +1.5",
           "Hánd. V +0.75",
-          "Under 2.5",
           "hc_away_+1.25",
-          "Hánd. V +1.0",
+          "Under 2.5",
           "Over 2.5",
-          "Hánd. Local 0.0"
+          "Hánd. Local 0.0",
+          "Hánd. L -0.25"
         ],
         "cells": [
           [
@@ -2430,16 +2414,6 @@
               "n": 2,
               "status": "green"
             },
-            null,
-            null,
-            null,
-            null,
-            null
-          ],
-          [
-            null,
-            null,
-            null,
             null,
             null,
             null,
@@ -2697,30 +2671,6 @@
           "resultado": "PERDIDA",
           "roi_pct": -100.0,
           "fecha": "2026-05-16"
-        },
-        {
-          "liga": "FIN1",
-          "local": "AC Oulu",
-          "visitante": "TPS Turku",
-          "mercado": "Under 2.5",
-          "odd": 1.98,
-          "stake": 0.07,
-          "ganancia": 0.07,
-          "resultado": "GANADA",
-          "roi_pct": -2.0,
-          "fecha": "2026-05-15"
-        },
-        {
-          "liga": "FIN1",
-          "local": "HJK Helsinki",
-          "visitante": "Ilves Tampere",
-          "mercado": "Hánd. V +1.0",
-          "odd": 1.71,
-          "stake": 0.07,
-          "ganancia": 0.05,
-          "resultado": "GANADA",
-          "roi_pct": -29.0,
-          "fecha": "2026-05-15"
         }
       ]
     },
