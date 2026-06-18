@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-17T22:48:52",
+    "generated_at": "2026-06-18T07:03:12",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -104,7 +104,7 @@
       "v": 99.53
     },
     {
-      "d": "17/06",
+      "d": "18/06",
       "v": 99.53,
       "pending": true
     }
@@ -7177,8 +7177,8 @@
     "basketball_shadow_pnl": -1.11,
     "basketball_shadow_staked": 18.69,
     "basketball_shadow_win_pct": 48,
-    "rejected_total": 931,
-    "total_analysis": 1068
+    "rejected_total": 945,
+    "total_analysis": 1082
   },
   "coberturaAnalisis": [
     {
