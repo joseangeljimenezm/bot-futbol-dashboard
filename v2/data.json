@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-19T22:47:45",
+    "generated_at": "2026-06-20T22:45:06",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -104,7 +104,7 @@
       "v": 99.53
     },
     {
-      "d": "19/06",
+      "d": "20/06",
       "v": 99.53,
       "pending": true
     }
