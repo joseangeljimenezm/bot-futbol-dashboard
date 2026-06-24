@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-23T22:50:14",
+    "generated_at": "2026-06-24T08:18:36",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -104,7 +104,7 @@
       "v": 99.53
     },
     {
-      "d": "23/06",
+      "d": "24/06",
       "v": 99.53,
       "pending": true
     }
@@ -183,22 +183,22 @@
       "ganancia_neto": 0.0
     },
     "month": {
-      "roi": -76.2,
-      "roi_percent": -76.2,
-      "profit": -0.32,
-      "picks": 6,
+      "roi": -71.4,
+      "roi_percent": -71.4,
+      "profit": -0.25,
+      "picks": 5,
       "wins": 1,
-      "losses": 5,
-      "win": 17,
-      "winPct": 17,
-      "edge": 6.9,
-      "yld": -76.2,
-      "yield": -76.2,
-      "staked": 0.42,
-      "bank_inicial": 106.4,
+      "losses": 4,
+      "win": 20,
+      "winPct": 20,
+      "edge": 5.6,
+      "yld": -71.4,
+      "yield": -71.4,
+      "staked": 0.35,
+      "bank_inicial": 106.33,
       "bank_final": 106.08,
       "bank_current": 106.08,
-      "ganancia_neto": -0.32
+      "ganancia_neto": -0.25
     },
     "since": {
       "roi": -3.9,
@@ -2095,17 +2095,17 @@
         },
         {
           "name": "Eliteserien",
-          "total": 2,
+          "total": 1,
           "w": 0,
-          "l": 2,
-          "losses": 2,
+          "l": 1,
+          "losses": 1,
           "winPct": 0,
           "win_pct": 0,
           "roi": -100.0,
           "yield": -100.0,
-          "eur": -0.14,
-          "pnl": -0.14,
-          "staked": 0.14,
+          "eur": -0.07,
+          "pnl": -0.07,
+          "staked": 0.07,
           "status": "insuf"
         }
       ],
@@ -2184,21 +2184,6 @@
           "pnl": -0.07,
           "staked": 0.07,
           "status": "insuf"
-        },
-        {
-          "name": "Hánd. V +0.5",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
         }
       ],
       "byOdds": [
@@ -2219,17 +2204,17 @@
         },
         {
           "name": "2. 1.35-1.60",
-          "total": 2,
+          "total": 1,
           "w": 1,
-          "l": 1,
-          "losses": 1,
-          "winPct": 50,
-          "win_pct": 50,
-          "roi": -28.6,
-          "yield": -28.6,
-          "eur": -0.04,
-          "pnl": -0.04,
-          "staked": 0.14,
+          "l": 0,
+          "losses": 0,
+          "winPct": 100,
+          "win_pct": 100,
+          "roi": 42.9,
+          "yield": 42.9,
+          "eur": 0.03,
+          "pnl": 0.03,
+          "staked": 0.07,
           "status": "insuf"
         }
       ],
@@ -2245,8 +2230,7 @@
           "Hánd. L +1.0",
           "hc_away_+1.25",
           "Hánd. V +1.0",
-          "Hánd. V +0.75",
-          "Hánd. V +0.5"
+          "Hánd. V +0.75"
         ],
         "cells": [
           [
@@ -2254,11 +2238,9 @@
             null,
             null,
             null,
-            null,
             null
           ],
           [
-            null,
             null,
             null,
             null,
@@ -2328,18 +2310,6 @@
           "resultado": "GANADA",
           "roi_pct": -51.0,
           "fecha": "2026-05-29"
-        },
-        {
-          "liga": "Eliteserien",
-          "local": "KFUM",
-          "visitante": "Rosenborg",
-          "mercado": "Hánd. V +0.5",
-          "odd": 1.58,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-25"
         }
       ]
     },
@@ -6967,12 +6937,12 @@
     "status": "+9"
   },
   "analysis": {
-    "shadow_total": 141,
-    "shadow_wins": 65,
-    "shadow_losses": 76,
-    "shadow_roi": -9.3,
-    "shadow_pnl": -2.77,
-    "shadow_staked": 29.61,
+    "shadow_total": 146,
+    "shadow_wins": 67,
+    "shadow_losses": 79,
+    "shadow_roi": -14.9,
+    "shadow_pnl": -4.56,
+    "shadow_staked": 30.66,
     "shadow_win_pct": 46,
     "basketball_shadow_total": 89,
     "basketball_shadow_wins": 43,
@@ -6981,14 +6951,14 @@
     "basketball_shadow_pnl": -1.11,
     "basketball_shadow_staked": 18.69,
     "basketball_shadow_win_pct": 48,
-    "rejected_total": 1002,
-    "total_analysis": 1143
+    "rejected_total": 1027,
+    "total_analysis": 1173
   },
   "coberturaAnalisis": [
     {
       "liga": "WC",
-      "partidos_evaluados": 18,
-      "con_valor": 15,
+      "partidos_evaluados": 14,
+      "con_valor": 11,
       "sombra": 3,
       "sin_valor": 0,
       "sin_odds": 0
@@ -7003,9 +6973,9 @@
     },
     {
       "liga": "SWE2",
-      "partidos_evaluados": 3,
+      "partidos_evaluados": 2,
       "con_valor": 2,
-      "sombra": 1,
+      "sombra": 0,
       "sin_valor": 0,
       "sin_odds": 0
     },
