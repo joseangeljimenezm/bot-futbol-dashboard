@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-24T22:49:14",
+    "generated_at": "2026-06-25T22:52:16",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -104,7 +104,7 @@
       "v": 99.53
     },
     {
-      "d": "24/06",
+      "d": "25/06",
       "v": 99.53,
       "pending": true
     }
@@ -6965,11 +6965,11 @@
     },
     {
       "liga": "FIN1",
-      "partidos_evaluados": 5,
-      "con_valor": 2,
+      "partidos_evaluados": 3,
+      "con_valor": 1,
       "sombra": 2,
       "sin_valor": 0,
-      "sin_odds": 1
+      "sin_odds": 0
     },
     {
       "liga": "SWE2",
