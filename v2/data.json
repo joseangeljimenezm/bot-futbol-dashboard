@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-25T22:54:36",
+    "generated_at": "2026-06-25T22:55:26",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -6937,12 +6937,12 @@
     "status": "+9"
   },
   "analysis": {
-    "shadow_total": 146,
+    "shadow_total": 147,
     "shadow_wins": 67,
-    "shadow_losses": 79,
-    "shadow_roi": -14.9,
-    "shadow_pnl": -4.56,
-    "shadow_staked": 30.66,
+    "shadow_losses": 80,
+    "shadow_roi": -18.0,
+    "shadow_pnl": -5.56,
+    "shadow_staked": 30.87,
     "shadow_win_pct": 46,
     "basketball_shadow_total": 89,
     "basketball_shadow_wins": 43,
@@ -6952,7 +6952,7 @@
     "basketball_shadow_staked": 18.69,
     "basketball_shadow_win_pct": 48,
     "rejected_total": 1027,
-    "total_analysis": 1173
+    "total_analysis": 1174
   },
   "coberturaAnalisis": [
     {
