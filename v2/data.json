@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-27T22:48:44",
+    "generated_at": "2026-06-28T07:03:40",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -104,7 +104,7 @@
       "v": 99.53
     },
     {
-      "d": "27/06",
+      "d": "28/06",
       "v": 99.53,
       "pending": true
     }
@@ -183,22 +183,22 @@
       "ganancia_neto": 0.0
     },
     "month": {
-      "roi": -71.4,
-      "roi_percent": -71.4,
-      "profit": -0.25,
-      "picks": 5,
-      "wins": 1,
-      "losses": 4,
-      "win": 20,
-      "winPct": 20,
-      "edge": 5.6,
-      "yld": -71.4,
-      "yield": -71.4,
-      "staked": 0.35,
-      "bank_inicial": 106.33,
+      "roi": -100.0,
+      "roi_percent": -100.0,
+      "profit": -0.14,
+      "picks": 2,
+      "wins": 0,
+      "losses": 2,
+      "win": 0,
+      "winPct": 0,
+      "edge": 4.1,
+      "yld": -100.0,
+      "yield": -100.0,
+      "staked": 0.14,
+      "bank_inicial": 106.22,
       "bank_final": 106.08,
       "bank_current": 106.08,
-      "ganancia_neto": -0.25
+      "ganancia_neto": -0.14
     },
     "since": {
       "roi": -3.9,
@@ -2080,17 +2080,17 @@
       "byLeague": [
         {
           "name": "Allsvenskan",
-          "total": 4,
-          "w": 1,
-          "l": 3,
-          "losses": 3,
-          "winPct": 25,
-          "win_pct": 25,
-          "roi": -64.3,
-          "yield": -64.3,
-          "eur": -0.18,
-          "pnl": -0.18,
-          "staked": 0.28,
+          "total": 1,
+          "w": 0,
+          "l": 1,
+          "losses": 1,
+          "winPct": 0,
+          "win_pct": 0,
+          "roi": -100.0,
+          "yield": -100.0,
+          "eur": -0.07,
+          "pnl": -0.07,
+          "staked": 0.07,
           "status": "insuf"
         },
         {
@@ -2126,52 +2126,7 @@
           "status": "insuf"
         },
         {
-          "name": "Hánd. L +1.0",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 42.9,
-          "yield": 42.9,
-          "eur": 0.03,
-          "pnl": 0.03,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "hc_away_+1.25",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
           "name": "Hánd. V +1.0",
-          "total": 1,
-          "w": 0,
-          "l": 1,
-          "losses": 1,
-          "winPct": 0,
-          "win_pct": 0,
-          "roi": -100.0,
-          "yield": -100.0,
-          "eur": -0.07,
-          "pnl": -0.07,
-          "staked": 0.07,
-          "status": "insuf"
-        },
-        {
-          "name": "Hánd. V +0.75",
           "total": 1,
           "w": 0,
           "l": 1,
@@ -2189,32 +2144,17 @@
       "byOdds": [
         {
           "name": "3. 1.60-2.10",
-          "total": 4,
+          "total": 2,
           "w": 0,
-          "l": 4,
-          "losses": 4,
+          "l": 2,
+          "losses": 2,
           "winPct": 0,
           "win_pct": 0,
           "roi": -100.0,
           "yield": -100.0,
-          "eur": -0.28,
-          "pnl": -0.28,
-          "staked": 0.28,
-          "status": "insuf"
-        },
-        {
-          "name": "2. 1.35-1.60",
-          "total": 1,
-          "w": 1,
-          "l": 0,
-          "losses": 0,
-          "winPct": 100,
-          "win_pct": 100,
-          "roi": 42.9,
-          "yield": 42.9,
-          "eur": 0.03,
-          "pnl": 0.03,
-          "staked": 0.07,
+          "eur": -0.14,
+          "pnl": -0.14,
+          "staked": 0.14,
           "status": "insuf"
         }
       ],
@@ -2227,23 +2167,14 @@
         ],
         "markets": [
           "Hánd. Local 0.0",
-          "Hánd. L +1.0",
-          "hc_away_+1.25",
-          "Hánd. V +1.0",
-          "Hánd. V +0.75"
+          "Hánd. V +1.0"
         ],
         "cells": [
           [
             null,
-            null,
-            null,
-            null,
             null
           ],
           [
-            null,
-            null,
-            null,
             null,
             null
           ]
@@ -2274,42 +2205,6 @@
           "resultado": "PERDIDA",
           "roi_pct": -100.0,
           "fecha": "2026-05-30"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "Malmo FF",
-          "visitante": "Halmstads BK",
-          "mercado": "hc_away_+1.25",
-          "odd": 1.76,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-29"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "GAIS",
-          "visitante": "Kalmar FF",
-          "mercado": "Hánd. V +0.75",
-          "odd": 1.73,
-          "stake": 0.07,
-          "ganancia": -0.07,
-          "resultado": "PERDIDA",
-          "roi_pct": -100.0,
-          "fecha": "2026-05-29"
-        },
-        {
-          "liga": "Allsvenskan",
-          "local": "Örgryte IS",
-          "visitante": "IF Elfsborg",
-          "mercado": "Hánd. L +1.0",
-          "odd": 1.49,
-          "stake": 0.07,
-          "ganancia": 0.03,
-          "resultado": "GANADA",
-          "roi_pct": -51.0,
-          "fecha": "2026-05-29"
         }
       ]
     },
@@ -6937,13 +6832,13 @@
     "status": "+9"
   },
   "analysis": {
-    "shadow_total": 151,
+    "shadow_total": 155,
     "shadow_wins": 69,
-    "shadow_losses": 82,
-    "shadow_roi": -11.9,
-    "shadow_pnl": -3.77,
-    "shadow_staked": 31.71,
-    "shadow_win_pct": 46,
+    "shadow_losses": 86,
+    "shadow_roi": -20.8,
+    "shadow_pnl": -6.77,
+    "shadow_staked": 32.55,
+    "shadow_win_pct": 45,
     "basketball_shadow_total": 89,
     "basketball_shadow_wins": 43,
     "basketball_shadow_losses": 46,
@@ -6951,8 +6846,8 @@
     "basketball_shadow_pnl": -1.11,
     "basketball_shadow_staked": 18.69,
     "basketball_shadow_win_pct": 48,
-    "rejected_total": 1046,
-    "total_analysis": 1197
+    "rejected_total": 1054,
+    "total_analysis": 1209
   },
   "coberturaAnalisis": [
     {
