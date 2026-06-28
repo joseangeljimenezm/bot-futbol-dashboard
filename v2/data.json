@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-28T07:03:40",
+    "generated_at": "2026-06-28T07:07:25",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -6861,8 +6861,8 @@
     {
       "liga": "SWE2",
       "partidos_evaluados": 3,
-      "con_valor": 2,
-      "sombra": 1,
+      "con_valor": 3,
+      "sombra": 0,
       "sin_valor": 0,
       "sin_odds": 0
     },
