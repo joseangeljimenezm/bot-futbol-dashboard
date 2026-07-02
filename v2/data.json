@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-02T23:07:33",
+    "generated_at": "2026-07-02T23:10:21",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -6734,8 +6734,8 @@
   "coberturaAnalisis": [
     {
       "liga": "WC",
-      "partidos_evaluados": 8,
-      "con_valor": 6,
+      "partidos_evaluados": 9,
+      "con_valor": 7,
       "sombra": 2,
       "sin_valor": 0,
       "sin_odds": 0
