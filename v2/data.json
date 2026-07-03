@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-03T22:45:12",
+    "generated_at": "2026-07-03T22:55:36",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -6734,8 +6734,16 @@
   "coberturaAnalisis": [
     {
       "liga": "WC",
-      "partidos_evaluados": 9,
-      "con_valor": 7,
+      "partidos_evaluados": 11,
+      "con_valor": 9,
+      "sombra": 2,
+      "sin_valor": 0,
+      "sin_odds": 0
+    },
+    {
+      "liga": "KOR1",
+      "partidos_evaluados": 2,
+      "con_valor": 0,
       "sombra": 2,
       "sin_valor": 0,
       "sin_odds": 0
@@ -6745,6 +6753,14 @@
       "partidos_evaluados": 1,
       "con_valor": 1,
       "sombra": 0,
+      "sin_valor": 0,
+      "sin_odds": 0
+    },
+    {
+      "liga": "SWE1",
+      "partidos_evaluados": 1,
+      "con_valor": 0,
+      "sombra": 1,
       "sin_valor": 0,
       "sin_odds": 0
     }
