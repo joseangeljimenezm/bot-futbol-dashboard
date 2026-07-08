@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-07T22:46:25",
+    "generated_at": "2026-07-08T07:27:57",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -104,7 +104,7 @@
       "v": 99.53
     },
     {
-      "d": "07/07",
+      "d": "08/07",
       "v": 99.53,
       "pending": true
     }
@@ -6728,15 +6728,15 @@
     "basketball_shadow_pnl": -1.11,
     "basketball_shadow_staked": 18.69,
     "basketball_shadow_win_pct": 48,
-    "rejected_total": 1202,
-    "total_analysis": 1377
+    "rejected_total": 1205,
+    "total_analysis": 1380
   },
   "coberturaAnalisis": [
     {
       "liga": "WC",
-      "partidos_evaluados": 9,
+      "partidos_evaluados": 7,
       "con_valor": 6,
-      "sombra": 2,
+      "sombra": 0,
       "sin_valor": 0,
       "sin_odds": 1
     },
