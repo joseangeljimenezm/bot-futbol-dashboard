@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-13T22:45:09",
+    "generated_at": "2026-07-13T22:46:30",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -6741,7 +6741,7 @@
       "sin_odds": 5
     },
     {
-      "liga": "KOR1",
+      "liga": "WC",
       "partidos_evaluados": 3,
       "con_valor": 0,
       "sombra": 0,
@@ -6749,12 +6749,12 @@
       "sin_odds": 3
     },
     {
-      "liga": "WC",
-      "partidos_evaluados": 2,
+      "liga": "KOR1",
+      "partidos_evaluados": 3,
       "con_valor": 0,
       "sombra": 0,
       "sin_valor": 0,
-      "sin_odds": 2
+      "sin_odds": 3
     },
     {
       "liga": "NOR1",
