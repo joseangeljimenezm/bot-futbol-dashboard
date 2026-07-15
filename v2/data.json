@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-15T22:45:14",
+    "generated_at": "2026-07-15T22:47:38",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -6763,6 +6763,22 @@
       "sombra": 0,
       "sin_valor": 0,
       "sin_odds": 2
+    },
+    {
+      "liga": "BSA",
+      "partidos_evaluados": 2,
+      "con_valor": 0,
+      "sombra": 0,
+      "sin_valor": 0,
+      "sin_odds": 2
+    },
+    {
+      "liga": "MEX1",
+      "partidos_evaluados": 1,
+      "con_valor": 0,
+      "sombra": 0,
+      "sin_valor": 0,
+      "sin_odds": 1
     }
   ]
 }
