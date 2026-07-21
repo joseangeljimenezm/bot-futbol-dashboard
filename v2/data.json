@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-20T22:46:56",
+    "generated_at": "2026-07-21T22:45:26",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -104,7 +104,7 @@
       "v": 99.53
     },
     {
-      "d": "20/07",
+      "d": "21/07",
       "v": 99.53,
       "pending": true
     }
@@ -6765,7 +6765,7 @@
       "sin_odds": 5
     },
     {
-      "liga": "WC",
+      "liga": "SWE1",
       "partidos_evaluados": 3,
       "con_valor": 0,
       "sombra": 0,
@@ -6773,12 +6773,12 @@
       "sin_odds": 3
     },
     {
-      "liga": "SWE1",
-      "partidos_evaluados": 3,
+      "liga": "WC",
+      "partidos_evaluados": 2,
       "con_valor": 0,
       "sombra": 0,
       "sin_valor": 0,
-      "sin_odds": 3
+      "sin_odds": 2
     },
     {
       "liga": "FIN1",
