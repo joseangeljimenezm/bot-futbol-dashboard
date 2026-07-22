@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-22T22:45:08",
+    "generated_at": "2026-07-22T22:46:35",
     "period_default": "since",
     "stake_default": 0.21,
     "bot_version": "v2.1.0"
@@ -6742,11 +6742,11 @@
     },
     {
       "liga": "BSA",
-      "partidos_evaluados": 9,
+      "partidos_evaluados": 11,
       "con_valor": 0,
       "sombra": 0,
       "sin_valor": 0,
-      "sin_odds": 9
+      "sin_odds": 11
     },
     {
       "liga": "MEX1",
@@ -6790,6 +6790,14 @@
     },
     {
       "liga": "SWE2",
+      "partidos_evaluados": 1,
+      "con_valor": 0,
+      "sombra": 0,
+      "sin_valor": 0,
+      "sin_odds": 1
+    },
+    {
+      "liga": "ARG",
       "partidos_evaluados": 1,
       "con_valor": 0,
       "sombra": 0,
